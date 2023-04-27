@@ -2,3 +2,4 @@
 node_modules/
 test/antora/.cache/
 test/antora/public/
+*.tgz

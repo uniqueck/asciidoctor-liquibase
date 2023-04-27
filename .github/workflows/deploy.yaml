@@ -1,0 +1,66 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    env:
+      PR_NUM: ${{ github.event.pull_request.number }}
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+      - name: Use Node.js 🚧
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+      - name: Install dependencies 🚧
+        run: npm ci
+      - name: Run Tests and Build 🦺
+        run: npm pack
+      - name: Comment on PR 💬
+        if: github.ref != 'refs/heads/main'
+        uses: hasura/comment-progress@v2.2.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          number: ${{ github.event.number }}
+          id: deploy-preview
+          message: "Initializing deploy of documentation site preview... ⏳"
+      - name: Set BASE_URL for Preview Build 🔨
+        if: github.ref != 'refs/heads/main'
+        run: echo BASE_URL="https://uniqueck.github.io/asciidoctor-liquibase/pull/${{ env.PR_NUM }}" >> $GITHUB_ENV
+      - name: Create a .nojekyll file
+        run: |
+          touch test/antora/public/.nojekyll
+      - name: Deploy (main branch) 🚀
+        if: github.ref == 'refs/heads/main'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          clean-exclude: pull
+          branch: gh-pages
+          folder: test/antora/public
+          token: ${{secrets.GITHUB_TOKEN}}
+      - name: Deploy (PR Preview) 🔎
+        if: github.ref != 'refs/heads/main'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: test/antora/public
+          target-folder: pull/${{ env.PR_NUM }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          clean: false
+      - name: Update PR comment 💬
+        if: github.ref != 'refs/heads/main'
+        uses: hasura/comment-progress@v2.2.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          number: ${{ github.event.number }}
+          id: deploy-preview
+          message: "🚀 Deploy of docs site preview has been started.  It will take a minute or two for changes to appear on the site.  See changes here: ${{ env.BASE_URL }}"

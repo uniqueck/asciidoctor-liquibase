@@ -1,0 +1,9 @@
+lfet.project.ini:
+  ide:
+    default: java
+    java:
+      enabled: true
+      extension: js
+
+      src:
+        path: ${project.root}../lib/

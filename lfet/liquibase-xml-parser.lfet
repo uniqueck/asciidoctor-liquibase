@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230505a)" language="English" saveDate="2023.05.13 at 01:07:10 CEST" saveUser="constantin">
+<LFET version="LF-ET 2.2.1 (230505a)" language="English" saveDate="2023.05.13 at 23:16:14 CEST" saveUser="constantin">
   <Conditions>
     <Condition uId="11443124863866955">
       <Title language="English" value="Element = createTable"/>
@@ -84,7 +84,7 @@
   <Actions>
     <Action uId="11443124863976962">
       <Title language="English" value="extract Table"/>
-      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="// "/>
+      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="//&lt;br/&gt;let tableName = element.$['tableName']&lt;br/&gt;processModel.tables.set(tableName, {})"/>
     </Action>
     <Action uId="11443124877466972">
       <Title language="English" value="follow include"/>
@@ -92,7 +92,7 @@
     </Action>
     <Action uId="15719536207449650">
       <Title language="English" value="parse changeSet"/>
-      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="//"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="parseLiquibaseChangeSet(processModel, element.$$, logger, vfs, tillTag)"/>
     </Action>
     <Action uId="15721627411830198">
       <Title language="English" value="set primary key for column"/>
@@ -121,7 +121,7 @@
     </Action>
     <Action uId="15719509716635710">
       <Title language="English" value="log unsupported element"/>
-      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="doc.getLogger().warn(`Unsupported liquibase element '${element['#name']}' detected`)"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="logger.warn(`Unsupported liquibase element '${element['#name']}' detected`)"/>
     </Action>
     <Action uId="15721803018960493">
       <Title language="English" value="ignore element"/>
@@ -130,7 +130,7 @@
     <Action uId="15722112921724925">
       <Title language="English" value="skip tag"/>
       <Text language="English" value="{@code &lt;tagDatabase tag=&quot;1.X.FINAL&quot; /&gt;}"/>
-      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="doc.getLogger().warn(`skip tag '${element['#name']}'`);"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="logger.warn(`skip tag '${element['#name']}'`);"/>
     </Action>
     <Action uId="15722113190675321">
       <Title language="English" value="finish parsing"/>
@@ -412,7 +412,7 @@
   <UrlsOut>
     <Url title="Folder" url="file:///./"/>
   </UrlsOut>
-  <SourceCode codeLanguage="Java" sourceCodeType="Prolog" value="const Parser = require('xml2js').Parser;&lt;br/&gt;&lt;br/&gt;function parseLiquibaseChangeSet(changelogFile, doc, vfs, tillTag) {&lt;br/&gt;    const parser = new Parser({preserveChildrenOrder: true, explicitArray: true, explicitRoot: false, explicitChildren: true});&lt;br/&gt;&lt;br/&gt;    var elements = []&lt;br/&gt;    parser.parseString(vfs.read(changelogFile), function(err, result) {&lt;br/&gt;        elements = result.$$&lt;br/&gt;    });&lt;br/&gt;    const content = []&lt;br/&gt;&lt;br/&gt;    for (let elementIndex = 0; elementIndex &lt; elements.length; elementIndex++) {&lt;br/&gt;        let element = elements[elementIndex]&lt;br/&gt;        console.log(element)"/>
-  <SourceCode codeLanguage="Java" sourceCodeType="Epilog" value="}&lt;br/&gt;&amp;#009;return content&lt;br/&gt;}&lt;br/&gt;&lt;br/&gt;module.exports = {&lt;br/&gt;  parseLiquibaseChangeSet: (changelogFile, doc, vfs, tillTag) =&gt; {&lt;br/&gt;    return parseLiquibaseChangeSet(changelogFile, doc, vfs, tillTag)&lt;br/&gt;  }&lt;br/&gt;}"/>
-  <SourceCode codeLanguage="Java" sourceCodeType="Trace" value="doc.getLogger().info('$$dtName - $$version - $$rule / $$rules')"/>
+  <SourceCode codeLanguage="Java" sourceCodeType="Prolog" value="const Parser = require('xml2js').Parser;&lt;br/&gt;&lt;br/&gt;function parseLiquibaseChangeSet(processModel, elements, logger, vfs, tillTag) {&lt;br/&gt;&lt;br/&gt;    const content = []&lt;br/&gt;&lt;br/&gt;    for (let elementIndex = 0; elementIndex &lt; elements.length; elementIndex++) {&lt;br/&gt;        let element = elements[elementIndex]&lt;br/&gt;        console.log(element)"/>
+  <SourceCode codeLanguage="Java" sourceCodeType="Epilog" value="}&lt;br/&gt;    return content&lt;br/&gt;}&lt;br/&gt;&lt;br/&gt;module.exports = {&lt;br/&gt;  parseLiquibaseChangeSet: (processModel, elements, logger, vfs, tillTag) =&gt; {&lt;br/&gt;    return parseLiquibaseChangeSet(processModel, elements, logger, vfs, tillTag)&lt;br/&gt;  }&lt;br/&gt;}"/>
+  <SourceCode codeLanguage="Java" sourceCodeType="Trace" value="logger.info('$$dtName - $$version - $$rule / $$rules')"/>
 </LFET>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230505a)" language="English" saveDate="2023.05.13 at 23:16:14 CEST" saveUser="constantin">
+<LFET version="LF-ET 2.2.1 (230520C)" language="English" saveDate="2023.05.21 at 11:48:51 CEST" saveUser="constantin">
   <Conditions>
     <Condition uId="11443124863866955">
       <Title language="English" value="Element = createTable"/>
@@ -78,46 +78,46 @@
     </Condition>
     <Condition uId="15722111209784898">
       <Title language="English" value="tag = tillTag"/>
-      <SourceCode codeLanguage="Java" sourceCodeType="LogArg" value="tillTag === changeSetElement[&quot;@tag&quot;]"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="LogArg" value="tillTag === element.$['#tag']"/>
     </Condition>
   </Conditions>
   <Actions>
     <Action uId="11443124863976962">
       <Title language="English" value="extract Table"/>
-      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="//&lt;br/&gt;let tableName = element.$['tableName']&lt;br/&gt;processModel.tables.set(tableName, {})"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="//&lt;br/&gt;let tableName = element.$['tableName']&lt;br/&gt;processModel.tables.set(tableName, {columns: new Map()})&lt;br/&gt;for (let columnIndex = 0; columnIndex &lt; element.$$.length; columnIndex++) {&lt;br/&gt;    let column = element.$$[columnIndex]&lt;br/&gt;    let constraints = column.constraints&lt;br/&gt;    let primaryKey = constraints !== undefined ? constraints[0].$['primaryKey'] : false&lt;br/&gt;    processModel.tables.get(tableName).columns.set(column.$['name'], {type: column.$['type'], primaryKey: primaryKey})&lt;br/&gt;}"/>
     </Action>
     <Action uId="11443124877466972">
       <Title language="English" value="follow include"/>
-      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="//"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="const absoluteFile = path.join('/',vfs.dirname(currentFile), element.$['file'])&lt;br/&gt;&lt;br/&gt;var includeFileElements = []&lt;br/&gt;parser.parseString(vfs.read(absoluteFile), function(err, result) {&lt;br/&gt;    includeFileElements = result.$$&lt;br/&gt;});&lt;br/&gt;&lt;br/&gt;parseLiquibaseChangeSet(processModel, absoluteFile, includeFileElements, logger, vfs, tillTag)&lt;br/&gt;//"/>
     </Action>
     <Action uId="15719536207449650">
       <Title language="English" value="parse changeSet"/>
-      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="parseLiquibaseChangeSet(processModel, element.$$, logger, vfs, tillTag)"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="parseLiquibaseChangeSet(processModel, currentFile, element.$$, logger, vfs, tillTag)"/>
     </Action>
     <Action uId="15721627411830198">
       <Title language="English" value="set primary key for column"/>
-      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="//"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="let table = processModel.tables.get(element.$['tableName'])&lt;br/&gt;let columnNames = element.$['columnNames']&lt;br/&gt;table.columns.get(columnNames).primaryKey = true"/>
     </Action>
     <Action uId="15721764244910319">
       <Title language="English" value="drop Table"/>
-      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="//"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="processModel.tables.delete(element.$['tableName'])"/>
     </Action>
     <Action uId="15721810494930896">
       <Title language="English" value="rename Column"/>
-      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="//"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="let tableName = element.$['tableName']&lt;br/&gt;let oldColumnName = element.$['oldColumnName']&lt;br/&gt;let newColumnName = element.$['newColumnName']&lt;br/&gt;let table = processModel.tables.get(tableName)&lt;br/&gt;let column = table.columns.get(oldColumnName)&lt;br/&gt;table.columns.set(newColumnName, column)&lt;br/&gt;table.columns.delete(oldColumnName)"/>
     </Action>
     <Action uId="15721829366451250">
       <Title language="English" value="add Column"/>
-      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="//"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="//&lt;br/&gt;let tableName = element.$['tableName']&lt;br/&gt;let table = processModel.tables.get(tableName)&lt;br/&gt;let columns = element.column&lt;br/&gt;columns.forEach((column) =&gt; {&lt;br/&gt;    let columnName = column.$['name']&lt;br/&gt;    let type = column.$['type']&lt;br/&gt;    table.columns.set(columnName, {type: type, primaryKey: false})&lt;br/&gt;})"/>
     </Action>
     <Action uId="15721835730951458">
       <Title language="English" value="drop Column"/>
-      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="//"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="let tableName = element.$['tableName']&lt;br/&gt;let columnName = element.$['columnName']&lt;br/&gt;processModel.tables.get(tableName).columns.delete(columnName)"/>
     </Action>
     <Action uId="15722076683993515">
       <Title language="English" value="addForeignKeyConstraint"/>
       <Text language="English" value="{@code &lt;addForeignKeyConstraint baseTableName=&quot;DEPLOYMENT_TRIGGER&quot; baseColumnNames=&quot;DEPLOYMENTUMGEBUNG_ID&quot; referencedTableName=&quot;DEPLOYMENT_UMGEBUNG&quot; referencedColumnNames=&quot;ID&quot; constraintName=&quot;DEPLOYMENT_TRIGGER_DEPLOY_FK1&quot; /&gt;}"/>
-      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="//"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="let baseTableName = element.$['baseTableName']&lt;br/&gt;let baseColumnName = element.$['baseColumnNames']&lt;br/&gt;let referencedTableName = element.$['referencedTableName']&lt;br/&gt;let referencedColumnName = element.$['referencedColumnNames']&lt;br/&gt;processModel.tables.get(baseTableName).columns.get(baseColumnName).referencedTable = referencedTableName&lt;br/&gt;processModel.tables.get(baseTableName).columns.get(baseColumnName).referencedColumn = referencedColumnName"/>
     </Action>
     <Action uId="15719509716635710">
       <Title language="English" value="log unsupported element"/>
@@ -125,7 +125,7 @@
     </Action>
     <Action uId="15721803018960493">
       <Title language="English" value="ignore element"/>
-      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="//"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="console.log(element)&lt;br/&gt;//"/>
     </Action>
     <Action uId="15722112921724925">
       <Title language="English" value="skip tag"/>
@@ -134,7 +134,7 @@
     </Action>
     <Action uId="15722113190675321">
       <Title language="English" value="finish parsing"/>
-      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="//"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="processModel.finshedProcessing = true&lt;br/&gt;//"/>
     </Action>
   </Actions>
   <Rules lastId="40">
@@ -412,7 +412,7 @@
   <UrlsOut>
     <Url title="Folder" url="file:///./"/>
   </UrlsOut>
-  <SourceCode codeLanguage="Java" sourceCodeType="Prolog" value="const Parser = require('xml2js').Parser;&lt;br/&gt;&lt;br/&gt;function parseLiquibaseChangeSet(processModel, elements, logger, vfs, tillTag) {&lt;br/&gt;&lt;br/&gt;    const content = []&lt;br/&gt;&lt;br/&gt;    for (let elementIndex = 0; elementIndex &lt; elements.length; elementIndex++) {&lt;br/&gt;        let element = elements[elementIndex]&lt;br/&gt;        console.log(element)"/>
-  <SourceCode codeLanguage="Java" sourceCodeType="Epilog" value="}&lt;br/&gt;    return content&lt;br/&gt;}&lt;br/&gt;&lt;br/&gt;module.exports = {&lt;br/&gt;  parseLiquibaseChangeSet: (processModel, elements, logger, vfs, tillTag) =&gt; {&lt;br/&gt;    return parseLiquibaseChangeSet(processModel, elements, logger, vfs, tillTag)&lt;br/&gt;  }&lt;br/&gt;}"/>
-  <SourceCode codeLanguage="Java" sourceCodeType="Trace" value="logger.info('$$dtName - $$version - $$rule / $$rules')"/>
+  <SourceCode codeLanguage="Java" sourceCodeType="Prolog" value="const XMLParser = require('xml2js').Parser;&lt;br/&gt;const path = require('path')&lt;br/&gt;const parser = new XMLParser({preserveChildrenOrder: true, explicitArray: true, explicitRoot: false, explicitChildren: true});&lt;br/&gt;&lt;br/&gt;function parseLiquibaseChangeSet(processModel, currentFile, elements, logger, vfs, tillTag) {&lt;br/&gt;&lt;br/&gt;    const content = []&lt;br/&gt;&lt;br/&gt;    for (let elementIndex = 0; elementIndex &lt; elements.length; elementIndex++) {&lt;br/&gt;        let element = elements[elementIndex]"/>
+  <SourceCode codeLanguage="Java" sourceCodeType="Epilog" value="}&lt;br/&gt;    return content&lt;br/&gt;}&lt;br/&gt;&lt;br/&gt;module.exports = {&lt;br/&gt;  parseLiquibaseChangeSet: (processModel, currentFile, elements, logger, vfs, tillTag) =&gt; {&lt;br/&gt;    return parseLiquibaseChangeSet(processModel, currentFile, elements, logger, vfs, tillTag)&lt;br/&gt;  }&lt;br/&gt;}"/>
+  <SourceCode codeLanguage="Java" sourceCodeType="Trace" value="logger.info(`$$dtName - $$version - $$rule / $$rules - ${currentFile} - ${JSON.stringify(processModel)}`)"/>
 </LFET>

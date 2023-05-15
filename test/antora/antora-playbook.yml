@@ -2,7 +2,7 @@ runtime:
   cache_dir: ./.cache/antora
   fetch: true
   log:
-    level: info
+    level: warn
 
 site:
   title: Antora x Liquibase Changesets
@@ -15,8 +15,11 @@ content:
       start_path: test/antora/docs
 
 asciidoc:
+  attributes:
+    plantuml-server-url: https://plantuml.com/plantuml
   extensions:
     - ./../../lib/asciidoctor-liquibase.js
+    - asciidoctor-plantuml
 
 ui:
   bundle:

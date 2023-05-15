@@ -3,7 +3,7 @@ const rimrafSync = require('rimraf')
 const generateSite = require('@antora/site-generator-default')
 
 describe('Antora integration', function () {
-    this.timeout(5000)
+    this.timeout(10000)
     before(async function () {
         rimrafSync(`${__dirname}/public`, function (error) {})
         await generateSite([`--playbook=${__dirname}/antora-playbook.yml`])

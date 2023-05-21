@@ -1,6 +1,0 @@
-name: antora-liquibase
-title: Antora x liquibase
-version: master
-start_page: ROOT:index.adoc
-nav:
-  - modules/ROOT/nav.adoc

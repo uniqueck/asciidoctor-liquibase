@@ -1,7 +1,0 @@
-= {page-component-title}
-
-== Ways of using asciidoctor-liquibase extension
-
-liquibase::example$simpleChangeSet.xml[]
-
-liquibase::example$db/db.changelog-master.xml[]

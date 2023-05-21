@@ -1,4 +1,0 @@
-:icons: font
-:version: 1.0-SNAPSHOT
-:imagesdir: doc/images
-= Asciidoctor.js Liquibase Extension

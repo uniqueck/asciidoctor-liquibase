@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LFET version="LF-ET 2.2.1 (230526A)" language="English" saveDate="2023.06.11 at 13:05:44 CEST" saveUser="constantin">
+  <Conditions>
+    <Condition uId="16863469997658590">
+      <Title language="English" value="definition is based on ... format"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="16863486742924066">
+          <Symbol language="English" value="yaml"/>
+          <Title language="English" value="yaml definition"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="currentFile.endsWith('$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863875092701159">
+          <Symbol language="English" value="xml"/>
+          <Title language="English" value="xml definition"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="currentFile.endsWith('$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863486742944068">
+          <Symbol language="English" value="*"/>
+          <Title language="English" value="extractor not supported for other formats"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+  </Conditions>
+  <Actions>
+    <Action uId="11443124863976962">
+      <Title language="English" value="extract ..."/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="16863487805934306">
+          <Symbol language="English" value="yaml"/>
+          <Title language="English" value="extract table on yaml definition"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="processModel.tables.delete(element.dropTable.tableName)"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16863874949031053">
+          <Symbol language="English" value="xml"/>
+          <Title language="English" value="extract on xml definition"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="processModel.tables.delete(element.$['tableName'])"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="11443124877466972">
+      <Title language="English" value="error"/>
+      <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="logger.errror('dass')"/>
+    </Action>
+  </Actions>
+  <Rules lastId="344">
+    <Rule id="342">
+      <ConditionOccurrenceLink link="16863486742924066"/>
+      <ActionOccurrenceLink link="16863487805934306"/>
+    </Rule>
+    <Rule id="344">
+      <ConditionOccurrenceLink link="16863875092701159"/>
+      <ActionOccurrenceLink link="16863874949031053"/>
+    </Rule>
+    <Rule id="343">
+      <ConditionOccurrenceLink link="16863486742944068"/>
+      <ActionLink link="11443124877466972"/>
+    </Rule>
+  </Rules>
+  <Title language="English" value="extract liquibase element dropTable"/>
+  <UrlsOut>
+    <Url title="Folder" url="file:///./"/>
+  </UrlsOut>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="function $$dtname(element, currentFile, processModel, logger, vfs) {"/>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Epilog" value="}&lt;br/&gt;&lt;br/&gt;module.exports = {&lt;br/&gt;  extract: (element, currentFile, processModel, logger, vfs) =&gt; {&lt;br/&gt;    return $$dtname(element, currentFile, processModel, logger, vfs)&lt;br/&gt;  }&lt;br/&gt;}"/>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Trace" value="logger.info(`$$dtName - $$version - $$rule / $$rules - ${currentFile} - ${JSON.stringify(processModel)}`)"/>
+</LFET>

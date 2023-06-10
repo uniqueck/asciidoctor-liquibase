@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LFET version="LF-ET 2.2.1 (230526A)" language="English" saveDate="2023.06.10 at 22:33:14 CEST" saveUser="constantin">
+  <Conditions>
+    <Condition uId="16863044272660255">
+      <Title language="English" value="Liquibase element name is ..."/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="16863044558500721">
+          <Symbol language="English" value="addDefaultValue"/>
+          <Title language="English" value="liquibase element addDefaultValue"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863045764502702">
+          <Symbol language="English" value="loadData"/>
+          <Title language="English" value="liquibase element loadData"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863046987564886">
+          <Symbol language="English" value="insert"/>
+          <Title language="English" value="liquibase element insert"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863049927637255">
+          <Symbol language="English" value="sql"/>
+          <Title language="English" value="liquibase element sql"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863061031562272">
+          <Symbol language="English" value="sqlFile"/>
+          <Title language="English" value="liquibase element sqlFile"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863054569523559">
+          <Symbol language="English" value="preConditions"/>
+          <Title language="English" value="https://docs.liquibase.com/concepts/changelogs/preconditions.html"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863055779156750">
+          <Symbol language="English" value="property"/>
+          <Title language="English" value="liquibase element property"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863093546431598">
+          <Symbol language="English" value="tagDatabase"/>
+          <Title language="English" value="liquibase element tagDatabase"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863094017433363">
+          <Symbol language="English" value="addForeignKeyConstraint"/>
+          <Title language="English" value="liquibase element addForeignKeyConstraint"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863094220654541">
+          <Symbol language="English" value="addUniqueConstraint"/>
+          <Title language="English" value="liquibase element addUniqueConstraint"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863094463275725">
+          <Symbol language="English" value="rollback"/>
+          <Title language="English" value="liquibase element rollback"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863094676986915">
+          <Symbol language="English" value="dropColumn"/>
+          <Title language="English" value="liquibase element dropColumn"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863094871116918">
+          <Symbol language="English" value="addColumn"/>
+          <Title language="English" value="liquibase element addColumn"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863095098176921">
+          <Symbol language="English" value="comment"/>
+          <Title language="English" value="liquibase element comment"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863095199056924">
+          <Symbol language="English" value="renameColumn"/>
+          <Title language="English" value="liquibase element renameColumn"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863095566448138">
+          <Symbol language="English" value="createIndex"/>
+          <Title language="English" value="liquibase element createIndex"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863095996909901">
+          <Symbol language="English" value="changeSet"/>
+          <Title language="English" value="https://docs.liquibase.com/concepts/changelogs/changeset.html"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863096087889904">
+          <Symbol language="English" value="dropSequence"/>
+          <Title language="English" value="liquibase element dropSequence"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863097675291370">
+          <Symbol language="English" value="createTable"/>
+          <Title language="English" value="liquibase element createTable"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863100652105145">
+          <Symbol language="English" value="addPrimaryKey"/>
+          <Title language="English" value="liquibase element addPrimaryKey"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863101582766923">
+          <Symbol language="English" value="dropTable"/>
+          <Title language="English" value="liquibase element dropTable"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863102002868271">
+          <Symbol language="English" value="include"/>
+          <Title language="English" value="liquibase element include"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863103067589589">
+          <Symbol language="English" value="createSequence"/>
+          <Title language="English" value="liquibase element createSequence"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863103414211216">
+          <Symbol language="English" value="createProcedure"/>
+          <Title language="English" value="liquibase element createProcedure"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863044558520723">
+          <Symbol language="English" value="*"/>
+          <Title language="English" value="unknown element"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+    <Condition uId="15722111209784898">
+      <Title language="English" value="tag = tillTag"/>
+      <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="tillTag === tagValueCallback(element)"/>
+    </Condition>
+  </Conditions>
+  <Actions>
+    <Action uId="15719509716635710">
+      <Title language="English" value="log"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="16863449399366407">
+          <Symbol language="English" value="NOT_SUPPORTED"/>
+          <Title language="English" value="not supported element"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="logger.warn(`Unsupported liquibase element '${JSON.stringify(element)}' detected`)"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16863449559356413">
+          <Symbol language="English" value="IGNORE"/>
+          <Title language="English" value="ignored element"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="logger.info(`Liquibase element '${JSON.stringify(element)}' ignored`)"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="15721803018960493">
+      <Title language="English" value="set element to ignore"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="16863430490853949">
+          <Symbol language="English" value="true"/>
+          <Title language="English" value="element should ignored"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.ignore = $$symbol"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16863430559663970">
+          <Symbol language="English" value="false"/>
+          <Title language="English" value="element should processed"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.ignore = $$symbol"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="15722113190675321">
+      <Title language="English" value="set finish processing"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="16863427516420767">
+          <Symbol language="English" value="true"/>
+          <Title language="English" value="parsing is finished"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.finshedProcessing = $$symbol"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16863427635250773">
+          <Symbol language="English" value="false"/>
+          <Title language="English" value="parsing is not yet done"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.finshedProcessing = $$symbol"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="16863462843197403">
+      <Title language="English" value="set element name"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="16863466015187759">
+          <Symbol language="English" value="addColumn"/>
+          <Title language="English" value="liquibase element addColumn"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16863465781257745">
+          <Symbol language="English" value="addForeignKeyConstraint"/>
+          <Title language="English" value="liquibase element addForeignKeyConstraint"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16863466417307794">
+          <Symbol language="English" value="addPrimaryKey"/>
+          <Title language="English" value="liquibase element addPrimaryKey"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16863466226927780">
+          <Symbol language="English" value="changeSet"/>
+          <Title language="English" value="liquibase element changeSet"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16863466168907773">
+          <Symbol language="English" value="createIndex"/>
+          <Title language="English" value="liquibase element createIndex"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16863466351207787">
+          <Symbol language="English" value="createTable"/>
+          <Title language="English" value="liquibase element createTable"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16863465882467752">
+          <Symbol language="English" value="dropColumn"/>
+          <Title language="English" value="liquibase element dropColumn"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16863466475207801">
+          <Symbol language="English" value="dropTable"/>
+          <Title language="English" value="liquibase element dropTable"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16863466618197808">
+          <Symbol language="English" value="include"/>
+          <Title language="English" value="liquibase element include"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16863466074147766">
+          <Symbol language="English" value="renameColumn"/>
+          <Title language="English" value="liquibase element renameColumn"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+  </Actions>
+  <Rules lastId="387">
+    <Rule id="348">
+      <ConditionOccurrenceLink link="16863044558500721"/>
+      <ActionOccurrenceLink link="16863430490853949"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863449559356413"/>
+    </Rule>
+    <Rule id="349">
+      <ConditionOccurrenceLink link="16863045764502702"/>
+      <ActionOccurrenceLink link="16863430490853949"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863449559356413"/>
+    </Rule>
+    <Rule id="350">
+      <ConditionOccurrenceLink link="16863046987564886"/>
+      <ActionOccurrenceLink link="16863430490853949"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863449559356413"/>
+    </Rule>
+    <Rule id="351">
+      <ConditionOccurrenceLink link="16863049927637255"/>
+      <ActionOccurrenceLink link="16863430490853949"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863449559356413"/>
+    </Rule>
+    <Rule id="352">
+      <ConditionOccurrenceLink link="16863061031562272"/>
+      <ActionOccurrenceLink link="16863430490853949"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863449559356413"/>
+    </Rule>
+    <Rule id="353">
+      <ConditionOccurrenceLink link="16863054569523559"/>
+      <ActionOccurrenceLink link="16863430490853949"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863449559356413"/>
+    </Rule>
+    <Rule id="354">
+      <ConditionOccurrenceLink link="16863055779156750"/>
+      <ActionOccurrenceLink link="16863430490853949"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863449559356413"/>
+    </Rule>
+    <Rule id="325">
+      <ConditionOccurrenceLink link="16863093546431598"/>
+      <ConditionLink link="15722111209784898" conditionState="true"/>
+      <ActionOccurrenceLink link="16863427516420767"/>
+      <ActionOccurrenceLink link="16863430559663970"/>
+    </Rule>
+    <Rule id="383">
+      <ConditionOccurrenceLink link="16863093546431598"/>
+      <ConditionLink link="15722111209784898" conditionState="false"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863430490853949"/>
+    </Rule>
+    <Rule id="371">
+      <ConditionOccurrenceLink link="16863094017433363"/>
+      <ActionOccurrenceLink link="16863430559663970"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863465781257745"/>
+    </Rule>
+    <Rule id="355">
+      <ConditionOccurrenceLink link="16863094220654541"/>
+      <ActionOccurrenceLink link="16863430490853949"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863449559356413"/>
+    </Rule>
+    <Rule id="356">
+      <ConditionOccurrenceLink link="16863094463275725"/>
+      <ActionOccurrenceLink link="16863430490853949"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863449559356413"/>
+    </Rule>
+    <Rule id="372">
+      <ConditionOccurrenceLink link="16863094676986915"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863430559663970"/>
+      <ActionOccurrenceLink link="16863465882467752"/>
+    </Rule>
+    <Rule id="373">
+      <ConditionOccurrenceLink link="16863094871116918"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863430559663970"/>
+      <ActionOccurrenceLink link="16863466015187759"/>
+    </Rule>
+    <Rule id="359">
+      <ConditionOccurrenceLink link="16863095098176921"/>
+      <ActionOccurrenceLink link="16863430490853949"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863449559356413"/>
+    </Rule>
+    <Rule id="374">
+      <ConditionOccurrenceLink link="16863095199056924"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863430559663970"/>
+      <ActionOccurrenceLink link="16863466074147766"/>
+    </Rule>
+    <Rule id="375">
+      <ConditionOccurrenceLink link="16863095566448138"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863430559663970"/>
+      <ActionOccurrenceLink link="16863466168907773"/>
+    </Rule>
+    <Rule id="384">
+      <ConditionOccurrenceLink link="16863095996909901"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863430559663970"/>
+      <ActionOccurrenceLink link="16863466226927780"/>
+    </Rule>
+    <Rule id="364">
+      <ConditionOccurrenceLink link="16863096087889904"/>
+      <ActionOccurrenceLink link="16863430490853949"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863449559356413"/>
+    </Rule>
+    <Rule id="377">
+      <ConditionOccurrenceLink link="16863097675291370"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863430559663970"/>
+      <ActionOccurrenceLink link="16863466351207787"/>
+    </Rule>
+    <Rule id="378">
+      <ConditionOccurrenceLink link="16863100652105145"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863430559663970"/>
+      <ActionOccurrenceLink link="16863466417307794"/>
+    </Rule>
+    <Rule id="379">
+      <ConditionOccurrenceLink link="16863101582766923"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863430559663970"/>
+      <ActionOccurrenceLink link="16863466475207801"/>
+    </Rule>
+    <Rule id="387">
+      <ConditionOccurrenceLink link="16863102002868271"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863466618197808"/>
+      <ActionOccurrenceLink link="16863430559663970"/>
+    </Rule>
+    <Rule id="369">
+      <ConditionOccurrenceLink link="16863103067589589"/>
+      <ActionOccurrenceLink link="16863430490853949"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863449559356413"/>
+    </Rule>
+    <Rule id="370">
+      <ConditionOccurrenceLink link="16863103414211216"/>
+      <ActionOccurrenceLink link="16863430490853949"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863449559356413"/>
+    </Rule>
+    <Rule id="347">
+      <ConditionOccurrenceLink link="16863044558520723"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863430490853949"/>
+      <ActionOccurrenceLink link="16863449399366407"/>
+    </Rule>
+  </Rules>
+  <Title language="English" value="Analyse Liquibase element based on name"/>
+  <UrlsOut>
+    <Url title="Folder" url="file:///./"/>
+  </UrlsOut>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="const YAML = require('yaml')&lt;br/&gt;const path = require('path')&lt;br/&gt;&lt;br/&gt;function liquibaseElement(element, logger, tillTag, elementNameCallback, tagValueCallback) {&lt;br/&gt;&lt;br/&gt;  let liquibaseElementResult = {}"/>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Epilog" value="    return liquibaseElementResult&lt;br/&gt;}&lt;br/&gt;&lt;br/&gt;module.exports = {&lt;br/&gt;  liquibaseElement: (element, logger, tillTag, elementNameCallback, tagValueCallback) =&gt; {&lt;br/&gt;    return liquibaseElement(element, logger, tillTag, elementNameCallback, tagValueCallback)&lt;br/&gt;  }&lt;br/&gt;}"/>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Trace" value="logger.info(`$$dtName - $$version - $$rule / $$rules - ${JSON.stringify(element)}`)"/>
+</LFET>

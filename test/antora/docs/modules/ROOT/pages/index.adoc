@@ -2,6 +2,14 @@
 
 == Ways of using asciidoctor-liquibase extension
 
-liquibase::example$simpleChangeSet.xml[]
+=== xml based format
 
-liquibase::example$db/db.changelog-master.xml[]
+liquibase::example$xml/simpleChangeSet.xml[]
+
+liquibase::example$xml/db/db.changelog-master.xml[]
+
+liquibase::example$xml/db/db.changelog-master.xml[tillTag=1.X.FINAL]
+
+=== yaml based format
+
+liquibase::example$yaml/common.tests.changelog.yaml[]

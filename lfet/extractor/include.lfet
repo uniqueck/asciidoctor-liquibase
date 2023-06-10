@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LFET version="LF-ET 2.2.1 (230526A)" language="English" saveDate="2023.06.11 at 14:59:20 CEST" saveUser="constantin">
+  <Conditions>
+    <Condition uId="16863469997658590">
+      <Title language="English" value="definition is based on ... format"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="16863486742924066">
+          <Symbol language="English" value="yaml"/>
+          <Title language="English" value="yaml definition"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="currentFile.endsWith('$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863871140979573">
+          <Symbol language="English" value="xml"/>
+          <Title language="English" value="xml definition"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="currentFile.endsWith('$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863486742944068">
+          <Symbol language="English" value="*"/>
+          <Title language="English" value="extractor not supported for other formats"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+    <Condition uId="16863856553036001">
+      <Title language="English" value="yaml based definition - file extension"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="16863856723166062">
+          <Symbol language="English" value="yaml"/>
+          <Title language="English" value="yaml"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="element.include.file.endsWith('.$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863856770056071">
+          <Symbol language="English" value="xml"/>
+          <Title language="English" value="xml"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="element.include.file.endsWith('.$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863856723186064">
+          <Symbol language="English" value="*"/>
+          <Title language="English" value="*"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+    <Condition uId="16863871819219843">
+      <Title language="English" value="xml based definition - file extension"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="16863871819249846">
+          <Symbol language="English" value="yaml"/>
+          <Title language="English" value="yaml"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="element.$.file.endsWith('.$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863871821799850">
+          <Symbol language="English" value="xml"/>
+          <Title language="English" value="xml"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="element.$.file.endsWith('.$$symbol')"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863871821839854">
+          <Symbol language="English" value="*"/>
+          <Title language="English" value="*"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+  </Conditions>
+  <Actions>
+    <Action uId="11443124863976962">
+      <Title language="English" value="extract ..."/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="16863487805934306">
+          <Symbol language="English" value="yaml"/>
+          <Title language="English" value="extract table on yaml definition"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const path = require('path')&lt;br/&gt;const YAML = require('yaml')&lt;br/&gt;const absoluteFile = path.join('/',vfs.dirname(currentFile), element.include.file)&lt;br/&gt;&lt;br/&gt;var includeFileElements = YAML.parseDocument(vfs.read(absoluteFile)).toJSON().databaseChangeLog;&lt;br/&gt;&lt;br/&gt;require('../liquibase-parser.js').parseLiquibaseChangeSet(processModel, absoluteFile, includeFileElements, logger, vfs)&lt;br/&gt;"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16863870940779332">
+          <Symbol language="English" value="xml"/>
+          <Title language="English" value="extract on xml definition"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const path = require('path')&lt;br/&gt;const absoluteFile = path.join('/',vfs.dirname(currentFile), element.$.file)&lt;br/&gt;&lt;br/&gt;const XMLParser = require('xml2js').Parser;&lt;br/&gt;const parser = new XMLParser({preserveChildrenOrder: true, explicitArray: true, explicitRoot: false, explicitChildren: true});&lt;br/&gt;&lt;br/&gt;var includeFileElements = []&lt;br/&gt;parser.parseString(vfs.read(absoluteFile), function(err, result) {&lt;br/&gt;    includeFileElements = result.$$&lt;br/&gt;});&lt;br/&gt;&lt;br/&gt;require('../liquibase-parser.js').parseLiquibaseChangeSet(processModel, absoluteFile, includeFileElements, logger, vfs)"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="11443124877466972">
+      <Title language="English" value="error"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="16864851718648925">
+          <Symbol language="English" value="UDF"/>
+          <Title language="English" value="Format for '${currentFile}' is not supported."/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="logger.error(`$$dtName - $$version - $$rule / $$rules - $$title`)"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16864852526319162">
+          <Symbol language="English" value="UYFE"/>
+          <Title language="English" value="YAML liquibase definition unknown file extension."/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="logger.error(`$$dtName - $$version - $$rule / $$rules - $$title`)"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16864852809879165">
+          <Symbol language="English" value="UXFE"/>
+          <Title language="English" value="XML liquibase defintion unknown file extension."/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="logger.error(`$$dtName - $$version - $$rule / $$rules - $$title`)"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16864853378579407">
+          <Symbol language="English" value="MFNS"/>
+          <Title language="English" value="Mixed liquibase base definitions is not supported."/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="logger.error(`$$dtName - $$version - $$rule / $$rules - $$title`)"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+  </Actions>
+  <Rules lastId="356">
+    <Rule id="344">
+      <ConditionOccurrenceLink link="16863486742924066"/>
+      <ActionOccurrenceLink link="16863487805934306"/>
+      <ConditionOccurrenceLink link="16863856723166062"/>
+    </Rule>
+    <Rule id="352">
+      <ConditionOccurrenceLink link="16863486742924066"/>
+      <ConditionOccurrenceLink link="16863856770056071"/>
+      <ActionOccurrenceLink link="16864853378579407"/>
+    </Rule>
+    <Rule id="353">
+      <ConditionOccurrenceLink link="16863486742924066"/>
+      <ConditionOccurrenceLink link="16863856723186064"/>
+      <ActionOccurrenceLink link="16864852526319162"/>
+    </Rule>
+    <Rule id="354">
+      <ConditionOccurrenceLink link="16863871140979573"/>
+      <ConditionOccurrenceLink link="16863871819249846"/>
+      <ActionOccurrenceLink link="16864853378579407"/>
+    </Rule>
+    <Rule id="349">
+      <ConditionOccurrenceLink link="16863871140979573"/>
+      <ConditionOccurrenceLink link="16863871821799850"/>
+      <ActionOccurrenceLink link="16863870940779332"/>
+    </Rule>
+    <Rule id="355">
+      <ConditionOccurrenceLink link="16863871140979573"/>
+      <ConditionOccurrenceLink link="16863871821839854"/>
+      <ActionOccurrenceLink link="16864852809879165"/>
+    </Rule>
+    <Rule id="356">
+      <ConditionOccurrenceLink link="16863486742944068"/>
+      <ActionOccurrenceLink link="16864851718648925"/>
+    </Rule>
+  </Rules>
+  <Title language="English" value="extract liquibase element include"/>
+  <UrlsOut>
+    <Url title="Folder" url="file:///./"/>
+  </UrlsOut>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="function $$dtname(element, currentFile, processModel, logger, vfs) {"/>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Epilog" value="}&lt;br/&gt;&lt;br/&gt;module.exports = {&lt;br/&gt;  extract: (element, currentFile, processModel, logger, vfs) =&gt; {&lt;br/&gt;    return $$dtname(element, currentFile, processModel, logger, vfs)&lt;br/&gt;  }&lt;br/&gt;}"/>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Trace" value="logger.info(`$$dtName - $$version - $$rule / $$rules - ${currentFile} - ${JSON.stringify(processModel)}`)"/>
+</LFET>

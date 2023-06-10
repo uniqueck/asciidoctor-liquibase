@@ -1,9 +1,12 @@
 lfet.project.ini:
   ide:
-    default: java
-    java:
+    nested: false
+    default: javascript
+    javascript:
       enabled: true
-      extension: js
+
+      baseOfVersion: DT
+      emptyLines: false
 
       src:
         path: ${project.root}../lib/

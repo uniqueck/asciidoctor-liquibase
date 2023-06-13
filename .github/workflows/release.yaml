@@ -26,7 +26,7 @@ jobs:
       - name: Build Package 🛠
         run: npm pack
       - name: Release 🚀
-        run: npm run semantic-release --debug
+        run: npm run release --debug
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

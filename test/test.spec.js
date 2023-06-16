@@ -29,8 +29,38 @@ describe('Conversion', () => {
           const registry = asciidoctor.Extensions.create()
           asciidoctorLiquibase.register(registry)
           const html = asciidoctor.convert(`liquibase::${file}[]`, { extension_registry: registry })
-          console.log(html)
+          expect(html).to.contain(`<pre>'hide the spot
+hide circle
+skinparam tabSize 4
+' avoid problems with angled crows feet
+skinparam linetype ortho
+'entities
+entity person {
+---
+\\t\\t\\tid:int
+}
+'relationships</pre>`)
+
       })
+
+        it('should handle addColumn correct', () => {
+            const file = fixturePath('liquibase', 'addColumn.yaml')
+            const registry = asciidoctor.Extensions.create()
+            asciidoctorLiquibase.register(registry)
+            const html = asciidoctor.convert(`liquibase::${file}[]`, { extension_registry: registry })
+            expect(html).to.contain(`<pre>'hide the spot
+hide circle
+skinparam tabSize 4
+' avoid problems with angled crows feet
+skinparam linetype ortho
+'entities
+entity person {
+---
+\\t\\t\\tid:varchar
+\\t\\t\\tname:varchar
+}
+'relationships</pre>`)
+        })
 
 
     })

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230526A)" language="English" saveDate="2023.06.11 at 13:34:42 CEST" saveUser="constantin">
+<LFET version="LF-ET 2.2.1 (230526A)" language="English" saveDate="2023.06.16 at 18:51:49 CEST" saveUser="constantin">
   <Conditions>
     <Condition uId="16863469997658590">
       <Title language="English" value="definition is based on ... format"/>
@@ -29,7 +29,7 @@
         <ActionOccurrence uId="16863487805934306">
           <Symbol language="English" value="yaml"/>
           <Title language="English" value="extract table on yaml definition"/>
-          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="let tableName = element.addColumn.tableName&lt;br/&gt;let table = processModel.tables.get(tableName)&lt;br/&gt;let columns = element.addColumn.columns&lt;br/&gt;columns.forEach((column) =&gt; {&lt;br/&gt;    let columnName = column.name&lt;br/&gt;    let type = column.type&lt;br/&gt;    table.columns.set(columnName, {type: type, primaryKey: false})&lt;br/&gt;})"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="let tableName = element.addColumn.tableName&lt;br/&gt;let table = processModel.tables.get(tableName)&lt;br/&gt;let columns = element.addColumn.columns&lt;br/&gt;columns.forEach((column) =&gt; {&lt;br/&gt;    let columnName = column.column.name&lt;br/&gt;    let type = column.column.type&lt;br/&gt;    table.columns.set(columnName, {type: type, primaryKey: false})&lt;br/&gt;})"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16863874949031053">
           <Symbol language="English" value="xml"/>

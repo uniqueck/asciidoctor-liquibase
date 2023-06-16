@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230526A)" language="English" saveDate="2023.06.10 at 22:33:14 CEST" saveUser="constantin">
+<LFET version="LF-ET 2.2.1 (230526A)" language="English" saveDate="2023.06.16 at 09:29:40 CEST" saveUser="constantin">
   <Conditions>
     <Condition uId="16863044272660255">
       <Title language="English" value="Liquibase element name is ..."/>
@@ -125,6 +125,11 @@
           <Title language="English" value="liquibase element createProcedure"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
         </ConditionOccurrence>
+        <ConditionOccurrence uId="16868983994031140">
+          <Symbol language="English" value="modifyDataType"/>
+          <Title language="English" value="https://docs.liquibase.com/change-types/modify-data-type.html"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
         <ConditionOccurrence uId="16863044558520723">
           <Symbol language="English" value="*"/>
           <Title language="English" value="unknown element"/>
@@ -230,6 +235,11 @@
           <Title language="English" value="liquibase element include"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
         </ActionOccurrence>
+        <ActionOccurrence uId="16869005635741480">
+          <Symbol language="English" value="modifyDataType"/>
+          <Title language="English" value="https://docs.liquibase.com/change-types/modify-data-type.html"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+        </ActionOccurrence>
         <ActionOccurrence uId="16863466074147766">
           <Symbol language="English" value="renameColumn"/>
           <Title language="English" value="liquibase element renameColumn"/>
@@ -238,7 +248,7 @@
       </ActionOccurrences>
     </Action>
   </Actions>
-  <Rules lastId="387">
+  <Rules lastId="388">
     <Rule id="348">
       <ConditionOccurrenceLink link="16863044558500721"/>
       <ActionOccurrenceLink link="16863430490853949"/>
@@ -388,6 +398,12 @@
       <ActionOccurrenceLink link="16863430490853949"/>
       <ActionOccurrenceLink link="16863427635250773"/>
       <ActionOccurrenceLink link="16863449559356413"/>
+    </Rule>
+    <Rule id="388">
+      <ConditionOccurrenceLink link="16868983994031140"/>
+      <ActionOccurrenceLink link="16863430559663970"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16869005635741480"/>
     </Rule>
     <Rule id="347">
       <ConditionOccurrenceLink link="16863044558520723"/>

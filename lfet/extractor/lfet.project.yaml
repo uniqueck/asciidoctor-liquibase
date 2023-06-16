@@ -1,6 +1,6 @@
-lfet.project.ini:
-  nested: true
+lfet:
+  nestedProjectIni: true
   ide:
-    javascript:
+    JavaScript:
       src:
-        path: ${project.root}../../lib/extractor/
+        path: ${project.root}/../lib/extractor/

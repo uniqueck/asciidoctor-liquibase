@@ -1,6 +1,6 @@
-lfet.project.ini:
+lfet:
+  nestedProjectIni: false
   ide:
-    nested: false
     default: javascript
     javascript:
       enabled: true

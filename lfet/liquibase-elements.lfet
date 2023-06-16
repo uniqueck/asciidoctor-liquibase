@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230526A)" language="English" saveDate="2023.06.16 at 09:29:40 CEST" saveUser="constantin">
+<LFET version="LF-ET 2.2.1 (230526A)" language="English" saveDate="2023.06.16 at 19:02:49 CEST" saveUser="constantin">
   <Conditions>
     <Condition uId="16863044272660255">
       <Title language="English" value="Liquibase element name is ..."/>
@@ -130,6 +130,11 @@
           <Title language="English" value="https://docs.liquibase.com/change-types/modify-data-type.html"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
         </ConditionOccurrence>
+        <ConditionOccurrence uId="16869348832433336">
+          <Symbol language="English" value="update"/>
+          <Title language="English" value="https://docs.liquibase.com/change-types/update.html"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+        </ConditionOccurrence>
         <ConditionOccurrence uId="16863044558520723">
           <Symbol language="English" value="*"/>
           <Title language="English" value="unknown element"/>
@@ -248,7 +253,7 @@
       </ActionOccurrences>
     </Action>
   </Actions>
-  <Rules lastId="388">
+  <Rules lastId="390">
     <Rule id="348">
       <ConditionOccurrenceLink link="16863044558500721"/>
       <ActionOccurrenceLink link="16863430490853949"/>
@@ -405,6 +410,12 @@
       <ActionOccurrenceLink link="16863427635250773"/>
       <ActionOccurrenceLink link="16869005635741480"/>
     </Rule>
+    <Rule id="390">
+      <ConditionOccurrenceLink link="16869348832433336"/>
+      <ActionOccurrenceLink link="16863430490853949"/>
+      <ActionOccurrenceLink link="16863427635250773"/>
+      <ActionOccurrenceLink link="16863449559356413"/>
+    </Rule>
     <Rule id="347">
       <ConditionOccurrenceLink link="16863044558520723"/>
       <ActionOccurrenceLink link="16863427635250773"/>
@@ -412,7 +423,7 @@
       <ActionOccurrenceLink link="16863449399366407"/>
     </Rule>
   </Rules>
-  <Title language="English" value="Analyse Liquibase element based on name"/>
+  <Title language="English" value="Analyze Liquibase element based on name"/>
   <UrlsOut>
     <Url title="Folder" url="file:///./"/>
   </UrlsOut>

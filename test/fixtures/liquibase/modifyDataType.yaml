@@ -1,0 +1,19 @@
+databaseChangeLog:
+- changeSet:
+    id: createTable
+    author: liquibase-docs
+    changes:
+      - createTable:
+          tableName: person
+          columns:
+            - column:
+                name: id
+                type: varchar
+-  changeSet:
+     id:  modifyDataType-example
+     author:  liquibase-docs
+     changes:
+       -  modifyDataType:
+            columnName:  id
+            newDataType:  int
+            tableName:  person

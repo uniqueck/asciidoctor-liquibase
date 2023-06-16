@@ -1,3 +1,22 @@
+# [1.2.0](https://github.com/uniqueck/asciidoctor-liquibase/compare/v1.1.0...v1.2.0) (2023-06-16)
+
+
+### Build
+
+* add keywords and add changelog to node js package ([c5e10b8](https://github.com/uniqueck/asciidoctor-liquibase/commit/c5e10b85f513b959f741f9e6d1e1689bf3d4a01c))
+
+### Docs
+
+* remove duplicated changelog file in adoc format ([3a65933](https://github.com/uniqueck/asciidoctor-liquibase/commit/3a6593328cd20887385fc854148ee97a321e8314))
+
+### Fix
+
+* extract columns of addColumn changeSet type correctly ([161c14a](https://github.com/uniqueck/asciidoctor-liquibase/commit/161c14a552efc0a09d8228c8f9cafdf3353007f2))
+
+### Update
+
+* Ignore changeSet elements of type update ([703e662](https://github.com/uniqueck/asciidoctor-liquibase/commit/703e6627d828dc582000472e2f0197debc68e9c0))
+
 # [1.1.0](https://github.com/uniqueck/asciidoctor-liquibase/compare/v1.0.1...v1.1.0) (2023-06-16)
 
 

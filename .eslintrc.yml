@@ -5,4 +5,7 @@ env:
 extends: standard
 parserOptions:
   ecmaVersion: latest
+ignorePatterns:
+  - "test/antora/.cache/**"
+  - "test/antora/public/**"
 rules: {}

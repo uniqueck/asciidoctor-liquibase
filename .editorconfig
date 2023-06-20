@@ -1,4 +1,13 @@
 root = true
+
 [*.yaml]
+indent_style = space
+indent_size = 2
+
+[test/**/*.spec.js]
+indent_style = space
+indent_size = 2
+
+[test/utils.js]
 indent_style = space
 indent_size = 2

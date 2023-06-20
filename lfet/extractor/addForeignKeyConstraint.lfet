@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230526A)" language="English" saveDate="2023.06.11 at 13:34:23 CEST" saveUser="constantin">
+<LFET version="LF-ET 2.2.1 (230619D)" language="English" saveDate="2023.06.20 at 17:35:17 CEST" saveUser="constantin">
   <Conditions>
     <Condition uId="16863469997658590">
       <Title language="English" value="definition is based on ... format"/>
@@ -29,12 +29,12 @@
         <ActionOccurrence uId="16863487805934306">
           <Symbol language="English" value="yaml"/>
           <Title language="English" value="extract table on yaml definition"/>
-          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="let baseTableName = element.addForeignKeyConstraint.baseTableName&lt;br/&gt;let baseColumnName = element.addForeignKeyConstraint.baseColumnNames&lt;br/&gt;let referencedTableName = element.addForeignKeyConstraint.referencedTableName&lt;br/&gt;let referencedColumnName = element.addForeignKeyConstraint.referencedColumnNames&lt;br/&gt;processModel.tables.get(baseTableName).columns.get(baseColumnName).referencedTable = referencedTableName&lt;br/&gt;processModel.tables.get(baseTableName).columns.get(baseColumnName).referencedColumn = referencedColumnName"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const baseTableName = element.addForeignKeyConstraint.baseTableName&lt;br/&gt;const baseColumnName = element.addForeignKeyConstraint.baseColumnNames&lt;br/&gt;const referencedTableName = element.addForeignKeyConstraint.referencedTableName&lt;br/&gt;const referencedColumnName = element.addForeignKeyConstraint.referencedColumnNames&lt;br/&gt;processModel.tables.get(baseTableName).columns.get(baseColumnName).referencedTable = referencedTableName&lt;br/&gt;processModel.tables.get(baseTableName).columns.get(baseColumnName).referencedColumn = referencedColumnName"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16863874949031053">
           <Symbol language="English" value="xml"/>
           <Title language="English" value="extract on xml definition"/>
-          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="let baseTableName = element.$['baseTableName']&lt;br/&gt;let baseColumnName = element.$['baseColumnNames']&lt;br/&gt;let referencedTableName = element.$['referencedTableName']&lt;br/&gt;let referencedColumnName = element.$['referencedColumnNames']&lt;br/&gt;processModel.tables.get(baseTableName).columns.get(baseColumnName).referencedTable = referencedTableName&lt;br/&gt;processModel.tables.get(baseTableName).columns.get(baseColumnName).referencedColumn = referencedColumnName"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const baseTableName = element.$.baseTableName&lt;br/&gt;const baseColumnName = element.$.baseColumnNames&lt;br/&gt;const referencedTableName = element.$.referencedTableName&lt;br/&gt;const referencedColumnName = element.$.referencedColumnNames&lt;br/&gt;processModel.tables.get(baseTableName).columns.get(baseColumnName).referencedTable = referencedTableName&lt;br/&gt;processModel.tables.get(baseTableName).columns.get(baseColumnName).referencedColumn = referencedColumnName"/>
         </ActionOccurrence>
       </ActionOccurrences>
     </Action>
@@ -61,7 +61,7 @@
   <UrlsOut>
     <Url title="Folder" url="file:///./"/>
   </UrlsOut>
-  <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="function $$dtname(element, currentFile, processModel, logger, vfs) {"/>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="function $$dtname (element, currentFile, processModel, logger, vfs) {"/>
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Epilog" value="}&lt;br/&gt;&lt;br/&gt;module.exports = {&lt;br/&gt;  extract: (element, currentFile, processModel, logger, vfs) =&gt; {&lt;br/&gt;    return $$dtname(element, currentFile, processModel, logger, vfs)&lt;br/&gt;  }&lt;br/&gt;}"/>
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Trace" value="logger.info(`$$dtName - $$version - $$rule / $$rules - ${currentFile} - ${JSON.stringify(processModel)}`)"/>
 </LFET>

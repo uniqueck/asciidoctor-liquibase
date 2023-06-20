@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230526A)" language="English" saveDate="2023.06.11 at 13:32:32 CEST" saveUser="constantin">
+<LFET version="LF-ET 2.2.1 (230619D)" language="English" saveDate="2023.06.20 at 08:27:49 CEST" saveUser="constantin">
   <Conditions>
     <Condition uId="16863469997658590">
       <Title language="English" value="definition is based on ... format"/>
@@ -29,12 +29,12 @@
         <ActionOccurrence uId="16863487805934306">
           <Symbol language="English" value="yaml"/>
           <Title language="English" value="extract table on yaml definition"/>
-          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="let tableName = element.renameColumn.tableName&lt;br/&gt;let oldColumnName = element.renameColumn.oldColumnName&lt;br/&gt;let newColumnName = element.renameColumn.newColumnName&lt;br/&gt;let table = processModel.tables.get(tableName)&lt;br/&gt;let column = table.columns.get(oldColumnName)&lt;br/&gt;table.columns.set(newColumnName, column)&lt;br/&gt;table.columns.delete(oldColumnName)"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const tableName = element.renameColumn.tableName&lt;br/&gt;const oldColumnName = element.renameColumn.oldColumnName&lt;br/&gt;const newColumnName = element.renameColumn.newColumnName&lt;br/&gt;const table = processModel.tables.get(tableName)&lt;br/&gt;const column = table.columns.get(oldColumnName)&lt;br/&gt;table.columns.set(newColumnName, column)&lt;br/&gt;table.columns.delete(oldColumnName)"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16863874949031053">
           <Symbol language="English" value="xml"/>
           <Title language="English" value="extract on xml definition"/>
-          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="let tableName = element.$['tableName']&lt;br/&gt;let oldColumnName = element.$['oldColumnName']&lt;br/&gt;let newColumnName = element.$['newColumnName']&lt;br/&gt;let table = processModel.tables.get(tableName)&lt;br/&gt;let column = table.columns.get(oldColumnName)&lt;br/&gt;table.columns.set(newColumnName, column)&lt;br/&gt;table.columns.delete(oldColumnName)"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const tableName = element.$.tableName&lt;br/&gt;const oldColumnName = element.$.oldColumnName&lt;br/&gt;const newColumnName = element.$.newColumnName&lt;br/&gt;const table = processModel.tables.get(tableName)&lt;br/&gt;const column = table.columns.get(oldColumnName)&lt;br/&gt;table.columns.set(newColumnName, column)&lt;br/&gt;table.columns.delete(oldColumnName)"/>
         </ActionOccurrence>
       </ActionOccurrences>
     </Action>
@@ -61,7 +61,7 @@
   <UrlsOut>
     <Url title="Folder" url="file:///./"/>
   </UrlsOut>
-  <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="function $$dtname(element, currentFile, processModel, logger, vfs) {"/>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="function $$dtname (element, currentFile, processModel, logger, vfs) {"/>
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Epilog" value="}&lt;br/&gt;&lt;br/&gt;module.exports = {&lt;br/&gt;  extract: (element, currentFile, processModel, logger, vfs) =&gt; {&lt;br/&gt;    return $$dtname(element, currentFile, processModel, logger, vfs)&lt;br/&gt;  }&lt;br/&gt;}"/>
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Trace" value="logger.info(`$$dtName - $$version - $$rule / $$rules - ${currentFile} - ${JSON.stringify(processModel)}`)"/>
 </LFET>

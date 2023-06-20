@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230526A)" language="English" saveDate="2023.06.16 at 19:02:49 CEST" saveUser="constantin">
+<LFET version="LF-ET 2.2.1 (230620A)" language="English" saveDate="2023.06.21 at 00:10:48 CEST" saveUser="constantin">
   <Conditions>
     <Condition uId="16863044272660255">
       <Title language="English" value="Liquibase element name is ..."/>
@@ -427,7 +427,7 @@
   <UrlsOut>
     <Url title="Folder" url="file:///./"/>
   </UrlsOut>
-  <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="const YAML = require('yaml')&lt;br/&gt;const path = require('path')&lt;br/&gt;&lt;br/&gt;function liquibaseElement(element, logger, tillTag, elementNameCallback, tagValueCallback) {&lt;br/&gt;&lt;br/&gt;  let liquibaseElementResult = {}"/>
-  <SourceCode codeLanguage="JavaScript" sourceCodeType="Epilog" value="    return liquibaseElementResult&lt;br/&gt;}&lt;br/&gt;&lt;br/&gt;module.exports = {&lt;br/&gt;  liquibaseElement: (element, logger, tillTag, elementNameCallback, tagValueCallback) =&gt; {&lt;br/&gt;    return liquibaseElement(element, logger, tillTag, elementNameCallback, tagValueCallback)&lt;br/&gt;  }&lt;br/&gt;}"/>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="function liquibaseElement (element, logger, tillTag, elementNameCallback, tagValueCallback) {&lt;br/&gt;  const liquibaseElementResult = {}"/>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Epilog" value="  //&lt;br/&gt;  return liquibaseElementResult&lt;br/&gt;}&lt;br/&gt;&lt;br/&gt;module.exports = {&lt;br/&gt;  liquibaseElement: (element, logger, tillTag, elementNameCallback, tagValueCallback) =&gt; {&lt;br/&gt;    return liquibaseElement(element, logger, tillTag, elementNameCallback, tagValueCallback)&lt;br/&gt;  }&lt;br/&gt;}"/>
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Trace" value="logger.info(`$$dtName - $$version - $$rule / $$rules - ${JSON.stringify(element)}`)"/>
 </LFET>

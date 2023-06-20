@@ -47,6 +47,7 @@
     "test:antora": "mocha test/antora/**.spec.js",
     "test:node": "mocha test/**.spec.js",
     "lint": "eslint './lib/**/*.js' './test/**/*.js'",
+    "lint:fix": "eslint './lib/**/*.js' './test/**/*.js' --fix",
     "prepack": "npm t",
     "pretest": "npm run lint",
     "lfet:GenSrc": "exec java -classpath \"/opt/lfet/lib/*\" lohrfink.lfet.Application -gs \"$INIT_CWD/lfet/\" -rec -fnp \"*.lfet\" -sku -src \"JavaScript\""

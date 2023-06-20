@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230526A)" language="English" saveDate="2023.06.11 at 13:33:06 CEST" saveUser="constantin">
+<LFET version="LF-ET 2.2.1 (230620A)" language="English" saveDate="2023.06.20 at 23:26:37 CEST" saveUser="constantin">
   <Conditions>
     <Condition uId="16863469997658590">
       <Title language="English" value="definition is based on ... format"/>
@@ -29,12 +29,12 @@
         <ActionOccurrence uId="16863487805934306">
           <Symbol language="English" value="yaml"/>
           <Title language="English" value="extract on yaml definition"/>
-          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="let tableName = element.createTable.tableName&lt;br/&gt;processModel.tables.set(tableName, {columns: new Map()})&lt;br/&gt;for (let columnIndex = 0; columnIndex &lt; element.createTable.columns.length; columnIndex++) {&lt;br/&gt;    let column = element.createTable.columns[columnIndex].column&lt;br/&gt;    let constraints = column.constraints&lt;br/&gt;    let primaryKey = constraints !== undefined ? constraints.primaryKey : false&lt;br/&gt;    processModel.tables.get(tableName).columns.set(column.name, {type: column.type, primaryKey: primaryKey})&lt;br/&gt;}"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const tableName = element.createTable.tableName&lt;br/&gt;processModel.tables.set(tableName, { columns: new Map() })&lt;br/&gt;for (let columnIndex = 0; columnIndex &lt; element.createTable.columns.length; columnIndex++) {&lt;br/&gt;  const column = element.createTable.columns[columnIndex].column&lt;br/&gt;  const constraints = column.constraints&lt;br/&gt;  const primaryKey = constraints !== undefined ? constraints.primaryKey : false&lt;br/&gt;  processModel.tables.get(tableName).columns.set(column.name, { type: column.type, primaryKey })&lt;br/&gt;}"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16863870064498619">
           <Symbol language="English" value="xml"/>
           <Title language="English" value="extract on xml definition"/>
-          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="let tableName = element.$['tableName']&lt;br/&gt;processModel.tables.set(tableName, {columns: new Map()})&lt;br/&gt;for (let columnIndex = 0; columnIndex &lt; element.$$.length; columnIndex++) {&lt;br/&gt;    let column = element.$$[columnIndex]&lt;br/&gt;    let constraints = column.constraints&lt;br/&gt;    let primaryKey = constraints !== undefined ? constraints[0].$['primaryKey'] : false&lt;br/&gt;    processModel.tables.get(tableName).columns.set(column.$['name'], {type: column.$['type'], primaryKey: primaryKey})&lt;br/&gt;}"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const tableName = element.$.tableName&lt;br/&gt;processModel.tables.set(tableName, { columns: new Map() })&lt;br/&gt;for (let columnIndex = 0; columnIndex &lt; element.$$.length; columnIndex++) {&lt;br/&gt;  const column = element.$$[columnIndex]&lt;br/&gt;  const constraints = column.constraints&lt;br/&gt;  const primaryKey = constraints !== undefined ? constraints[0].$.primaryKey : false&lt;br/&gt;  processModel.tables.get(tableName).columns.set(column.$.name, { type: column.$.type, primaryKey })&lt;br/&gt;}"/>
         </ActionOccurrence>
       </ActionOccurrences>
     </Action>
@@ -61,7 +61,7 @@
   <UrlsOut>
     <Url title="Folder" url="file:///./"/>
   </UrlsOut>
-  <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="function $$dtname(element, currentFile, processModel, logger, vfs) {"/>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="function $$dtname (element, currentFile, processModel, logger, vfs) {"/>
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Epilog" value="}&lt;br/&gt;&lt;br/&gt;module.exports = {&lt;br/&gt;  extract: (element, currentFile, processModel, logger, vfs) =&gt; {&lt;br/&gt;    return $$dtname(element, currentFile, processModel, logger, vfs)&lt;br/&gt;  }&lt;br/&gt;}"/>
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Trace" value="logger.info(`$$dtName - $$version - $$rule / $$rules - ${currentFile} - ${JSON.stringify(processModel)}`)"/>
 </LFET>

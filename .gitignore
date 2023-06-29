@@ -3,3 +3,8 @@ node_modules/
 test/antora/.cache/
 test/antora/public/
 *.tgz
+
+*.log.*.console.txt
+*.log.*.ti.gtd.txt
+*.log.*.check.txt
+

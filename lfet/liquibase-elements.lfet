@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230620A)" language="English" saveDate="2023.06.21 at 00:10:48 CEST" saveUser="constantin">
+<LFET version="LF-ET 2.2.1 (230620A)" language="English" saveDate="2023.07.09 at 13:41:29 CEST" saveUser="constantin">
   <Conditions>
     <Condition uId="16863044272660255">
       <Title language="English" value="Liquibase element name is ..."/>
@@ -9,141 +9,182 @@
           <Symbol language="English" value="addDefaultValue"/>
           <Title language="English" value="liquibase element addDefaultValue"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863045764502702">
           <Symbol language="English" value="loadData"/>
           <Title language="English" value="liquibase element loadData"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863046987564886">
           <Symbol language="English" value="insert"/>
           <Title language="English" value="liquibase element insert"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863049927637255">
           <Symbol language="English" value="sql"/>
           <Title language="English" value="liquibase element sql"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863061031562272">
           <Symbol language="English" value="sqlFile"/>
           <Title language="English" value="liquibase element sqlFile"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863054569523559">
           <Symbol language="English" value="preConditions"/>
           <Title language="English" value="https://docs.liquibase.com/concepts/changelogs/preconditions.html"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863055779156750">
           <Symbol language="English" value="property"/>
           <Title language="English" value="liquibase element property"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863093546431598">
           <Symbol language="English" value="tagDatabase"/>
           <Title language="English" value="liquibase element tagDatabase"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}' with tag '${*GTD.Tag.Tag}'"/>
+          <TestValue group="*ti.gtd.Cucumber" type="tcpre" value="Row; Tag; Tags"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863094017433363">
           <Symbol language="English" value="addForeignKeyConstraint"/>
           <Title language="English" value="liquibase element addForeignKeyConstraint"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863094220654541">
           <Symbol language="English" value="addUniqueConstraint"/>
           <Title language="English" value="liquibase element addUniqueConstraint"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863094463275725">
           <Symbol language="English" value="rollback"/>
           <Title language="English" value="liquibase element rollback"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863094676986915">
           <Symbol language="English" value="dropColumn"/>
           <Title language="English" value="liquibase element dropColumn"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863094871116918">
           <Symbol language="English" value="addColumn"/>
           <Title language="English" value="liquibase element addColumn"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863095098176921">
           <Symbol language="English" value="comment"/>
           <Title language="English" value="liquibase element comment"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863095199056924">
           <Symbol language="English" value="renameColumn"/>
           <Title language="English" value="liquibase element renameColumn"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863095566448138">
           <Symbol language="English" value="createIndex"/>
           <Title language="English" value="liquibase element createIndex"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863095996909901">
           <Symbol language="English" value="changeSet"/>
           <Title language="English" value="https://docs.liquibase.com/concepts/changelogs/changeset.html"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863096087889904">
           <Symbol language="English" value="dropSequence"/>
           <Title language="English" value="liquibase element dropSequence"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863097675291370">
           <Symbol language="English" value="createTable"/>
           <Title language="English" value="liquibase element createTable"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863100652105145">
           <Symbol language="English" value="addPrimaryKey"/>
           <Title language="English" value="liquibase element addPrimaryKey"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863101582766923">
           <Symbol language="English" value="dropTable"/>
           <Title language="English" value="liquibase element dropTable"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863102002868271">
           <Symbol language="English" value="include"/>
           <Title language="English" value="liquibase element include"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863103067589589">
           <Symbol language="English" value="createSequence"/>
           <Title language="English" value="liquibase element createSequence"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863103414211216">
           <Symbol language="English" value="createProcedure"/>
           <Title language="English" value="liquibase element createProcedure"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16868983994031140">
           <Symbol language="English" value="modifyDataType"/>
           <Title language="English" value="https://docs.liquibase.com/change-types/modify-data-type.html"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16869348832433336">
           <Symbol language="English" value="update"/>
           <Title language="English" value="https://docs.liquibase.com/change-types/update.html"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863044558520723">
           <Symbol language="English" value="*"/>
           <Title language="English" value="unknown element"/>
+          <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is 'hugo'"/>
         </ConditionOccurrence>
       </ConditionOccurrences>
+      <TestValue group="*ti.gtd.Cucumber" type="tspre" value="Row, Format, Formats"/>
     </Condition>
     <Condition uId="15722111209784898">
       <Title language="English" value="tag = tillTag"/>
-      <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="tillTag === tagValueCallback(element)"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="16873293135369970">
+          <Symbol language="English" value="Y"/>
+          <Title language="English" value="Yes"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="tillTag === tagValueCallback(element)"/>
+          <TestValue group="*ti.gtd.Cucumber" type="tsi" value="Table; TillTags; Tags; TillTagDefined = 'yes'&lt;br/&gt;Row; TillTag; TillTags; Tag = Tag.Tag"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16873293137669972">
+          <Symbol language="English" value="N"/>
+          <Title language="English" value="No"/>
+          <TestValue group="*ti.gtd.Cucumber" type="tsi" value="Row; TillTag; Tags; Tag &lt;&gt; Tag.Tag"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
     </Condition>
   </Conditions>
   <Actions>
@@ -154,11 +195,13 @@
           <Symbol language="English" value="NOT_SUPPORTED"/>
           <Title language="English" value="not supported element"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="logger.warn(`Unsupported liquibase element '${JSON.stringify(element)}' detected`)"/>
+          <TestValue group="Cucumber" type="tse" value="Check that not supported message is logged"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16863449559356413">
           <Symbol language="English" value="IGNORE"/>
           <Title language="English" value="ignored element"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="logger.info(`Liquibase element '${JSON.stringify(element)}' ignored`)"/>
+          <TestValue group="Cucumber" type="tse" value="Check that ignore message is logged"/>
         </ActionOccurrence>
       </ActionOccurrences>
     </Action>
@@ -169,6 +212,7 @@
           <Symbol language="English" value="true"/>
           <Title language="English" value="element should ignored"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.ignore = $$symbol"/>
+          <TestValue group="Cucumber" type="tse" value="element should ignored from processing"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16863430559663970">
           <Symbol language="English" value="false"/>
@@ -184,11 +228,13 @@
           <Symbol language="English" value="true"/>
           <Title language="English" value="parsing is finished"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.finshedProcessing = $$symbol"/>
+          <TestValue group="Cucumber" type="tse" value="processing is finished"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16863427635250773">
           <Symbol language="English" value="false"/>
           <Title language="English" value="parsing is not yet done"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.finshedProcessing = $$symbol"/>
+          <TestValue group="Cucumber" type="tse" value="processing is not finished"/>
         </ActionOccurrence>
       </ActionOccurrences>
     </Action>
@@ -199,114 +245,224 @@
           <Symbol language="English" value="addColumn"/>
           <Title language="English" value="liquibase element addColumn"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16888961650828004">
+          <Symbol language="English" value="addDefaultValue"/>
+          <Title language="English" value="liquibase element addDefaultValue"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16863465781257745">
           <Symbol language="English" value="addForeignKeyConstraint"/>
           <Title language="English" value="liquibase element addForeignKeyConstraint"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16863466417307794">
           <Symbol language="English" value="addPrimaryKey"/>
           <Title language="English" value="liquibase element addPrimaryKey"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16888962043468061">
+          <Symbol language="English" value="addUniqueConstraint"/>
+          <Title language="English" value="liquibase element addUniqueConstraint"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16863466226927780">
           <Symbol language="English" value="changeSet"/>
           <Title language="English" value="liquibase element changeSet"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16888962100788075">
+          <Symbol language="English" value="comment"/>
+          <Title language="English" value="liquibase element comment"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16863466168907773">
           <Symbol language="English" value="createIndex"/>
           <Title language="English" value="liquibase element createIndex"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16888962241388096">
+          <Symbol language="English" value="createProcedure"/>
+          <Title language="English" value="liquibase element createProcedure"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16888962220278089">
+          <Symbol language="English" value="createSequence"/>
+          <Title language="English" value="liquibase element createSequence"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16863466351207787">
           <Symbol language="English" value="createTable"/>
           <Title language="English" value="liquibase element createTable"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16863465882467752">
           <Symbol language="English" value="dropColumn"/>
           <Title language="English" value="liquibase element dropColumn"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16888962161258082">
+          <Symbol language="English" value="dropSequence"/>
+          <Title language="English" value="liquibase element dropSequence"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16863466475207801">
           <Symbol language="English" value="dropTable"/>
           <Title language="English" value="liquibase element dropTable"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16863466618197808">
           <Symbol language="English" value="include"/>
           <Title language="English" value="liquibase element include"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16888961705028018">
+          <Symbol language="English" value="insert"/>
+          <Title language="English" value="liquibase element insert"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16888961680418011">
+          <Symbol language="English" value="loadData"/>
+          <Title language="English" value="liquibase element loadData"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16869005635741480">
           <Symbol language="English" value="modifyDataType"/>
           <Title language="English" value="https://docs.liquibase.com/change-types/modify-data-type.html"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16888961858158039">
+          <Symbol language="English" value="preConditions"/>
+          <Title language="English" value="https://docs.liquibase.com/concepts/changelogs/preconditions.html"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16888961880798046">
+          <Symbol language="English" value="property"/>
+          <Title language="English" value="liquibase element property"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16863466074147766">
           <Symbol language="English" value="renameColumn"/>
           <Title language="English" value="liquibase element renameColumn"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16888962067798068">
+          <Symbol language="English" value="rollback"/>
+          <Title language="English" value="liquibase element rollback"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16888961797058025">
+          <Symbol language="English" value="sql"/>
+          <Title language="English" value="liquibase element sql"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16888961834058032">
+          <Symbol language="English" value="sqlFile"/>
+          <Title language="English" value="liquibase element sqlFile"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16888961919448053">
+          <Symbol language="English" value="tagDatabase"/>
+          <Title language="English" value="liquibase element tagDatabase"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16888962318108103">
+          <Symbol language="English" value="update"/>
+          <Title language="English" value="https://docs.liquibase.com/change-types/update.html"/>
+          <TestValue group="Cucumber" type="tse" value="element name is '${*LFET.Symbol}'"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.elementName = '$$symbol'"/>
         </ActionOccurrence>
       </ActionOccurrences>
     </Action>
   </Actions>
-  <Rules lastId="390">
-    <Rule id="348">
+  <Rules lastId="408">
+    <Rule id="393">
       <ConditionOccurrenceLink link="16863044558500721"/>
       <ActionOccurrenceLink link="16863430490853949"/>
       <ActionOccurrenceLink link="16863427635250773"/>
       <ActionOccurrenceLink link="16863449559356413"/>
+      <ActionOccurrenceLink link="16888961650828004"/>
     </Rule>
-    <Rule id="349">
+    <Rule id="394">
       <ConditionOccurrenceLink link="16863045764502702"/>
       <ActionOccurrenceLink link="16863430490853949"/>
       <ActionOccurrenceLink link="16863427635250773"/>
       <ActionOccurrenceLink link="16863449559356413"/>
+      <ActionOccurrenceLink link="16888961680418011"/>
     </Rule>
-    <Rule id="350">
+    <Rule id="395">
       <ConditionOccurrenceLink link="16863046987564886"/>
       <ActionOccurrenceLink link="16863430490853949"/>
       <ActionOccurrenceLink link="16863427635250773"/>
       <ActionOccurrenceLink link="16863449559356413"/>
+      <ActionOccurrenceLink link="16888961705028018"/>
     </Rule>
-    <Rule id="351">
+    <Rule id="396">
       <ConditionOccurrenceLink link="16863049927637255"/>
       <ActionOccurrenceLink link="16863430490853949"/>
       <ActionOccurrenceLink link="16863427635250773"/>
       <ActionOccurrenceLink link="16863449559356413"/>
+      <ActionOccurrenceLink link="16888961797058025"/>
     </Rule>
-    <Rule id="352">
+    <Rule id="397">
       <ConditionOccurrenceLink link="16863061031562272"/>
       <ActionOccurrenceLink link="16863430490853949"/>
       <ActionOccurrenceLink link="16863427635250773"/>
       <ActionOccurrenceLink link="16863449559356413"/>
+      <ActionOccurrenceLink link="16888961834058032"/>
     </Rule>
-    <Rule id="353">
+    <Rule id="398">
       <ConditionOccurrenceLink link="16863054569523559"/>
       <ActionOccurrenceLink link="16863430490853949"/>
       <ActionOccurrenceLink link="16863427635250773"/>
       <ActionOccurrenceLink link="16863449559356413"/>
+      <ActionOccurrenceLink link="16888961858158039"/>
     </Rule>
-    <Rule id="354">
+    <Rule id="399">
       <ConditionOccurrenceLink link="16863055779156750"/>
       <ActionOccurrenceLink link="16863430490853949"/>
       <ActionOccurrenceLink link="16863427635250773"/>
       <ActionOccurrenceLink link="16863449559356413"/>
+      <ActionOccurrenceLink link="16888961880798046"/>
     </Rule>
-    <Rule id="325">
+    <Rule id="400">
       <ConditionOccurrenceLink link="16863093546431598"/>
-      <ConditionLink link="15722111209784898" conditionState="true"/>
       <ActionOccurrenceLink link="16863427516420767"/>
       <ActionOccurrenceLink link="16863430559663970"/>
+      <ConditionOccurrenceLink link="16873293135369970"/>
+      <ActionOccurrenceLink link="16888961919448053"/>
     </Rule>
-    <Rule id="383">
+    <Rule id="401">
       <ConditionOccurrenceLink link="16863093546431598"/>
-      <ConditionLink link="15722111209784898" conditionState="false"/>
       <ActionOccurrenceLink link="16863427635250773"/>
       <ActionOccurrenceLink link="16863430490853949"/>
+      <ConditionOccurrenceLink link="16873293137669972"/>
+      <ActionOccurrenceLink link="16888961919448053"/>
     </Rule>
     <Rule id="371">
       <ConditionOccurrenceLink link="16863094017433363"/>
@@ -314,17 +470,19 @@
       <ActionOccurrenceLink link="16863427635250773"/>
       <ActionOccurrenceLink link="16863465781257745"/>
     </Rule>
-    <Rule id="355">
+    <Rule id="402">
       <ConditionOccurrenceLink link="16863094220654541"/>
       <ActionOccurrenceLink link="16863430490853949"/>
       <ActionOccurrenceLink link="16863427635250773"/>
       <ActionOccurrenceLink link="16863449559356413"/>
+      <ActionOccurrenceLink link="16888962043468061"/>
     </Rule>
-    <Rule id="356">
+    <Rule id="403">
       <ConditionOccurrenceLink link="16863094463275725"/>
       <ActionOccurrenceLink link="16863430490853949"/>
       <ActionOccurrenceLink link="16863427635250773"/>
       <ActionOccurrenceLink link="16863449559356413"/>
+      <ActionOccurrenceLink link="16888962067798068"/>
     </Rule>
     <Rule id="372">
       <ConditionOccurrenceLink link="16863094676986915"/>
@@ -338,11 +496,12 @@
       <ActionOccurrenceLink link="16863430559663970"/>
       <ActionOccurrenceLink link="16863466015187759"/>
     </Rule>
-    <Rule id="359">
+    <Rule id="404">
       <ConditionOccurrenceLink link="16863095098176921"/>
       <ActionOccurrenceLink link="16863430490853949"/>
       <ActionOccurrenceLink link="16863427635250773"/>
       <ActionOccurrenceLink link="16863449559356413"/>
+      <ActionOccurrenceLink link="16888962100788075"/>
     </Rule>
     <Rule id="374">
       <ConditionOccurrenceLink link="16863095199056924"/>
@@ -362,11 +521,12 @@
       <ActionOccurrenceLink link="16863430559663970"/>
       <ActionOccurrenceLink link="16863466226927780"/>
     </Rule>
-    <Rule id="364">
+    <Rule id="405">
       <ConditionOccurrenceLink link="16863096087889904"/>
       <ActionOccurrenceLink link="16863430490853949"/>
       <ActionOccurrenceLink link="16863427635250773"/>
       <ActionOccurrenceLink link="16863449559356413"/>
+      <ActionOccurrenceLink link="16888962161258082"/>
     </Rule>
     <Rule id="377">
       <ConditionOccurrenceLink link="16863097675291370"/>
@@ -392,17 +552,19 @@
       <ActionOccurrenceLink link="16863466618197808"/>
       <ActionOccurrenceLink link="16863430559663970"/>
     </Rule>
-    <Rule id="369">
+    <Rule id="406">
       <ConditionOccurrenceLink link="16863103067589589"/>
       <ActionOccurrenceLink link="16863430490853949"/>
       <ActionOccurrenceLink link="16863427635250773"/>
       <ActionOccurrenceLink link="16863449559356413"/>
+      <ActionOccurrenceLink link="16888962220278089"/>
     </Rule>
-    <Rule id="370">
+    <Rule id="407">
       <ConditionOccurrenceLink link="16863103414211216"/>
       <ActionOccurrenceLink link="16863430490853949"/>
       <ActionOccurrenceLink link="16863427635250773"/>
       <ActionOccurrenceLink link="16863449559356413"/>
+      <ActionOccurrenceLink link="16888962241388096"/>
     </Rule>
     <Rule id="388">
       <ConditionOccurrenceLink link="16868983994031140"/>
@@ -410,11 +572,12 @@
       <ActionOccurrenceLink link="16863427635250773"/>
       <ActionOccurrenceLink link="16869005635741480"/>
     </Rule>
-    <Rule id="390">
+    <Rule id="408">
       <ConditionOccurrenceLink link="16869348832433336"/>
       <ActionOccurrenceLink link="16863430490853949"/>
       <ActionOccurrenceLink link="16863427635250773"/>
       <ActionOccurrenceLink link="16863449559356413"/>
+      <ActionOccurrenceLink link="16888962318108103"/>
     </Rule>
     <Rule id="347">
       <ConditionOccurrenceLink link="16863044558520723"/>
@@ -426,8 +589,20 @@
   <Title language="English" value="Analyze Liquibase element based on name"/>
   <UrlsOut>
     <Url title="Folder" url="file:///./"/>
+    <Url title="*GTD.Formats" url="file:///../test/features/liquibase-elements.gtd.txt"/>
   </UrlsOut>
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="function liquibaseElement (element, logger, tillTag, elementNameCallback, tagValueCallback) {&lt;br/&gt;  const liquibaseElementResult = {}"/>
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Epilog" value="  //&lt;br/&gt;  return liquibaseElementResult&lt;br/&gt;}&lt;br/&gt;&lt;br/&gt;module.exports = {&lt;br/&gt;  liquibaseElement: (element, logger, tillTag, elementNameCallback, tagValueCallback) =&gt; {&lt;br/&gt;    return liquibaseElement(element, logger, tillTag, elementNameCallback, tagValueCallback)&lt;br/&gt;  }&lt;br/&gt;}"/>
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Trace" value="logger.info(`$$dtName - $$version - $$rule / $$rules - ${JSON.stringify(element)}`)"/>
+  <TestValueGroups selectedGroup="Cucumber">
+    <TestValueGroup name="*ti.check.Cucumber"/>
+    <TestValueGroup name="*ti.gtd.Cucumber"/>
+    <TestValueGroup name="*ti.att.Cucumber"/>
+    <TestValueGroup name="Cucumber" tvgTiAtt="*ti.att.Cucumber" tvgTiCheck="*ti.check.Cucumber" tvgTiGTD="*ti.gtd.Cucumber">
+      <Config name="Config" tags="cucumber" parms="-Group 'Cucumber' -NonExecutableRules '50' -RecommendedTestCases -OutGherkin 'liquibase-elements.testcases.feature'"/>
+    </TestValueGroup>
+  </TestValueGroups>
+  <TestValue group="*ti.att.Cucumber" type="tcpre" value="# language: en"/>
+  <TestValue group="Cucumber" type="isi" value="liquibase-elements is called ${*GTD.TillTag.TillTag_Suffix_Keyword}"/>
+  <TestValue group="*ti.gtd.Cucumber" type="tcpre" value="Row, TillTag, Tags"/>
 </LFET>

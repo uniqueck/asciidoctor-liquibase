@@ -2,7 +2,7 @@ runtime:
   cache_dir: ./.cache/antora
   fetch: true
   log:
-    level: warn
+    level: info
 
 site:
   title: Antora x Liquibase Changesets
@@ -13,6 +13,9 @@ content:
     - url: ./../..
       branches: HEAD
       start_path: test/antora/docs
+    - url: https://github.com/uniqueck/asciidoctor-liquibase-test.git
+      branches: main
+      start_path: docs
 
 asciidoc:
   attributes:

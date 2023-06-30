@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230620A)" language="English" saveDate="2023.06.21 at 00:20:57 CEST" saveUser="constantin">
+<LFET version="LF-ET 2.2.1 (230620A)" language="English" saveDate="2023.07.05 at 18:16:21 CEST" saveUser="constantin">
   <Conditions>
     <Condition uId="16863469997658590">
       <Title language="English" value="definition is based on ... format"/>
@@ -67,12 +67,12 @@
         <ActionOccurrence uId="16863487805934306">
           <Symbol language="English" value="yaml"/>
           <Title language="English" value="extract table on yaml definition"/>
-          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const path = require('path')&lt;br/&gt;const YAML = require('yaml')&lt;br/&gt;const absoluteFile = path.join('/', vfs.dirname(currentFile), element.include.file)&lt;br/&gt;const includeFileElements = YAML.parseDocument(vfs.read(absoluteFile)).toJSON().databaseChangeLog&lt;br/&gt;require('../liquibase-parser.js').parseLiquibaseChangeSet(processModel, absoluteFile, includeFileElements, logger, vfs)&lt;br/&gt;"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const YAML = require('yaml')&lt;br/&gt;const newChangeLogFile = vfs.createRelativeResourceId(currentFile, element.include.file)&lt;br/&gt;const includeFileElements = YAML.parseDocument(vfs.read(newChangeLogFile)).toJSON().databaseChangeLog&lt;br/&gt;require('../liquibase-parser.js').parseLiquibaseChangeSet(processModel, newChangeLogFile, includeFileElements, logger, vfs)&lt;br/&gt;"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16863870940779332">
           <Symbol language="English" value="xml"/>
           <Title language="English" value="extract on xml definition"/>
-          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const path = require('path')&lt;br/&gt;const absoluteFile = path.join('/', vfs.dirname(currentFile), element.$.file)&lt;br/&gt;const XMLParser = require('xml2js').Parser&lt;br/&gt;const parser = new XMLParser({ preserveChildrenOrder: true, explicitArray: true, explicitRoot: false, explicitChildren: true })&lt;br/&gt;let includeFileElements = []&lt;br/&gt;parser.parseString(vfs.read(absoluteFile), function (err, result) {&lt;br/&gt;  if (err) {&lt;br/&gt;    includeFileElements = []&lt;br/&gt;  } else {&lt;br/&gt;    includeFileElements = result.$$&lt;br/&gt;  }&lt;br/&gt;})&lt;br/&gt;require('../liquibase-parser.js').parseLiquibaseChangeSet(processModel, absoluteFile, includeFileElements, logger, vfs)"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const newChangeLogFile = vfs.createRelativeResourceId(currentFile, element.$.file)&lt;br/&gt;const XMLParser = require('xml2js').Parser&lt;br/&gt;const parser = new XMLParser({ preserveChildrenOrder: true, explicitArray: true, explicitRoot: false, explicitChildren: true })&lt;br/&gt;let includeFileElements = []&lt;br/&gt;parser.parseString(vfs.read(newChangeLogFile), function (err, result) {&lt;br/&gt;  if (err) {&lt;br/&gt;    includeFileElements = []&lt;br/&gt;  } else {&lt;br/&gt;    includeFileElements = result.$$&lt;br/&gt;  }&lt;br/&gt;})&lt;br/&gt;require('../liquibase-parser.js').parseLiquibaseChangeSet(processModel, newChangeLogFile, includeFileElements, logger, vfs)"/>
         </ActionOccurrence>
       </ActionOccurrences>
     </Action>

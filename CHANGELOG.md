@@ -1,3 +1,15 @@
+## [1.2.1](https://github.com/uniqueck/asciidoctor-liquibase/compare/v1.2.0...v1.2.1) (2023-07-05)
+
+
+### Chore
+
+* Fix eslint configuration and script ([2929965](https://github.com/uniqueck/asciidoctor-liquibase/commit/292996506f8233aca747224005aa66700d636008))
+* Fix lint errors & warnings ([76677f8](https://github.com/uniqueck/asciidoctor-liquibase/commit/76677f8bb22ed80aaf39efb335ff5f1e29235e80))
+
+### Fix
+
+* read relative files via antora virtual file system ([515902d](https://github.com/uniqueck/asciidoctor-liquibase/commit/515902d264995302aa5f79521f06b4ee5780a6d1))
+
 # [1.2.0](https://github.com/uniqueck/asciidoctor-liquibase/compare/v1.1.0...v1.2.0) (2023-06-16)
 
 

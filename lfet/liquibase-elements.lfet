@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230620A)" language="English" saveDate="2023.07.09 at 13:41:29 CEST" saveUser="constantin">
+<LFET version="LF-ET 2.2.1 (230819A)" language="English" saveDate="2023.08.19 at 16:58:20 CEST" saveUser="constantin">
   <Conditions>
     <Condition uId="16863044272660255">
       <Title language="English" value="Liquibase element name is ..."/>
@@ -52,7 +52,6 @@
           <Title language="English" value="liquibase element tagDatabase"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementNameCallback(element, '$$symbol')"/>
           <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is '${*LFET.Symbol}' with tag '${*GTD.Tag.Tag}'"/>
-          <TestValue group="*ti.gtd.Cucumber" type="tcpre" value="Row; Tag; Tags"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863094017433363">
           <Symbol language="English" value="addForeignKeyConstraint"/>
@@ -168,7 +167,7 @@
           <TestValue group="Cucumber" type="tcpre" value="${*GTD.Format.Format} tag value callback function is provided&lt;br/&gt;define ${*GTD.Format.Format} element name callback function&lt;br/&gt;${*GTD.Format.Format} based liquibase element name is 'hugo'"/>
         </ConditionOccurrence>
       </ConditionOccurrences>
-      <TestValue group="*ti.gtd.Cucumber" type="tspre" value="Row, Format, Formats"/>
+      <TestValue group="*ti.gtd.Cucumber" type="tspre" value="Row, Format, Formats, Supported = true"/>
     </Condition>
     <Condition uId="15722111209784898">
       <Title language="English" value="tag = tillTag"/>
@@ -177,12 +176,12 @@
           <Symbol language="English" value="Y"/>
           <Title language="English" value="Yes"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="tillTag === tagValueCallback(element)"/>
-          <TestValue group="*ti.gtd.Cucumber" type="tsi" value="Table; TillTags; Tags; TillTagDefined = 'yes'&lt;br/&gt;Row; TillTag; TillTags; Tag = Tag.Tag"/>
+          <TestValue group="*ti.gtd.Cucumber" type="tsi" value="Table; TillTag; TillTag; TillTagDefined = 'yes'&lt;br/&gt;Row; Tag; TillTag; Tag = TillTag.Tag"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16873293137669972">
           <Symbol language="English" value="N"/>
           <Title language="English" value="No"/>
-          <TestValue group="*ti.gtd.Cucumber" type="tsi" value="Row; TillTag; Tags; Tag &lt;&gt; Tag.Tag"/>
+          <TestValue group="*ti.gtd.Cucumber" type="tsi" value="Row; TillTag; TillTag; Tag &lt;&gt; Tag.Tag"/>
         </ConditionOccurrence>
       </ConditionOccurrences>
     </Condition>
@@ -589,7 +588,6 @@
   <Title language="English" value="Analyze Liquibase element based on name"/>
   <UrlsOut>
     <Url title="Folder" url="file:///./"/>
-    <Url title="*GTD.Formats" url="file:///../test/features/liquibase-elements.gtd.txt"/>
   </UrlsOut>
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="function liquibaseElement (element, logger, tillTag, elementNameCallback, tagValueCallback) {&lt;br/&gt;  const liquibaseElementResult = {}"/>
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Epilog" value="  //&lt;br/&gt;  return liquibaseElementResult&lt;br/&gt;}&lt;br/&gt;&lt;br/&gt;module.exports = {&lt;br/&gt;  liquibaseElement: (element, logger, tillTag, elementNameCallback, tagValueCallback) =&gt; {&lt;br/&gt;    return liquibaseElement(element, logger, tillTag, elementNameCallback, tagValueCallback)&lt;br/&gt;  }&lt;br/&gt;}"/>
@@ -599,10 +597,10 @@
     <TestValueGroup name="*ti.gtd.Cucumber"/>
     <TestValueGroup name="*ti.att.Cucumber"/>
     <TestValueGroup name="Cucumber" tvgTiAtt="*ti.att.Cucumber" tvgTiCheck="*ti.check.Cucumber" tvgTiGTD="*ti.gtd.Cucumber">
-      <Config name="Config" tags="cucumber" parms="-Group 'Cucumber' -NonExecutableRules '50' -RecommendedTestCases -OutGherkin 'liquibase-elements.testcases.feature'"/>
+      <Config name="Config" tags="cucumber" parms="-Group 'Cucumber' -GtdDirectory '../test/features/testdata' -NonExecutableRules '50' -RecommendedTestCases -Protocol -OutGherkin 'liquibase-elements.testcases.feature'"/>
     </TestValueGroup>
   </TestValueGroups>
   <TestValue group="*ti.att.Cucumber" type="tcpre" value="# language: en"/>
   <TestValue group="Cucumber" type="isi" value="liquibase-elements is called ${*GTD.TillTag.TillTag_Suffix_Keyword}"/>
-  <TestValue group="*ti.gtd.Cucumber" type="tcpre" value="Row, TillTag, Tags"/>
+  <TestValue group="*ti.gtd.Cucumber" type="tcpre" value="Table, TillTag, Tags&lt;br/&gt;Table, Tag, Tags"/>
 </LFET>

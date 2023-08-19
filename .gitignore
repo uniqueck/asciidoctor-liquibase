@@ -4,7 +4,12 @@ test/antora/.cache/
 test/antora/public/
 *.tgz
 
+# lfet based files
 *.log.*.console.txt
 *.log.*.ti.gtd.txt
 *.log.*.check.txt
 
+*.lfet.*.$bak
+*.lfet_$temp
+
+reports/

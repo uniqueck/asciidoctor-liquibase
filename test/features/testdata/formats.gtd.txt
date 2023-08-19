@@ -1,0 +1,9 @@
+Encoding = UTF-8
+
+*GTD.Formats
+----------------------
+ID; Format; Supported
+----------------------
+1; xml    ; true
+2; yaml   ; true
+3; json   ; false

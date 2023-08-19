@@ -4,12 +4,23 @@
 
 === xml based format
 
+.simple changeset
 liquibase::example$xml/simpleChangeSet.xml[]
 
+.complexe changeset
 liquibase::example$xml/db/db.changelog-master.xml[]
 
+.tillTag defined
 liquibase::example$xml/db/db.changelog-master.xml[tillTag=1.X.FINAL]
+
+==== Issue #12
+
+liquibase::example$xml/issue-12.xml[]
 
 === yaml based format
 
 liquibase::example$yaml/common.tests.changelog.yaml[]
+
+==== Issue #12
+
+liquibase::example$yaml/issue-12.yaml[]

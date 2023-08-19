@@ -1,3 +1,14 @@
+## [1.2.2](https://github.com/uniqueck/asciidoctor-liquibase/compare/v1.2.1...v1.2.2) (2023-08-19)
+
+
+### Fix
+
+* changeset extractor addPrimaryKey (fixes #12) ([488efe8](https://github.com/uniqueck/asciidoctor-liquibase/commit/488efe8049454b0e09798cdbac220d00a472f867)), closes [#12](https://github.com/uniqueck/asciidoctor-liquibase/issues/12)
+
+### Test
+
+* add cucumber test for decision table liquibase-elements ([4fc4eef](https://github.com/uniqueck/asciidoctor-liquibase/commit/4fc4eef34439a0bac19804589f7fa193d983b105))
+
 ## [1.2.1](https://github.com/uniqueck/asciidoctor-liquibase/compare/v1.2.0...v1.2.1) (2023-07-05)
 
 

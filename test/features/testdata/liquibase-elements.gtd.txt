@@ -1,14 +1,7 @@
 Encoding = UTF-8
 
-*GTD.Formats
-
-ID; Format;
------------
-1; xml
-2; yaml
-
 *GTD.Tags
-
+--------------------------------------------------------------------
 ID; Tag;     TillTagDefined;       TillTag_Suffix_Keyword
 --------------------------------------------------------------------
 1;  V1.0.0;   yes;                 with tillTag '${*GTD.TillTag.Tag}'

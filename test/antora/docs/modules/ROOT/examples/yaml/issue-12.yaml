@@ -1,0 +1,21 @@
+databaseChangeLog:
+
+  - changeSet:
+      changes:
+        - createTable:
+            tableName: addPrimaryKeyTest
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: dateCol
+                  type: date
+
+  - changeSet:
+      changes:
+        - addPrimaryKey:
+            tableName: addPrimaryKeyTest
+            columnNames: id

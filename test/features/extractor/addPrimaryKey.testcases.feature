@@ -1,9 +1,9 @@
-# Diese Datei wurde erzeugt durch LF-ET 2.2.1 (230819A) und Kommandozeile:
-# -GenTest "/opt/data/github/asciidoctor/asciidoctor-liquibase/lfet/extractor/addPrimaryKey.lfet" -Group "Cucumber" -Config "Config" -GtdDirectory "../../test/features/testdata/" -GtdFileNamePattern "*.txt; *.csv" -NonExecutableRules "50" -RecommendedTestCases -Protocol -ForceProtocol -OutGherkin "addPrimaryKey.testcases.feature" -InputRootfolder "/opt/data/github/asciidoctor/asciidoctor-liquibase/lfet" -OutputRootfolder "/opt/data/github/asciidoctor/asciidoctor-liquibase/test/features"
+# Diese Datei wurde erzeugt durch LF-ET 2.2.1 (230826a) und Kommandozeile:
+# -GenTest "/opt/data/github/asciidoctor/asciidoctor-liquibase/lfet/extractor/addPrimaryKey.lfet" -Group "Cucumber" -Config "Config" -ContinueOnError -GtdDirectory "../../test/features/testdata/" -GtdFileNamePattern "*.txt; *.csv" -NonExecutableRules "50" -RecommendedTestCases -OutGherkin "addPrimaryKey.testcases.feature" -InputRootfolder "/opt/data/github/asciidoctor/asciidoctor-liquibase/lfet" -OutputRootfolder "/opt/data/github/asciidoctor/asciidoctor-liquibase/test/features"
 # 
 # Aktueller Benutzer: constantin
 # Aktuelles Verzeichnis (user.dir): "/opt/data/github/asciidoctor/asciidoctor-liquibase"
-# Benötigte Zeit: 00:00:00.046 (19.08.2023 18:11:44.176 - 19.08.2023 18:11:44.222)
+# Benötigte Zeit: 00:00:00.022 (26.08.2023 23:25:18.313 - 26.08.2023 23:25:18.335)
 # 
 # Entscheidungstabelle: /opt/data/github/asciidoctor/asciidoctor-liquibase/lfet/extractor/addPrimaryKey.lfet
 # 
@@ -30,7 +30,7 @@ Feature: extract liquibase element addPrimaryKey
   @recommended
   Scenario: 0001 addPrimaryKey
     addPrimaryKey
-    R01 : B01=yaml
+    R01 : B01 definition is based on ... format = yaml
     Given 'yaml' based 'addPrimaryKey' changeset
     When  extractor 'addPrimaryKey' is called
     Then  'addPrimaryKey' information is extracted
@@ -38,7 +38,7 @@ Feature: extract liquibase element addPrimaryKey
   @recommended
   Scenario: 0002 addPrimaryKey
     addPrimaryKey
-    R02 : B01=xml
+    R02 : B01 definition is based on ... format = xml
     Given 'xml' based 'addPrimaryKey' changeset
     When  extractor 'addPrimaryKey' is called
     Then  'addPrimaryKey' information is extracted
@@ -46,7 +46,9 @@ Feature: extract liquibase element addPrimaryKey
   @recommended
   Scenario: 0003 addPrimaryKey
     addPrimaryKey
-    R03 : B01=*
+    R03 : B01 definition is based on ... format = *
     Given 'json' based 'addPrimaryKey' changeset
     When  extractor 'addPrimaryKey' is called
-    Then  Error message 'addPrimaryKey - 20230819.180326 - Format for currentFile.json is not supported.' is logged
+    Then  Error message 'addPrimaryKey - 20230826.184034 - Format for currentFile.json is not supported.' is logged
+
+### end of generated test cases ###

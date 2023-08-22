@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230620A)" language="English" saveDate="2023.06.21 at 00:11:33 CEST" saveUser="constantin">
+<LFET version="LF-ET 2.2.1 (230826a)" language="English" saveDate="2023.08.31 at 20:21:46 CEST" saveUser="constantin">
   <Conditions>
     <Condition uId="16864341410910276">
       <Title language="English" value="Step"/>
@@ -23,15 +23,45 @@
     </Condition>
     <Condition uId="16864340782430270">
       <Title language="English" value="One more element to process"/>
-      <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementIndex &lt; elements.length"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="16926450297737170">
+          <Symbol language="English" value="Y"/>
+          <Title language="English" value="Yes"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementIndex &lt; elements.length"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16926450299787172">
+          <Symbol language="English" value="N"/>
+          <Title language="English" value="No"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
     </Condition>
     <Condition uId="16863867005846577">
       <Title language="English" value="Element should ignored"/>
-      <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementDetails.ignore"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="16926450299887182">
+          <Symbol language="English" value="Y"/>
+          <Title language="English" value="Yes"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="elementDetails.ignore"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16926450299907184">
+          <Symbol language="English" value="N"/>
+          <Title language="English" value="No"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
     </Condition>
     <Condition uId="16863867989948178">
       <Title language="English" value="Processing finished"/>
-      <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="processModel.finshedProcessing"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="16926450299997193">
+          <Symbol language="English" value="Y"/>
+          <Title language="English" value="Yes"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="processModel.finishedProcessing"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16926450300017195">
+          <Symbol language="English" value="N"/>
+          <Title language="English" value="No"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
     </Condition>
     <Condition uId="16864807968934498">
       <Title language="English" value="changeset format"/>
@@ -86,18 +116,36 @@
     </Action>
     <Action uId="16864342002880420">
       <Title language="English" value="next element"/>
-      <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="currentElement = elements[elementIndex++]&lt;br/&gt;elementDetails = require('./liquibase-elements.js').liquibaseElement(currentElement, logger, processModel.tillTag, elementNameCallback, tagValueCallback)&lt;br/&gt;processModel.finshedProcessing = (processModel.finshedProcessing ^ elementDetails.finshedProcessing) === 1"/>
       <UrlsOut>
         <Url title="liquibase-elements.lfet" url="file:///./liquibase-elements.lfet"/>
       </UrlsOut>
+      <ActionOccurrences>
+        <ActionOccurrence uId="16926450300117205">
+          <Symbol language="English" value="X"/>
+          <Title language="English" value="execute action"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="currentElement = elements[elementIndex++]&lt;br/&gt;elementDetails = require('./liquibase-elements.js').liquibaseElement(currentElement, logger, processModel.tillTag, elementNameCallback, tagValueCallback)&lt;br/&gt;processModel.finishedProcessing = (processModel.finishedProcessing ^ elementDetails.finishedProcessing) === 1"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
     </Action>
     <Action uId="16863869524098347">
       <Title language="English" value="call extractor"/>
-      <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="require(`./extractor/${elementDetails.elementName}.js`).extract(currentElement, currentFile, processModel, logger, vfs)"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="16926450300187212">
+          <Symbol language="English" value="X"/>
+          <Title language="English" value="execute action"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="require(`./extractor/${elementDetails.elementName}.js`).extract(currentElement, currentFile, processModel, logger, vfs)"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
     </Action>
     <Action uId="15721803018960493">
       <Title language="English" value="ignore element"/>
-      <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="logger.info(`${JSON.stringify(currentElement)} ignored.`)"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="16926450300247218">
+          <Symbol language="English" value="X"/>
+          <Title language="English" value="execute action"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="logger.info(`${JSON.stringify(currentElement)} ignored.`)"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
     </Action>
     <Action uId="16864342096110422">
       <Title language="English" value="next Step"/>
@@ -120,64 +168,64 @@
       </ActionOccurrences>
     </Action>
   </Actions>
-  <Rules lastId="86">
-    <Rule id="84">
-      <ConditionLink link="16864340782430270" conditionState="true"/>
+  <Rules lastId="95">
+    <Rule id="87">
       <ConditionOccurrenceLink link="16864341483330341"/>
       <ActionOccurrenceLink link="16864342179580508"/>
-      <ActionLink link="16864342002880420"/>
       <ConditionOccurrenceLink link="16839333503100327"/>
       <ActionOccurrenceLink link="16864809498195370"/>
       <ActionOccurrenceLink link="16864809881775677"/>
+      <ConditionOccurrenceLink link="16926450297737170"/>
+      <ActionOccurrenceLink link="16926450300117205"/>
     </Rule>
-    <Rule id="85">
-      <ConditionLink link="16864340782430270" conditionState="true"/>
+    <Rule id="88">
       <ConditionOccurrenceLink link="16864341483330341"/>
       <ActionOccurrenceLink link="16864342179580508"/>
-      <ActionLink link="16864342002880420"/>
       <ConditionOccurrenceLink link="16860685780121002"/>
       <ActionOccurrenceLink link="16864809544745375"/>
       <ActionOccurrenceLink link="16864809918555681"/>
+      <ConditionOccurrenceLink link="16926450297737170"/>
+      <ActionOccurrenceLink link="16926450300117205"/>
     </Rule>
-    <Rule id="86">
-      <ConditionLink link="16864340782430270" conditionState="true"/>
+    <Rule id="89">
       <ConditionOccurrenceLink link="16864341483330341"/>
       <ActionOccurrenceLink link="16864342234550512"/>
       <ConditionOccurrenceLink link="16839333503440329"/>
+      <ConditionOccurrenceLink link="16926450297737170"/>
     </Rule>
-    <Rule id="78">
-      <ConditionLink link="16864340782430270" conditionState="false"/>
+    <Rule id="90">
       <ConditionOccurrenceLink link="16864341483330341"/>
       <ActionOccurrenceLink link="16864342234550512"/>
+      <ConditionOccurrenceLink link="16926450299787172"/>
     </Rule>
-    <Rule id="76">
+    <Rule id="91">
       <ConditionOccurrenceLink link="16864341483350343"/>
-      <ConditionLink link="16863867005846577" conditionState="true"/>
       <ActionOccurrenceLink link="16864347446171583"/>
-      <ActionLink link="15721803018960493"/>
+      <ConditionOccurrenceLink link="16926450299887182"/>
+      <ActionOccurrenceLink link="16926450300247218"/>
     </Rule>
-    <Rule id="77">
+    <Rule id="92">
       <ConditionOccurrenceLink link="16864341483350343"/>
-      <ConditionLink link="16863867005846577" conditionState="false"/>
-      <ConditionLink link="16863867989948178" conditionState="true"/>
       <ActionOccurrenceLink link="16864342234550512"/>
+      <ConditionOccurrenceLink link="16926450299907184"/>
+      <ConditionOccurrenceLink link="16926450299997193"/>
     </Rule>
-    <Rule id="81">
-      <ActionLink link="16863869524098347"/>
+    <Rule id="93">
       <ConditionOccurrenceLink link="16864341483350343"/>
-      <ConditionLink link="16863867005846577" conditionState="false"/>
-      <ConditionLink link="16863867989948178" conditionState="false"/>
       <ActionOccurrenceLink link="16864342179580508"/>
+      <ConditionOccurrenceLink link="16926450299907184"/>
+      <ConditionOccurrenceLink link="16926450300017195"/>
+      <ActionOccurrenceLink link="16926450300187212"/>
     </Rule>
-    <Rule id="82">
+    <Rule id="94">
       <ConditionOccurrenceLink link="16864679199492624"/>
-      <ConditionLink link="16863867989948178" conditionState="true"/>
       <ActionOccurrenceLink link="16864342234550512"/>
+      <ConditionOccurrenceLink link="16926450299997193"/>
     </Rule>
-    <Rule id="83">
+    <Rule id="95">
       <ConditionOccurrenceLink link="16864679199492624"/>
-      <ConditionLink link="16863867989948178" conditionState="false"/>
       <ActionOccurrenceLink link="16864347446171583"/>
+      <ConditionOccurrenceLink link="16926450300017195"/>
     </Rule>
   </Rules>
   <Title language="English" value="Parse elements in Liquibase changelog files"/>
@@ -187,4 +235,15 @@
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="function parseLiquibaseChangeSet (processModel, currentFile, elements, logger, vfs, tillTag) {&lt;br/&gt;  const content = []&lt;br/&gt;  let _step = 1&lt;br/&gt;  let _exit = false&lt;br/&gt;  let currentElement&lt;br/&gt;  let elementIndex = 0&lt;br/&gt;  let elementDetails&lt;br/&gt;  //&lt;br/&gt;  do {&lt;br/&gt;    _exit = true&lt;br/&gt;    // $$BasicIndentLevel=2"/>
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Epilog" value="  //&lt;br/&gt;  } while (_exit === false)&lt;br/&gt;  return content&lt;br/&gt;}&lt;br/&gt;&lt;br/&gt;module.exports = {&lt;br/&gt;  parseLiquibaseChangeSet: (processModel, currentFile, elements, logger, vfs, tillTag) =&gt; {&lt;br/&gt;    return parseLiquibaseChangeSet(processModel, currentFile, elements, logger, vfs, tillTag)&lt;br/&gt;  }&lt;br/&gt;}"/>
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Trace" value="logger.info(`$$dtName - $$version - $$rule / $$rules - ${currentFile} - ${JSON.stringify(processModel)}`)"/>
+  <TestValueGroups selectedGroup="Cucumber">
+    <TestValueGroup name="*ti.check.Cucumber"/>
+    <TestValueGroup name="*ti.gtd.Cucumber"/>
+    <TestValueGroup name="*ti.att.Cucumber"/>
+    <TestValueGroup name="Cucumber" tvgTiAtt="*ti.att.Cucumber" tvgTiCheck="*ti.check.Cucumber" tvgTiGTD="*ti.gtd.Cucumber">
+      <Config name="Config" tags="cucumber" parms="-Group 'Cucumber' -SwitchCoverage '2' -NonExecutableRules '50' -RecommendedTestCases -OutGherkin 'liquibase-parser.testcases.feature'"/>
+    </TestValueGroup>
+  </TestValueGroups>
+  <TestValue group="*ti.att.Cucumber" type="tcpre" value="tags=&quot;ignore&quot;"/>
+  <TestValue group="Cucumber" type="isi" value="${*LFET.dt.name} is called"/>
+  <TestValue group="Cucumber" type="tcpre" value="#language:en"/>
 </LFET>

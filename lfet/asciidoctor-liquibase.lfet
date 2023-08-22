@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230620A)" language="German" saveDate="2023.06.21 at 00:19:52 CEST" saveUser="constantin">
+<LFET version="LF-ET 2.2.1 (230826a)" language="German" saveDate="2023.08.26 at 18:37:58 CEST" saveUser="constantin">
   <Conditions>
     <Condition uId="16864789879423038">
       <Title language="German" value="Step"/>
@@ -57,11 +57,23 @@
     </Action>
     <Action uId="16842716983416933">
       <Title language="German" value="convert to plantuml"/>
-      <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const content = []&lt;br/&gt;content.push('[plantuml]', '----')&lt;br/&gt;content.push('\'hide the spot')&lt;br/&gt;content.push('hide circle')&lt;br/&gt;content.push('skinparam tabSize 4')&lt;br/&gt;content.push('\' avoid problems with angled crows feet')&lt;br/&gt;content.push('skinparam linetype ortho')&lt;br/&gt;content.push('\'entities')&lt;br/&gt;//&lt;br/&gt;for (const [key, value] of processModel.tables) {&lt;br/&gt;  content.push(`entity ${key} {`)&lt;br/&gt;  const primaryColumns = new Map(Array.from(value.columns).filter(([_key, columnData]) =&gt; columnData.primaryKey))&lt;br/&gt;  //&lt;br/&gt;  for (const [columnName, columnData] of primaryColumns) {&lt;br/&gt;    content.push(`&lt;&lt;PK&gt;&gt;\\t${columnName}:${columnData.type}`)&lt;br/&gt;  }&lt;br/&gt;  //&lt;br/&gt;  content.push('---')&lt;br/&gt;  const nonPrimaryColumns = new Map(Array.from(value.columns).filter(([_key, columnData]) =&gt; !columnData.primaryKey))&lt;br/&gt;  //&lt;br/&gt;  for (const [columnName, columnData] of nonPrimaryColumns) {&lt;br/&gt;    if (columnData.referencedColumn !== undefined) {&lt;br/&gt;      content.push(`&lt;&lt;FK&gt;&gt;\\t${columnName}:${columnData.type}`)&lt;br/&gt;    } else {&lt;br/&gt;      content.push(`\\t\\t\\t${columnName}:${columnData.type}`)&lt;br/&gt;    }&lt;br/&gt;  }&lt;br/&gt;  content.push('}')&lt;br/&gt;}&lt;br/&gt;content.push(&quot;'relationships&quot;)&lt;br/&gt;for (const [key, value] of processModel.tables) {&lt;br/&gt;  Array.from(value.columns).filter(([_key, columnData]) =&gt; columnData.referencedTable !== undefined).forEach(([_key, columnData]) =&gt; {&lt;br/&gt;    content.push(`${key} --- ${columnData.referencedTable} : ${_key}`)&lt;br/&gt;  })&lt;br/&gt;}&lt;br/&gt;content.push('----')&lt;br/&gt;self.parseContent(parent, content.join('\n'), Opal.hash(attrs))"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="16926456853021536">
+          <Symbol language="German" value="X"/>
+          <Title language="German" value="Aktion ausführen"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const content = []&lt;br/&gt;content.push('[plantuml]', '----')&lt;br/&gt;content.push('\'hide the spot')&lt;br/&gt;content.push('hide circle')&lt;br/&gt;content.push('skinparam tabSize 4')&lt;br/&gt;content.push('\' avoid problems with angled crows feet')&lt;br/&gt;content.push('skinparam linetype ortho')&lt;br/&gt;content.push('\'entities')&lt;br/&gt;//&lt;br/&gt;for (const [key, value] of processModel.tables) {&lt;br/&gt;  content.push(`entity ${key} {`)&lt;br/&gt;  const primaryColumns = new Map(Array.from(value.columns).filter(([_key, columnData]) =&gt; columnData.primaryKey))&lt;br/&gt;  //&lt;br/&gt;  for (const [columnName, columnData] of primaryColumns) {&lt;br/&gt;    content.push(`&lt;&lt;PK&gt;&gt;\\t${columnName}:${columnData.type}`)&lt;br/&gt;  }&lt;br/&gt;  //&lt;br/&gt;  content.push('---')&lt;br/&gt;  const nonPrimaryColumns = new Map(Array.from(value.columns).filter(([_key, columnData]) =&gt; !columnData.primaryKey))&lt;br/&gt;  //&lt;br/&gt;  for (const [columnName, columnData] of nonPrimaryColumns) {&lt;br/&gt;    if (columnData.referencedColumn !== undefined) {&lt;br/&gt;      content.push(`&lt;&lt;FK&gt;&gt;\\t${columnName}:${columnData.type}`)&lt;br/&gt;    } else {&lt;br/&gt;      content.push(`\\t\\t\\t${columnName}:${columnData.type}`)&lt;br/&gt;    }&lt;br/&gt;  }&lt;br/&gt;  content.push('}')&lt;br/&gt;}&lt;br/&gt;content.push(&quot;'relationships&quot;)&lt;br/&gt;for (const [key, value] of processModel.tables) {&lt;br/&gt;  Array.from(value.columns).filter(([_key, columnData]) =&gt; columnData.referencedTable !== undefined).forEach(([_key, columnData]) =&gt; {&lt;br/&gt;    content.push(`${key} --- ${columnData.referencedTable} : ${_key}`)&lt;br/&gt;  })&lt;br/&gt;}&lt;br/&gt;content.push('----')&lt;br/&gt;self.parseContent(parent, content.join('\n'), Opal.hash(attrs))"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
     </Action>
     <Action uId="11446800829627977">
       <Title language="German" value="log not supported changeset definition"/>
-      <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="// TODO code statement sequence for A02 here"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="16926456855961542">
+          <Symbol language="German" value="X"/>
+          <Title language="German" value="Aktion ausführen"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="// TODO code statement sequence for A02 here"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
     </Action>
     <Action uId="16864802720523298">
       <Title language="German" value="Step"/>
@@ -79,7 +91,7 @@
       </ActionOccurrences>
     </Action>
   </Actions>
-  <Rules lastId="22">
+  <Rules lastId="24">
     <Rule id="18">
       <ConditionOccurrenceLink link="16839333503100327"/>
       <ActionOccurrenceLink link="16839346468246113"/>
@@ -92,16 +104,16 @@
       <ConditionOccurrenceLink link="16864789982593119"/>
       <ActionOccurrenceLink link="16864802766733393"/>
     </Rule>
-    <Rule id="20">
+    <Rule id="23">
       <ConditionOccurrenceLink link="16839333503440329"/>
-      <ActionLink link="11446800829627977"/>
       <ConditionOccurrenceLink link="16864789982593119"/>
       <ActionOccurrenceLink link="16864803132063581"/>
+      <ActionOccurrenceLink link="16926456855961542"/>
     </Rule>
-    <Rule id="22">
+    <Rule id="24">
       <ConditionOccurrenceLink link="16864789982613121"/>
-      <ActionLink link="16842716983416933"/>
       <ActionOccurrenceLink link="16864803132063581"/>
+      <ActionOccurrenceLink link="16926456853021536"/>
     </Rule>
   </Rules>
   <Title language="German" value="asciidoctor-liquibase extension"/>
@@ -111,4 +123,13 @@
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="/* global Opal */&lt;br/&gt;// @ts-check&lt;br/&gt;&lt;br/&gt;function liquibaseBlockMacro (name, context) {&lt;br/&gt;  return function () {&lt;br/&gt;    const self = this&lt;br/&gt;    self.named(name)&lt;br/&gt;    self.positionalAttributes(['tillTag'])&lt;br/&gt;    self.process((parent, target, attrs) =&gt; {&lt;br/&gt;      let vfs = context.vfs&lt;br/&gt;      if (typeof vfs === 'undefined' || typeof vfs.read !== 'function') {&lt;br/&gt;        vfs = require('./node-fs.js')&lt;br/&gt;      }&lt;br/&gt;      const changelogFile = parent.applySubstitutions(target, ['attributes'])&lt;br/&gt;      const doc = parent.getDocument()&lt;br/&gt;      const logger = doc.getLogger()&lt;br/&gt;      const processModel = { finshedProcessing: false, tillTag: attrs.tillTag || undefined }&lt;br/&gt;      processModel.tables = new Map()&lt;br/&gt;&amp;#009;  let _step = 1&lt;br/&gt;      let _exit = false&lt;br/&gt;      do {&lt;br/&gt;        _exit = true&lt;br/&gt;        // $$BasicIndentLevel=4&lt;br/&gt;"/>
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Epilog" value="      } while (_exit === false)&lt;br/&gt;&amp;#009;  return undefined&lt;br/&gt;    })&lt;br/&gt;  }&lt;br/&gt;}&lt;br/&gt;&lt;br/&gt;module.exports.register = function (registry, context = {}) {&lt;br/&gt;  if (typeof context.contentCatalog !== 'undefined' &amp;&amp; typeof context.contentCatalog.addFile === 'function' &amp;&amp; typeof context.file !== 'undefined') {&lt;br/&gt;    context.vfs = require('./antora-adapter.js')(context.file, context.contentCatalog, context.vfs)&lt;br/&gt;  }&lt;br/&gt;  context.logger = Opal.Asciidoctor.LoggerManager.getLogger()&lt;br/&gt;  const names = [&lt;br/&gt;    'liquibase'&lt;br/&gt;  ]&lt;br/&gt;  //&lt;br/&gt;  if (typeof registry.register === 'function') {&lt;br/&gt;    registry.register(function () {&lt;br/&gt;      for (const name of names) {&lt;br/&gt;        this.blockMacro(liquibaseBlockMacro(name, context))&lt;br/&gt;      }&lt;br/&gt;    })&lt;br/&gt;  } else if (typeof registry.block === 'function') {&lt;br/&gt;    for (const name of names) {&lt;br/&gt;      registry.blockMacro(liquibaseBlockMacro(name, context))&lt;br/&gt;    }&lt;br/&gt;  }&lt;br/&gt;  return registry&lt;br/&gt;}"/>
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Trace" value="logger.info('$$dtName - $$version - $$rule / $$rules')"/>
+  <TestValueGroups selectedGroup="Cucumber">
+    <TestValueGroup name="*ti.check.Cucumber"/>
+    <TestValueGroup name="*ti.gtd.Cucumber"/>
+    <TestValueGroup name="*ti.att.Cucumber"/>
+    <TestValueGroup name="Cucumber" tvgTiAtt="*ti.att.Cucumber" tvgTiCheck="*ti.check.Cucumber" tvgTiGTD="*ti.gtd.Cucumber">
+      <Config name="Config" tags="cucumber" parms="-Group 'Cucumber' -SwitchCoverage '1' -NonExecutableRules '50' -NonExecutableRuleSeq '50' -RecommendedTestCases -OutGherkin 'asciidoctor-liquibase.testcases.feature'"/>
+    </TestValueGroup>
+  </TestValueGroups>
+  <TestValue group="*ti.att.Cucumber" type="tcpre" value="#language:en"/>
 </LFET>

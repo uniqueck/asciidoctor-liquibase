@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230819A)" language="English" saveDate="2023.08.19 at 16:58:20 CEST" saveUser="constantin">
+<LFET version="LF-ET 2.2.1 (230826a)" language="English" saveDate="2023.08.26 at 18:36:00 CEST" saveUser="constantin">
   <Conditions>
     <Condition uId="16863044272660255">
       <Title language="English" value="Liquibase element name is ..."/>
@@ -226,13 +226,13 @@
         <ActionOccurrence uId="16863427516420767">
           <Symbol language="English" value="true"/>
           <Title language="English" value="parsing is finished"/>
-          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.finshedProcessing = $$symbol"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.finishedProcessing = $$symbol"/>
           <TestValue group="Cucumber" type="tse" value="processing is finished"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16863427635250773">
           <Symbol language="English" value="false"/>
           <Title language="English" value="parsing is not yet done"/>
-          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.finshedProcessing = $$symbol"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="liquibaseElementResult.finishedProcessing = $$symbol"/>
           <TestValue group="Cucumber" type="tse" value="processing is not finished"/>
         </ActionOccurrence>
       </ActionOccurrences>
@@ -399,7 +399,7 @@
       </ActionOccurrences>
     </Action>
   </Actions>
-  <Rules lastId="408">
+  <Rules lastId="409">
     <Rule id="393">
       <ConditionOccurrenceLink link="16863044558500721"/>
       <ActionOccurrenceLink link="16863430490853949"/>
@@ -597,7 +597,7 @@
     <TestValueGroup name="*ti.gtd.Cucumber"/>
     <TestValueGroup name="*ti.att.Cucumber"/>
     <TestValueGroup name="Cucumber" tvgTiAtt="*ti.att.Cucumber" tvgTiCheck="*ti.check.Cucumber" tvgTiGTD="*ti.gtd.Cucumber">
-      <Config name="Config" tags="cucumber" parms="-Group 'Cucumber' -GtdDirectory '../test/features/testdata' -NonExecutableRules '50' -RecommendedTestCases -Protocol -OutGherkin 'liquibase-elements.testcases.feature'"/>
+      <Config name="Config" tags="cucumber" parms="-Group 'Cucumber' -GtdDirectory '../test/features/testdata' -NonExecutableRules '50' -RecommendedTestCases -OutGherkin 'liquibase-elements.testcases.feature'"/>
     </TestValueGroup>
   </TestValueGroups>
   <TestValue group="*ti.att.Cucumber" type="tcpre" value="# language: en"/>

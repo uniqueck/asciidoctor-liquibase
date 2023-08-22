@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230619D)" language="English" saveDate="2023.06.20 at 17:29:36 CEST" saveUser="constantin">
+<LFET version="LF-ET 2.2.1 (230826a)" language="English" saveDate="2023.08.26 at 23:24:32 CEST" saveUser="constantin">
   <Conditions>
     <Condition uId="16863469997658590">
       <Title language="English" value="definition is based on ... format"/>
@@ -9,12 +9,15 @@
           <Symbol language="English" value="yaml"/>
           <Title language="English" value="yaml definition"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="currentFile.endsWith('$$symbol')"/>
+          <TestValue group="*ti.gtd.Cucumber" type="tcpre" value="Row, Format, Formats, Format = '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863486742944068">
           <Symbol language="English" value="*"/>
           <Title language="English" value="extractor not supported for other formats"/>
+          <TestValue group="*ti.gtd.Cucumber" type="tcpre" value="Row, Format, Formats, Supported = false"/>
         </ConditionOccurrence>
       </ConditionOccurrences>
+      <TestValue group="Cucumber" type="tcpre" value="'${*GTD.Format.Format}' based '${*LFET.DT.Name}' changeset"/>
     </Condition>
   </Conditions>
   <Actions>
@@ -24,23 +27,31 @@
         <ActionOccurrence uId="16863487805934306">
           <Symbol language="English" value="yaml"/>
           <Title language="English" value="extract table on yaml definition"/>
-          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="// ignore"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const tableName = element.createIndex.tableName&lt;br/&gt;const indexName = element.createIndex.indexName&lt;br/&gt;processModel.tables.get(tableName).indices = new Map()&lt;br/&gt;processModel.tables.get(tableName).indices.set(indexName, { columns: [] })&lt;br/&gt;for (let columnIndex = 0; columnIndex &lt; element.createIndex.columns.length; columnIndex++) {&lt;br/&gt;  processModel.tables.get(tableName).indices.get(indexName).columns.push(element.createIndex.columns[columnIndex].column.name)&lt;br/&gt;}"/>
         </ActionOccurrence>
       </ActionOccurrences>
+      <TestValue group="Cucumber" type="tcpost" value="'${*LFET.DT.Name}' information is extracted"/>
     </Action>
     <Action uId="11443124877466972">
       <Title language="English" value="error"/>
-      <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="logger.error(`$$dtName - $$version - Format for ${currentFile} is not supported.`)"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="16929085524181550">
+          <Symbol language="English" value="X"/>
+          <Title language="English" value="execute action"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="logger.error(`$$dtName - $$version - Format for ${currentFile} is not supported.`)"/>
+          <TestValue group="Cucumber" type="tse" value="Error message '${*LFET.DT.Name} - ${*LFET.version.dt} - Format for currentFile.${*GTD.Format.Format} is not supported.' is logged"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
     </Action>
   </Actions>
-  <Rules lastId="343">
+  <Rules lastId="344">
     <Rule id="342">
       <ConditionOccurrenceLink link="16863486742924066"/>
       <ActionOccurrenceLink link="16863487805934306"/>
     </Rule>
-    <Rule id="343">
+    <Rule id="344">
       <ConditionOccurrenceLink link="16863486742944068"/>
-      <ActionLink link="11443124877466972"/>
+      <ActionOccurrenceLink link="16929085524181550"/>
     </Rule>
   </Rules>
   <Title language="English" value="extract liquibase element createIndex"/>
@@ -50,4 +61,13 @@
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="function $$dtname (element, currentFile, processModel, logger, vfs) {"/>
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Epilog" value="}&lt;br/&gt;&lt;br/&gt;module.exports = {&lt;br/&gt;  extract: (element, currentFile, processModel, logger, vfs) =&gt; {&lt;br/&gt;    return $$dtname(element, currentFile, processModel, logger, vfs)&lt;br/&gt;  }&lt;br/&gt;}"/>
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Trace" value="logger.info(`$$dtName - $$version - $$rule / $$rules - ${currentFile} - ${JSON.stringify(processModel)}`)"/>
+  <TestValueGroups selectedGroup="Cucumber">
+    <TestValueGroup name="*ti.gtd.Cucumber"/>
+    <TestValueGroup name="*ti.att.Cucumber"/>
+    <TestValueGroup name="Cucumber" tvgTiAtt="*ti.att.Cucumber" tvgTiGTD="*ti.gtd.Cucumber">
+      <Config name="Config" tags="cucumber" parms="-Group 'Cucumber' -GtdDirectory '../../test/features/testdata/' -GtdFileNamePattern '*.txt; *.csv' -NonExecutableRules '50' -RecommendedTestCases -OutGherkin 'createIndex.testcases.feature'"/>
+    </TestValueGroup>
+  </TestValueGroups>
+  <TestValue group="Cucumber" type="tcpre" value="#language: en"/>
+  <TestValue group="Cucumber" type="isi" value="extractor '${*LFET.DT.Name}' is called"/>
 </LFET>

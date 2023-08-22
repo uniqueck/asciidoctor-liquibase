@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230819A)" language="English" saveDate="2023.08.19 at 18:11:27 CEST" saveUser="constantin">
+<LFET version="LF-ET 2.2.1 (230826a)" language="English" saveDate="2023.08.26 at 18:40:34 CEST" saveUser="constantin">
   <Conditions>
     <Condition uId="16863469997658590">
       <Title language="English" value="definition is based on ... format"/>
@@ -52,7 +52,7 @@
           <Symbol language="English" value="X"/>
           <Title language="English" value="execute action"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="logger.error(`$$dtName - $$version - Format for ${currentFile} is not supported.`)"/>
-          <TestValue group="Cucumber" type="tse" value="Error message '${*LFET.DT.Name} - 20230819.180326 - Format for currentFile.${*GTD.Format.Format} is not supported.' is logged"/>
+          <TestValue group="Cucumber" type="tse" value="Error message '${*LFET.DT.Name} - ${*LFET.version.dt} - Format for currentFile.${*GTD.Format.Format} is not supported.' is logged"/>
         </ActionOccurrence>
       </ActionOccurrences>
     </Action>
@@ -82,7 +82,7 @@
     <TestValueGroup name="*ti.gtd.Cucumber"/>
     <TestValueGroup name="*ti.att.Cucumber"/>
     <TestValueGroup name="Cucumber" tvgTiAtt="*ti.att.Cucumber" tvgTiCheck="*ti.check.Cucumber" tvgTiGTD="*ti.gtd.Cucumber">
-      <Config name="Config" tags="cucumber" parms="-Group 'Cucumber' -GtdDirectory '../../test/features/testdata/' -GtdFileNamePattern '*.txt; *.csv' -NonExecutableRules '50' -RecommendedTestCases -Protocol -OutGherkin 'addPrimaryKey.testcases.feature'"/>
+      <Config name="Config" tags="cucumber" parms="-Group 'Cucumber' -GtdDirectory '../../test/features/testdata/' -GtdFileNamePattern '*.txt; *.csv' -NonExecutableRules '50' -RecommendedTestCases -OutGherkin 'addPrimaryKey.testcases.feature'"/>
     </TestValueGroup>
   </TestValueGroups>
   <TestValue group="*ti.att.Cucumber" type="tcpre" value="# language: en"/>

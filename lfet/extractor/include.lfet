@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230620A)" language="English" saveDate="2023.07.05 at 18:16:21 CEST" saveUser="constantin">
+<LFET version="LF-ET 2.2.1 (230826a)" language="English" saveDate="2023.08.26 at 18:34:52 CEST" saveUser="constantin">
   <Conditions>
     <Condition uId="16863469997658590">
       <Title language="English" value="definition is based on ... format"/>
@@ -9,15 +9,19 @@
           <Symbol language="English" value="yaml"/>
           <Title language="English" value="yaml definition"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="currentFile.endsWith('$$symbol')"/>
+          <TestValue group="*ti.gtd.Cucumber" type="tcpre" value="Row, Format, Formats, Format = '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863871140979573">
           <Symbol language="English" value="xml"/>
           <Title language="English" value="xml definition"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="currentFile.endsWith('$$symbol')"/>
+          <TestValue group="*ti.gtd.Cucumber" type="tcpre" value="Row, Format, Formats, Format = '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863486742944068">
           <Symbol language="English" value="*"/>
           <Title language="English" value="extractor not supported for other formats"/>
+          <TestValue group="*ti.gtd.Cucumber" type="tcpre" value="Row, Format, Formats, Supported = false&lt;br/&gt;Row, IncludeFIleFormat, Formats"/>
+          <TestValue group="Cucumber" type="tcpre" value="'${*GTD.Format.Format}' based ${*LFET.DT.Name} changeset with target include file extension '${*Gtd.IncludeFileFormat.Format}'"/>
         </ConditionOccurrence>
       </ConditionOccurrences>
     </Condition>
@@ -28,17 +32,21 @@
           <Symbol language="English" value="yaml"/>
           <Title language="English" value="yaml"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="element.include.file.endsWith('.$$symbol')"/>
+          <TestValue group="*ti.gtd.Cucumber" type="tcpre" value="Row, IncludeFileFormat, Formats, Format = '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863856770056071">
           <Symbol language="English" value="xml"/>
           <Title language="English" value="xml"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="element.include.file.endsWith('.$$symbol')"/>
+          <TestValue group="*ti.gtd.Cucumber" type="tcpre" value="Row, IncludeFileFormat, Formats, Format = '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863856723186064">
           <Symbol language="English" value="*"/>
           <Title language="English" value="*"/>
+          <TestValue group="*ti.gtd.Cucumber" type="tcpre" value="Row, IncludeFileFormat, Formats, Supported = false"/>
         </ConditionOccurrence>
       </ConditionOccurrences>
+      <TestValue group="Cucumber" type="tcpre" value="'${*GTD.Format.Format}' based ${*LFET.DT.Name} changeset with target include file extension '${*Gtd.IncludeFileFormat.Format}'"/>
     </Condition>
     <Condition uId="16863871819219843">
       <Title language="English" value="xml based definition - file extension"/>
@@ -47,17 +55,21 @@
           <Symbol language="English" value="yaml"/>
           <Title language="English" value="yaml"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="element.$.file.endsWith('.$$symbol')"/>
+          <TestValue group="*ti.gtd.Cucumber" type="tcpre" value="Row, IncludeFileFormat, Formats, Format = '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863871821799850">
           <Symbol language="English" value="xml"/>
           <Title language="English" value="xml"/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="element.$.file.endsWith('.$$symbol')"/>
+          <TestValue group="*ti.gtd.Cucumber" type="tcpre" value="Row, IncludeFileFormat, Formats, Format = '${*LFET.Symbol}'"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16863871821839854">
           <Symbol language="English" value="*"/>
           <Title language="English" value="*"/>
+          <TestValue group="*ti.gtd.Cucumber" type="tcpre" value="Row, IncludeFileFormat, Formats, Supported = false"/>
         </ConditionOccurrence>
       </ConditionOccurrences>
+      <TestValue group="Cucumber" type="tcpre" value="'${*GTD.Format.Format}' based ${*LFET.DT.Name} changeset with target include file extension '${*Gtd.IncludeFileFormat.Format}'"/>
     </Condition>
   </Conditions>
   <Actions>
@@ -83,21 +95,25 @@
           <Symbol language="English" value="UDF"/>
           <Title language="English" value="Format for '${currentFile}' is not supported."/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="logger.error(`$$dtName - $$version - $$rule / $$rules - $$title`)"/>
+          <TestValue group="Cucumber" type="tse" value="Error message '${*LFET.DT.Name} - ${*LFET.version.dt} - ${*LFET.Rule} / ${*LFET.Rules} - Format for \'currentFile.${*GTD.Format.Format}\' is not supported.' is logged"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16864852526319162">
           <Symbol language="English" value="UYFE"/>
           <Title language="English" value="YAML liquibase definition unknown file extension."/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="logger.error('$$dtName - $$version - $$rule / $$rules - $$title')"/>
+          <TestValue group="Cucumber" type="tse" value="Error message '${*LFET.DT.Name} - ${*LFET.version.dt} - ${*LFET.Rule} / ${*LFET.Rules} - ${*LFET.Title}' is logged"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16864852809879165">
           <Symbol language="English" value="UXFE"/>
-          <Title language="English" value="XML liquibase defintion unknown file extension."/>
+          <Title language="English" value="XML liquibase definition unknown file extension."/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="logger.error('$$dtName - $$version - $$rule / $$rules - $$title')"/>
+          <TestValue group="Cucumber" type="tse" value="Error message '${*LFET.DT.Name} - ${*LFET.version.dt} - ${*LFET.Rule} / ${*LFET.Rules} - XML liquibase definition unknown file extension.' is logged"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16864853378579407">
           <Symbol language="English" value="MFNS"/>
           <Title language="English" value="Mixed liquibase base definitions is not supported."/>
           <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="logger.error('$$dtName - $$version - $$rule / $$rules - $$title')"/>
+          <TestValue group="Cucumber" type="tse" value="Error message '${*LFET.DT.Name} - ${*LFET.version.dt} - ${*LFET.Rule} / ${*LFET.Rules} - Mixed liquibase base definitions is not supported.' is logged"/>
         </ActionOccurrence>
       </ActionOccurrences>
     </Action>
@@ -145,4 +161,13 @@
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="function $$dtname (element, currentFile, processModel, logger, vfs) {"/>
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Epilog" value="}&lt;br/&gt;&lt;br/&gt;module.exports = {&lt;br/&gt;  extract: (element, currentFile, processModel, logger, vfs) =&gt; {&lt;br/&gt;    return $$dtname(element, currentFile, processModel, logger, vfs)&lt;br/&gt;  }&lt;br/&gt;}"/>
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Trace" value="logger.info(`$$dtName - $$version - $$rule / $$rules - ${currentFile} - ${JSON.stringify(processModel)}`)"/>
+  <TestValueGroups selectedGroup="Cucumber">
+    <TestValueGroup name="*ti.gtd.Cucumber"/>
+    <TestValueGroup name="*ti.att.Cucumber"/>
+    <TestValueGroup name="Cucumber" tvgTiAtt="*ti.att.Cucumber" tvgTiGTD="*ti.gtd.Cucumber">
+      <Config name="Config" tags="cucumber" parms="-Group 'Cucumber' -GtdDirectory '../../test/features/testdata/' -GtdFileNamePattern '*.txt; *.csv' -NonExecutableRules '50' -RecommendedTestCases -OutGherkin 'include.testcases.feature'"/>
+    </TestValueGroup>
+  </TestValueGroups>
+  <TestValue group="Cucumber" type="tcpre" value="#language: en"/>
+  <TestValue group="Cucumber" type="isi" value="extractor '${*LFET.DT.Name}' is called"/>
 </LFET>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230826a)" language="English" saveDate="2023.08.26 at 18:39:41 CEST" saveUser="constantin">
+<LFET version="LF-ET 2.2.1 (230826a)" language="English" saveDate="2023.09.10 at 22:33:28 CEST" saveUser="constantin">
   <Conditions>
     <Condition uId="16863469997658590">
       <Title language="English" value="definition is based on ... format"/>
@@ -75,9 +75,9 @@
   <UrlsOut>
     <Url title="Folder" url="file:///./"/>
   </UrlsOut>
-  <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="function $$dtname (element, currentFile, processModel, logger, vfs) {"/>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="const { stringify } = require('../utils')&lt;br/&gt;&lt;br/&gt;function $$dtname (element, currentFile, processModel, logger, vfs) {"/>
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Epilog" value="}&lt;br/&gt;&lt;br/&gt;module.exports = {&lt;br/&gt;  extract: (element, currentFile, processModel, logger, vfs) =&gt; {&lt;br/&gt;    return $$dtname(element, currentFile, processModel, logger, vfs)&lt;br/&gt;  }&lt;br/&gt;}"/>
-  <SourceCode codeLanguage="JavaScript" sourceCodeType="Trace" value="logger.info(`$$dtName - $$version - $$rule / $$rules - ${currentFile} - ${JSON.stringify(processModel)}`)"/>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Trace" value="logger.info(`$$dtName - $$version - $$rule / $$rules - ${currentFile} - ${stringify(processModel)}`)"/>
   <TestValueGroups selectedGroup="Cucumber">
     <TestValueGroup name="*ti.check.Cucumber"/>
     <TestValueGroup name="*ti.gtd.Cucumber"/>

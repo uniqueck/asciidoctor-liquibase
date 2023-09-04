@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230826a)" language="English" saveDate="2023.08.26 at 18:36:00 CEST" saveUser="constantin">
+<LFET version="LF-ET 2.2.1 (230826a)" language="English" saveDate="2023.09.03 at 22:07:13 CEST" saveUser="constantin">
   <Conditions>
     <Condition uId="16863044272660255">
       <Title language="English" value="Liquibase element name is ..."/>
@@ -193,13 +193,13 @@
         <ActionOccurrence uId="16863449399366407">
           <Symbol language="English" value="NOT_SUPPORTED"/>
           <Title language="English" value="not supported element"/>
-          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="logger.warn(`Unsupported liquibase element '${JSON.stringify(element)}' detected`)"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="logger.warn(`Unsupported liquibase element '${stringify(element)}' detected`)"/>
           <TestValue group="Cucumber" type="tse" value="Check that not supported message is logged"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16863449559356413">
           <Symbol language="English" value="IGNORE"/>
           <Title language="English" value="ignored element"/>
-          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="logger.info(`Liquibase element '${JSON.stringify(element)}' ignored`)"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="logger.info(`Liquibase element '${stringify(element)}' ignored`)"/>
           <TestValue group="Cucumber" type="tse" value="Check that ignore message is logged"/>
         </ActionOccurrence>
       </ActionOccurrences>
@@ -589,9 +589,9 @@
   <UrlsOut>
     <Url title="Folder" url="file:///./"/>
   </UrlsOut>
-  <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="function liquibaseElement (element, logger, tillTag, elementNameCallback, tagValueCallback) {&lt;br/&gt;  const liquibaseElementResult = {}"/>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="const { stringify } = require('./utils')&lt;br/&gt;&lt;br/&gt;function liquibaseElement (element, logger, tillTag, elementNameCallback, tagValueCallback) {&lt;br/&gt;  const liquibaseElementResult = {}"/>
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Epilog" value="  //&lt;br/&gt;  return liquibaseElementResult&lt;br/&gt;}&lt;br/&gt;&lt;br/&gt;module.exports = {&lt;br/&gt;  liquibaseElement: (element, logger, tillTag, elementNameCallback, tagValueCallback) =&gt; {&lt;br/&gt;    return liquibaseElement(element, logger, tillTag, elementNameCallback, tagValueCallback)&lt;br/&gt;  }&lt;br/&gt;}"/>
-  <SourceCode codeLanguage="JavaScript" sourceCodeType="Trace" value="logger.info(`$$dtName - $$version - $$rule / $$rules - ${JSON.stringify(element)}`)"/>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Trace" value="logger.info(`$$dtName - $$version - $$rule / $$rules - ${stringify(element)}`)"/>
   <TestValueGroups selectedGroup="Cucumber">
     <TestValueGroup name="*ti.check.Cucumber"/>
     <TestValueGroup name="*ti.gtd.Cucumber"/>

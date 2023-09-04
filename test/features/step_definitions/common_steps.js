@@ -137,7 +137,11 @@ Then('element name is {string}', function (elementName) {
 
 When('extractor {string} is called', function (extractorName) {
   const { extract } = require(`../../../lib/extractor/${extractorName}`)
-  extract(this.element, this.currentFile, this.processModel, this.loggerMock, this.vfs)
+  if (extractorName === 'column') {
+    extract(this.element, this.currentFile, this.processModel.tables.get('tableName'), this.loggerMock)
+  } else {
+    extract(this.element, this.currentFile, this.processModel, this.loggerMock, this.vfs)
+  }
 })
 
 Given('{string} based include changeset with target include file extension {string}', function (format, targetIncludeFileExtension) {
@@ -206,6 +210,11 @@ Given('{string} based {string} changeset', function (format, changeSeType) {
       this.processModel.tables.get('referencedTable').columns.set('referencedColumn', { type: 'int' })
     } else if (changeSeType === 'changeSet') {
       this.element[changeSeType] = {}
+    } else if (changeSeType === 'column') {
+      this.element = {
+        name: 'columnName',
+        type: 'varchar'
+      }
     } else {
       return 'pending'
     }

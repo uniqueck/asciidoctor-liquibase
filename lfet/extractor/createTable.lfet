@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230826a)" language="English" saveDate="2023.08.26 at 18:40:50 CEST" saveUser="constantin">
+<LFET version="LF-ET 2.2.1 (230826a)" language="English" saveDate="2023.09.09 at 21:06:13 CEST" saveUser="constantin">
   <Conditions>
     <Condition uId="16863469997658590">
       <Title language="English" value="definition is based on ... format"/>
@@ -33,12 +33,12 @@
         <ActionOccurrence uId="16863487805934306">
           <Symbol language="English" value="yaml"/>
           <Title language="English" value="extract on yaml definition"/>
-          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const tableName = element.createTable.tableName&lt;br/&gt;processModel.tables.set(tableName, { columns: new Map() })&lt;br/&gt;for (let columnIndex = 0; columnIndex &lt; element.createTable.columns.length; columnIndex++) {&lt;br/&gt;  const column = element.createTable.columns[columnIndex].column&lt;br/&gt;  const constraints = column.constraints&lt;br/&gt;  const primaryKey = constraints !== undefined ? constraints.primaryKey : false&lt;br/&gt;  processModel.tables.get(tableName).columns.set(column.name, { type: column.type, primaryKey })&lt;br/&gt;}"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const tableName = element.createTable.tableName&lt;br/&gt;processModel.tables.set(tableName, { columns: new Map() })&lt;br/&gt;for (let columnIndex = 0; columnIndex &lt; element.createTable.columns.length; columnIndex++) {&lt;br/&gt;  const columnDetails = require('./column').extract(element.createTable.columns[columnIndex].column, currentFile, logger)&lt;br/&gt;  processModel.tables.get(tableName).columns.set(columnDetails.name, columnDetails)&lt;br/&gt;}"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16863870064498619">
           <Symbol language="English" value="xml"/>
           <Title language="English" value="extract on xml definition"/>
-          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const tableName = element.$.tableName&lt;br/&gt;processModel.tables.set(tableName, { columns: new Map() })&lt;br/&gt;for (let columnIndex = 0; columnIndex &lt; element.$$.length; columnIndex++) {&lt;br/&gt;  const column = element.$$[columnIndex]&lt;br/&gt;  const constraints = column.constraints&lt;br/&gt;  const primaryKey = constraints !== undefined ? constraints[0].$.primaryKey : false&lt;br/&gt;  processModel.tables.get(tableName).columns.set(column.$.name, { type: column.$.type, primaryKey })&lt;br/&gt;}"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const tableName = element.$.tableName&lt;br/&gt;processModel.tables.set(tableName, { columns: new Map() })&lt;br/&gt;for (let columnIndex = 0; columnIndex &lt; element.$$.length; columnIndex++) {&lt;br/&gt;  const columnDetails = require('./column').extract(element.$$[columnIndex], currentFile, logger)&lt;br/&gt;  processModel.tables.get(tableName).columns.set(columnDetails.name, columnDetails)&lt;br/&gt;}"/>
         </ActionOccurrence>
       </ActionOccurrences>
       <TestValue group="Cucumber" type="tcpost" value="'${*LFET.DT.Name}' information is extracted"/>
@@ -73,9 +73,9 @@
   <UrlsOut>
     <Url title="Folder" url="file:///./"/>
   </UrlsOut>
-  <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="function $$dtname (element, currentFile, processModel, logger, vfs) {"/>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="const { stringify } = require('../utils')&lt;br/&gt;&lt;br/&gt;function $$dtname (element, currentFile, processModel, logger, vfs) {"/>
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Epilog" value="}&lt;br/&gt;&lt;br/&gt;module.exports = {&lt;br/&gt;  extract: (element, currentFile, processModel, logger, vfs) =&gt; {&lt;br/&gt;    return $$dtname(element, currentFile, processModel, logger, vfs)&lt;br/&gt;  }&lt;br/&gt;}"/>
-  <SourceCode codeLanguage="JavaScript" sourceCodeType="Trace" value="logger.info(`$$dtName - $$version - $$rule / $$rules - ${currentFile} - ${JSON.stringify(processModel)}`)"/>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Trace" value="logger.info(`$$dtName - $$version - $$rule / $$rules - ${currentFile} - ${stringify(processModel)}`)"/>
   <TestValueGroups selectedGroup="Cucumber">
     <TestValueGroup name="*ti.gtd.Cucumber"/>
     <TestValueGroup name="*ti.att.Cucumber"/>

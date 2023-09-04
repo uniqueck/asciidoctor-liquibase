@@ -3,7 +3,7 @@
 # 
 # Aktueller Benutzer: constantin
 # Aktuelles Verzeichnis (user.dir): "/opt/data/github/asciidoctor/asciidoctor-liquibase"
-# Benötigte Zeit: 00:00:00.019 (26.08.2023 23:25:18.363 - 26.08.2023 23:25:18.382)
+# Benötigte Zeit: 00:00:00.018 (10.09.2023 22:54:31.070 - 10.09.2023 22:54:31.088)
 # 
 # Entscheidungstabelle: /opt/data/github/asciidoctor/asciidoctor-liquibase/lfet/extractor/createIndex.lfet
 # 
@@ -41,6 +41,6 @@ Feature: extract liquibase element createIndex
     R02 : B01 definition is based on ... format = *
     Given 'json' based 'createIndex' changeset
     When  extractor 'createIndex' is called
-    Then  Error message 'createIndex - 20230826.232432 - Format for currentFile.json is not supported.' is logged
+    Then  Error message 'createIndex - 20230910.223507 - Format for currentFile.json is not supported.' is logged
 
 ### end of generated test cases ###

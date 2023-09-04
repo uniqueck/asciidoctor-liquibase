@@ -4,7 +4,7 @@ const generateSite = require('@antora/site-generator-default')
 const path = require('path')
 
 describe('Antora integration', function () {
-  this.timeout(10000)
+  this.timeout(20000)
 
   before(async function () {
     /* eslint-disable n/handle-callback-err */

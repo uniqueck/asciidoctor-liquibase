@@ -1,0 +1,8 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog">
+    <changeSet id="modifyDataType" author="liquibase-docs">
+        <createTable tableName="person">
+            <column name="id" type="varchar" />
+        </createTable>
+        <modifyDataType tableName="person" columnName="id" newDataType="int" />
+    </changeSet>
+</databaseChangeLog>

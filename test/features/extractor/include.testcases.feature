@@ -3,7 +3,7 @@
 # 
 # Aktueller Benutzer: constantin
 # Aktuelles Verzeichnis (user.dir): "/opt/data/github/asciidoctor/asciidoctor-liquibase"
-# Benötigte Zeit: 00:00:00.037 (26.08.2023 23:25:18.452 - 26.08.2023 23:25:18.489)
+# Benötigte Zeit: 00:00:00.035 (10.09.2023 22:54:31.151 - 10.09.2023 22:54:31.186)
 # 
 # Entscheidungstabelle: /opt/data/github/asciidoctor/asciidoctor-liquibase/lfet/extractor/include.lfet
 # 
@@ -40,7 +40,7 @@ Feature: extract liquibase element include
     R02 : B01 definition is based on ... format = yaml ; B02 yaml based definition - file extension = xml
     Given 'yaml' based include changeset with target include file extension 'xml'
     When  extractor 'include' is called
-    Then  Error message 'include - 20230826.183452 - 2 / 7 - Mixed liquibase base definitions is not supported.' is logged
+    Then  Error message 'include - 20230910.223434 - 2 / 7 - Mixed liquibase base definitions is not supported.' is logged
 
   @recommended
   Scenario: 0003 include
@@ -48,7 +48,7 @@ Feature: extract liquibase element include
     R03 : B01 definition is based on ... format = yaml ; B02 yaml based definition - file extension = *
     Given 'yaml' based include changeset with target include file extension 'json'
     When  extractor 'include' is called
-    Then  Error message 'include - 20230826.183452 - 3 / 7 - YAML liquibase definition unknown file extension.' is logged
+    Then  Error message 'include - 20230910.223434 - 3 / 7 - YAML liquibase definition unknown file extension.' is logged
 
   @recommended
   Scenario: 0004 include
@@ -56,7 +56,7 @@ Feature: extract liquibase element include
     R04 : B01 definition is based on ... format = xml ; B03 xml based definition - file extension = yaml
     Given 'xml' based include changeset with target include file extension 'yaml'
     When  extractor 'include' is called
-    Then  Error message 'include - 20230826.183452 - 4 / 7 - Mixed liquibase base definitions is not supported.' is logged
+    Then  Error message 'include - 20230910.223434 - 4 / 7 - Mixed liquibase base definitions is not supported.' is logged
 
   @recommended
   Scenario: 0005 include
@@ -71,7 +71,7 @@ Feature: extract liquibase element include
     R06 : B01 definition is based on ... format = xml ; B03 xml based definition - file extension = *
     Given 'xml' based include changeset with target include file extension 'json'
     When  extractor 'include' is called
-    Then  Error message 'include - 20230826.183452 - 6 / 7 - XML liquibase definition unknown file extension.' is logged
+    Then  Error message 'include - 20230910.223434 - 6 / 7 - XML liquibase definition unknown file extension.' is logged
 
   @recommended
   Scenario: 0007 include
@@ -79,6 +79,6 @@ Feature: extract liquibase element include
     R07 : B01 definition is based on ... format = *
     Given 'json' based include changeset with target include file extension 'json'
     When  extractor 'include' is called
-    Then  Error message 'include - 20230826.183452 - 7 / 7 - Format for \'currentFile.json\' is not supported.' is logged
+    Then  Error message 'include - 20230910.223434 - 7 / 7 - Format for \'currentFile.json\' is not supported.' is logged
 
 ### end of generated test cases ###

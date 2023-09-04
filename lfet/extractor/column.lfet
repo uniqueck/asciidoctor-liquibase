@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LFET version="LF-ET 2.2.1 (230826a)" language="English" saveDate="2023.09.10 at 22:53:04 CEST" saveUser="constantin">
+  <Conditions>
+    <Condition uId="16936948866246974">
+      <Title language="English" value="step"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="16936948985157095">
+          <Symbol language="English" value="1"/>
+          <Title language="English" value="Step 1"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="_step === $$symbol"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16936948985177097">
+          <Symbol language="English" value="2"/>
+          <Title language="English" value="Step 2"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+    <Condition uId="16863469997658590">
+      <Title language="English" value="definition is based on ... format"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="16863486742924066">
+          <Symbol language="English" value="yaml"/>
+          <Title language="English" value="yaml definition"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="currentFile.endsWith('$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="'${*GTD.Format.Format}' based ${*LFET.DT.Name} changeset"/>
+          <TestValue group="*ti.gtd.Cucumber" type="tcpre" value="Row, Format, Formats, Format = '${*LFET.Symbol}'"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863875092701159">
+          <Symbol language="English" value="xml"/>
+          <Title language="English" value="xml definition"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="currentFile.endsWith('$$symbol')"/>
+          <TestValue group="Cucumber" type="tcpre" value="'${*GTD.Format.Format}' based ${*LFET.DT.Name} changeset"/>
+          <TestValue group="*ti.gtd.Cucumber" type="tcpre" value="Row, Format, Formats, Format = '${*LFET.Symbol}'"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16863486742944068">
+          <Symbol language="English" value="*"/>
+          <Title language="English" value="extractor not supported for other formats"/>
+          <TestValue group="*ti.gtd.Cucumber" type="tcpre" value="Row, Format, Formats, Supported = false"/>
+          <TestValue group="Cucumber" type="tcpre" value="'${*GTD.Format.Format}' based '${*LFET.DT.Name}' changeset"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+    <Condition uId="16936907940024288">
+      <Title language="English" value="exist constraints element"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="16941156615736411">
+          <Symbol language="English" value="Y"/>
+          <Title language="English" value="Yes"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="constraintElementCallback(element) !== undefined"/>
+          <TestValue group="Cucumber" type="tcpre" value="sub tag 'constraints' exists"/>
+          <TestValue group="Cucumber" type="tse" value="extracted primaryKey information is set to true"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16941156617546413">
+          <Symbol language="English" value="N"/>
+          <Title language="English" value="No"/>
+          <TestValue group="Cucumber" type="tse" value="extracted primaryKey information is set to false"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+    <Condition uId="16943358535467445">
+      <Title language="English" value="exists primaryKey information"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="16943366213088663">
+          <Symbol language="English" value="Y"/>
+          <Title language="English" value="Yes"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="(constraintElementCallback(element).primaryKey !== undefined)"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16943366215128665">
+          <Symbol language="English" value="N"/>
+          <Title language="English" value="No"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+    <Condition uId="16943358818627454">
+      <Title language="English" value="exists foreignKey information"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="16943366215228675">
+          <Symbol language="English" value="Y"/>
+          <Title language="English" value="Yes"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="LogArg" value="(constraintElementCallback(element).referencedColumnNames !== undefined &amp;&amp; constraintElementCallback(element).referencedTableName !== undefined)"/>
+          <TestValue group="Cucumber" type="tcpre" value="foreign key information are present"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16943366215248677">
+          <Symbol language="English" value="N"/>
+          <Title language="English" value="No"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+  </Conditions>
+  <Actions>
+    <Action uId="16936950674979118">
+      <Title language="English" value="define callback to check existence of constraint element"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="16936951046129234">
+          <Symbol language="English" value="yaml"/>
+          <Title language="English" value="yaml based callback"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="constraintElementCallback = (_element) =&gt; { return _element.constraints }"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16936951152529238">
+          <Symbol language="English" value="xml"/>
+          <Title language="English" value="xml based callback"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="constraintElementCallback = (_element) =&gt; { return (_element.$$ !== undefined &amp;&amp; _element.$$[0]['#name'] === 'constraints') ? _element.$$[0].$ : undefined }"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="16936951438469474">
+      <Title language="English" value="extract primary key information's"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="16943364485848350">
+          <Symbol language="English" value="EXTRACT"/>
+          <Title language="English" value="extract information from element"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="columnDetails.primaryKey = constraintElementCallback(element).primaryKey"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16941156617626421">
+          <Symbol language="English" value="FALSE"/>
+          <Title language="English" value="set information to false"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="columnDetails.primaryKey = false"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="16943359977797480">
+      <Title language="English" value="extract foreign key information's"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="16943367078398971">
+          <Symbol language="English" value="EXTRACT"/>
+          <Title language="English" value="extract information from element"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const _constraintElement = constraintElementCallback(element)&lt;br/&gt;columnDetails.referencedColumnNames = _constraintElement.referencedColumnNames&lt;br/&gt;columnDetails.referencedTableName = _constraintElement.referencedTableName"/>
+          <TestValue group="Cucumber" type="tse" value="extracted foreign key information is set"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="16943359727277476">
+      <Title language="English" value="extract column name"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="16943365619648639">
+          <Symbol language="English" value="xml"/>
+          <Title language="English" value="extract on xml definition"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="columnDetails.name = element.$.name"/>
+          <TestValue group="Cucumber" type="tse" value="extracted column name is 'columnName'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16943365588558633">
+          <Symbol language="English" value="yaml"/>
+          <Title language="English" value="extract table on yaml definition"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="columnDetails.name = element.name"/>
+          <TestValue group="Cucumber" type="tse" value="extracted column name is 'columnName'"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="16943359853627478">
+      <Title language="English" value="extract column type"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="16943365638788650">
+          <Symbol language="English" value="xml"/>
+          <Title language="English" value="extract on xml definition"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="columnDetails.type = element.$.type"/>
+          <TestValue group="Cucumber" type="tse" value="extracted column type is 'int'"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16943365657758656">
+          <Symbol language="English" value="yaml"/>
+          <Title language="English" value="extract table on yaml definition"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="columnDetails.type = element.type"/>
+          <TestValue group="Cucumber" type="tse" value="extracted column type is 'varchar'"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="11443124877466972">
+      <Title language="English" value="error"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="16926514790330547">
+          <Symbol language="English" value="X"/>
+          <Title language="English" value="execute action"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="logger.error(`$$dtName - $$version - Format for ${currentFile} is not supported.`)"/>
+          <TestValue group="Cucumber" type="tse" value="Error message '${*LFET.DT.Name} - ${*LFET.version.dt} - Format for currentFile.${*GTD.Format.Format} is not supported.' is logged"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="16936949205247215">
+      <Title language="English" value="next step"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="16936950145098493">
+          <Symbol language="English" value="+"/>
+          <Title language="English" value="next step"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="_step++&lt;br/&gt;_exit = false"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16936950209368498">
+          <Symbol language="English" value="Ex"/>
+          <Title language="English" value="exit"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="_exit = true"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+  </Actions>
+  <Rules lastId="382">
+    <Rule id="381">
+      <ConditionOccurrenceLink link="16863486742924066"/>
+      <ConditionOccurrenceLink link="16936948985157095"/>
+      <ActionOccurrenceLink link="16936950145098493"/>
+      <ActionOccurrenceLink link="16936951046129234"/>
+      <ActionOccurrenceLink link="16943365588558633"/>
+      <ActionOccurrenceLink link="16943365657758656"/>
+    </Rule>
+    <Rule id="382">
+      <ConditionOccurrenceLink link="16863875092701159"/>
+      <ConditionOccurrenceLink link="16936948985157095"/>
+      <ActionOccurrenceLink link="16936950145098493"/>
+      <ActionOccurrenceLink link="16936951152529238"/>
+      <ActionOccurrenceLink link="16943365619648639"/>
+      <ActionOccurrenceLink link="16943365638788650"/>
+    </Rule>
+    <Rule id="362">
+      <ConditionOccurrenceLink link="16863486742944068"/>
+      <ActionOccurrenceLink link="16926514790330547"/>
+      <ActionOccurrenceLink link="16936950209368498"/>
+      <ConditionOccurrenceLink link="16936948985157095"/>
+    </Rule>
+    <Rule id="376">
+      <ConditionOccurrenceLink link="16936948985177097"/>
+      <ActionOccurrenceLink link="16936950209368498"/>
+      <ConditionOccurrenceLink link="16941156615736411"/>
+      <ActionOccurrenceLink link="16943364485848350"/>
+      <ConditionOccurrenceLink link="16943366213088663"/>
+      <ConditionOccurrenceLink link="16943366215228675"/>
+      <ActionOccurrenceLink link="16943367078398971"/>
+    </Rule>
+    <Rule id="377">
+      <ConditionOccurrenceLink link="16936948985177097"/>
+      <ActionOccurrenceLink link="16936950209368498"/>
+      <ConditionOccurrenceLink link="16941156615736411"/>
+      <ActionOccurrenceLink link="16943364485848350"/>
+      <ConditionOccurrenceLink link="16943366213088663"/>
+      <ConditionOccurrenceLink link="16943366215248677"/>
+    </Rule>
+    <Rule id="378">
+      <ConditionOccurrenceLink link="16936948985177097"/>
+      <ActionOccurrenceLink link="16936950209368498"/>
+      <ConditionOccurrenceLink link="16941156615736411"/>
+      <ActionOccurrenceLink link="16941156617626421"/>
+      <ConditionOccurrenceLink link="16943366215128665"/>
+      <ConditionOccurrenceLink link="16943366215228675"/>
+      <ActionOccurrenceLink link="16943367078398971"/>
+    </Rule>
+    <Rule id="379">
+      <ConditionOccurrenceLink link="16936948985177097"/>
+      <ActionOccurrenceLink link="16936950209368498"/>
+      <ConditionOccurrenceLink link="16941156615736411"/>
+      <ActionOccurrenceLink link="16941156617626421"/>
+      <ConditionOccurrenceLink link="16943366215128665"/>
+      <ConditionOccurrenceLink link="16943366215248677"/>
+    </Rule>
+    <Rule id="380">
+      <ConditionOccurrenceLink link="16936948985177097"/>
+      <ActionOccurrenceLink link="16936950209368498"/>
+      <ConditionOccurrenceLink link="16941156617546413"/>
+      <ActionOccurrenceLink link="16941156617626421"/>
+    </Rule>
+  </Rules>
+  <Title language="English" value="extract liquibase element column"/>
+  <UrlsOut>
+    <Url title="Folder" url="file:///./"/>
+  </UrlsOut>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="const { stringify } = require('../utils')&lt;br/&gt;&lt;br/&gt;function $$dtname (element, currentFile, logger) {&lt;br/&gt;  let _step = 1&lt;br/&gt;  let _exit = false&lt;br/&gt;  let constraintElementCallback = (_element) =&gt; { return undefined }&lt;br/&gt;  const $$dtnameDetails = {}&lt;br/&gt;  do {&lt;br/&gt;    _exit = true&lt;br/&gt;    // $$BasicIndentLevel=2"/>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Epilog" value="  } while (_exit === false)&lt;br/&gt;  return $$dtnameDetails&lt;br/&gt;}&lt;br/&gt;&lt;br/&gt;module.exports = {&lt;br/&gt;  extract: (element, currentFile, logger) =&gt; {&lt;br/&gt;    return $$dtname(element, currentFile, logger)&lt;br/&gt;  }&lt;br/&gt;}"/>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Trace" value="logger.info(`$$dtName - $$version - $$rule / $$rules - ${currentFile} - ${stringify(element)} - ${stringify($$dtnameDetails)}`)"/>
+  <TestValueGroups selectedGroup="Cucumber">
+    <TestValueGroup name="*ti.check.Cucumber"/>
+    <TestValueGroup name="*ti.gtd.Cucumber"/>
+    <TestValueGroup name="*ti.att.Cucumber"/>
+    <TestValueGroup name="Cucumber" tvgTiAtt="*ti.att.Cucumber" tvgTiCheck="*ti.check.Cucumber" tvgTiGTD="*ti.gtd.Cucumber">
+      <Config name="Config" tags="cucumber" parms="-Group 'Cucumber' -GtdDirectory '../../test/features/testdata/' -GtdFileNamePattern '*.txt; *.csv' -SwitchCoverage '1' -NonExecutableRules '50' -RecommendedTestCases -OutGherkin 'column.testcases.feature'"/>
+    </TestValueGroup>
+  </TestValueGroups>
+  <TestValue group="Cucumber" type="isi" value="extractor ${*LFET.DT.Name} is called"/>
+  <TestValue group="Cucumber" type="tcpre" value="#language:en"/>
+  <TestValue group="*ti.att.Cucumber" type="isi" value="scope=global&lt;br/&gt;sid=100"/>
+</LFET>

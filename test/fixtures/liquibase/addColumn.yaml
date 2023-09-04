@@ -9,6 +9,8 @@ databaseChangeLog:
             - column:
                 name: id
                 type: varchar
+                constraints:
+                  primaryKey: true
       - addColumn:
           tableName: person
           columns:

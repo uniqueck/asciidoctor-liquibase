@@ -3,7 +3,7 @@
 # 
 # Aktueller Benutzer: constantin
 # Aktuelles Verzeichnis (user.dir): "/opt/data/github/asciidoctor/asciidoctor-liquibase"
-# Benötigte Zeit: 00:00:00.025 (26.08.2023 23:25:18.336 - 26.08.2023 23:25:18.361)
+# Benötigte Zeit: 00:00:00.021 (10.09.2023 22:54:30.977 - 10.09.2023 22:54:30.998)
 # 
 # Entscheidungstabelle: /opt/data/github/asciidoctor/asciidoctor-liquibase/lfet/extractor/changeSet.lfet
 # 
@@ -57,6 +57,6 @@ Feature: extract liquibase element changeSet
     R04 : B01 definition is based on ... format = *
     Given 'json' based 'changeSet' changeset
     When  extractor 'changeSet' is called
-    Then  Error message 'changeSet - 20230826.222749 - Format for currentFile.json is not supported.' is logged
+    Then  Error message 'changeSet - 20230910.222205 - Format for currentFile.json is not supported.' is logged
 
 ### end of generated test cases ###

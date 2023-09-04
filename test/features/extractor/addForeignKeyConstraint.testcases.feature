@@ -3,7 +3,7 @@
 # 
 # Aktueller Benutzer: constantin
 # Aktuelles Verzeichnis (user.dir): "/opt/data/github/asciidoctor/asciidoctor-liquibase"
-# Benötigte Zeit: 00:00:00.025 (26.08.2023 23:25:18.286 - 26.08.2023 23:25:18.311)
+# Benötigte Zeit: 00:00:00.030 (10.09.2023 22:54:30.927 - 10.09.2023 22:54:30.957)
 # 
 # Entscheidungstabelle: /opt/data/github/asciidoctor/asciidoctor-liquibase/lfet/extractor/addForeignKeyConstraint.lfet
 # 
@@ -49,6 +49,6 @@ Feature: extract liquibase element addForeignKeyConstraint
     R03 : B01 definition is based on ... format = *
     Given 'json' based 'addForeignKeyConstraint' changeset
     When  extractor 'addForeignKeyConstraint' is called
-    Then  Error message 'addForeignKeyConstraint - 20230826.183912 - Format for currentFile.json is not supported.' is logged
+    Then  Error message 'addForeignKeyConstraint - 20230910.222853 - Format for currentFile.json is not supported.' is logged
 
 ### end of generated test cases ###

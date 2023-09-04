@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230826a)" language="English" saveDate="2023.08.31 at 20:21:46 CEST" saveUser="constantin">
+<LFET version="LF-ET 2.2.1 (230826a)" language="English" saveDate="2023.09.03 at 22:06:11 CEST" saveUser="constantin">
   <Conditions>
     <Condition uId="16864341410910276">
       <Title language="English" value="Step"/>
@@ -143,7 +143,7 @@
         <ActionOccurrence uId="16926450300247218">
           <Symbol language="English" value="X"/>
           <Title language="English" value="execute action"/>
-          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="logger.info(`${JSON.stringify(currentElement)} ignored.`)"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="logger.info(`${stringify(currentElement)} ignored.`)"/>
         </ActionOccurrence>
       </ActionOccurrences>
     </Action>
@@ -232,9 +232,9 @@
   <UrlsOut>
     <Url title="Folder" url="file:///./"/>
   </UrlsOut>
-  <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="function parseLiquibaseChangeSet (processModel, currentFile, elements, logger, vfs, tillTag) {&lt;br/&gt;  const content = []&lt;br/&gt;  let _step = 1&lt;br/&gt;  let _exit = false&lt;br/&gt;  let currentElement&lt;br/&gt;  let elementIndex = 0&lt;br/&gt;  let elementDetails&lt;br/&gt;  //&lt;br/&gt;  do {&lt;br/&gt;    _exit = true&lt;br/&gt;    // $$BasicIndentLevel=2"/>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="const { stringify } = require('./utils')&lt;br/&gt;&lt;br/&gt;function parseLiquibaseChangeSet (processModel, currentFile, elements, logger, vfs, tillTag) {&lt;br/&gt;  const content = []&lt;br/&gt;  let _step = 1&lt;br/&gt;  let _exit = false&lt;br/&gt;  let currentElement&lt;br/&gt;  let elementIndex = 0&lt;br/&gt;  let elementDetails&lt;br/&gt;  //&lt;br/&gt;  do {&lt;br/&gt;    _exit = true&lt;br/&gt;    // $$BasicIndentLevel=2"/>
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Epilog" value="  //&lt;br/&gt;  } while (_exit === false)&lt;br/&gt;  return content&lt;br/&gt;}&lt;br/&gt;&lt;br/&gt;module.exports = {&lt;br/&gt;  parseLiquibaseChangeSet: (processModel, currentFile, elements, logger, vfs, tillTag) =&gt; {&lt;br/&gt;    return parseLiquibaseChangeSet(processModel, currentFile, elements, logger, vfs, tillTag)&lt;br/&gt;  }&lt;br/&gt;}"/>
-  <SourceCode codeLanguage="JavaScript" sourceCodeType="Trace" value="logger.info(`$$dtName - $$version - $$rule / $$rules - ${currentFile} - ${JSON.stringify(processModel)}`)"/>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Trace" value="logger.info(`$$dtName - $$version - $$rule / $$rules - ${currentFile} - ${stringify(processModel)}`)"/>
   <TestValueGroups selectedGroup="Cucumber">
     <TestValueGroup name="*ti.check.Cucumber"/>
     <TestValueGroup name="*ti.gtd.Cucumber"/>

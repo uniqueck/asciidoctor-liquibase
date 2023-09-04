@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230826a)" language="English" saveDate="2023.08.26 at 18:38:54 CEST" saveUser="constantin">
+<LFET version="LF-ET 2.2.1 (230826a)" language="English" saveDate="2023.09.09 at 21:06:55 CEST" saveUser="constantin">
   <Conditions>
     <Condition uId="16863469997658590">
       <Title language="English" value="definition is based on ... format"/>
@@ -35,15 +35,18 @@
         <ActionOccurrence uId="16863487805934306">
           <Symbol language="English" value="yaml"/>
           <Title language="English" value="extract table on yaml definition"/>
-          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const tableName = element.addColumn.tableName&lt;br/&gt;const table = processModel.tables.get(tableName)&lt;br/&gt;const columns = element.addColumn.columns&lt;br/&gt;columns.forEach((column) =&gt; {&lt;br/&gt;  const columnName = column.column.name&lt;br/&gt;  const type = column.column.type&lt;br/&gt;  table.columns.set(columnName, { type, primaryKey: false })&lt;br/&gt;})"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const tableName = element.addColumn.tableName&lt;br/&gt;const table = processModel.tables.get(tableName)&lt;br/&gt;const columns = element.addColumn.columns&lt;br/&gt;columns.forEach((column) =&gt; {&lt;br/&gt;  const columnDetails = require('./column').extract(column.column, currentFile, logger)&lt;br/&gt;  table.columns.set(columnDetails.name, columnDetails)&lt;br/&gt;})"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16863874949031053">
           <Symbol language="English" value="xml"/>
           <Title language="English" value="extract on xml definition"/>
-          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const tableName = element.$.tableName&lt;br/&gt;const table = processModel.tables.get(tableName)&lt;br/&gt;const columns = element.column&lt;br/&gt;columns.forEach((column) =&gt; {&lt;br/&gt;  const columnName = column.$.name&lt;br/&gt;  const type = column.$.type&lt;br/&gt;  table.columns.set(columnName, { type, primaryKey: false })&lt;br/&gt;})"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const tableName = element.$.tableName&lt;br/&gt;const table = processModel.tables.get(tableName)&lt;br/&gt;const columns = element.column&lt;br/&gt;columns.forEach((column) =&gt; {&lt;br/&gt;  const columnDetails = require('./column').extract(column, currentFile, logger)&lt;br/&gt;  table.columns.set(columnDetails.name, columnDetails)&lt;br/&gt;})"/>
         </ActionOccurrence>
       </ActionOccurrences>
       <TestValue group="Cucumber" type="tcpost" value="'${*LFET.DT.Name}' information is extracted"/>
+      <UrlsOut>
+        <Url title="column.lfet" url="file:///./column.lfet"/>
+      </UrlsOut>
     </Action>
     <Action uId="11443124877466972">
       <Title language="English" value="error"/>
@@ -57,7 +60,7 @@
       </ActionOccurrences>
     </Action>
   </Actions>
-  <Rules lastId="345">
+  <Rules lastId="359">
     <Rule id="342">
       <ConditionOccurrenceLink link="16863486742924066"/>
       <ActionOccurrenceLink link="16863487805934306"/>
@@ -75,9 +78,9 @@
   <UrlsOut>
     <Url title="Folder" url="file:///./"/>
   </UrlsOut>
-  <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="function $$dtname (element, currentFile, processModel, logger, vfs) {"/>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Prolog" value="const { stringify } = require('../utils')&lt;br/&gt;&lt;br/&gt;function $$dtname (element, currentFile, processModel, logger, vfs) {"/>
   <SourceCode codeLanguage="JavaScript" sourceCodeType="Epilog" value="}&lt;br/&gt;&lt;br/&gt;module.exports = {&lt;br/&gt;  extract: (element, currentFile, processModel, logger, vfs) =&gt; {&lt;br/&gt;    return $$dtname(element, currentFile, processModel, logger, vfs)&lt;br/&gt;  }&lt;br/&gt;}"/>
-  <SourceCode codeLanguage="JavaScript" sourceCodeType="Trace" value="logger.info(`$$dtName - $$version - $$rule / $$rules - ${currentFile} - ${JSON.stringify(processModel)}`)"/>
+  <SourceCode codeLanguage="JavaScript" sourceCodeType="Trace" value="logger.info(`$$dtName - $$version - $$rule / $$rules - ${currentFile} - ${stringify(processModel)}`)"/>
   <TestValueGroups selectedGroup="Cucumber">
     <TestValueGroup name="*ti.check.Cucumber"/>
     <TestValueGroup name="*ti.gtd.Cucumber"/>

@@ -3,7 +3,7 @@
 # 
 # Aktueller Benutzer: constantin
 # Aktuelles Verzeichnis (user.dir): "/opt/data/github/asciidoctor/asciidoctor-liquibase"
-# Benötigte Zeit: 00:00:00.021 (26.08.2023 23:25:18.384 - 26.08.2023 23:25:18.405)
+# Benötigte Zeit: 00:00:00.019 (10.09.2023 22:54:31.090 - 10.09.2023 22:54:31.109)
 # 
 # Entscheidungstabelle: /opt/data/github/asciidoctor/asciidoctor-liquibase/lfet/extractor/createTable.lfet
 # 
@@ -49,6 +49,6 @@ Feature: extract liquibase element createTable
     R03 : B01 definition is based on ... format = *
     Given 'json' based 'createTable' changeset
     When  extractor 'createTable' is called
-    Then  Error message 'createTable - 20230826.184050 - Format for currentFile.json is not supported.' is logged
+    Then  Error message 'createTable - 20230909.210613 - Format for currentFile.json is not supported.' is logged
 
 ### end of generated test cases ###

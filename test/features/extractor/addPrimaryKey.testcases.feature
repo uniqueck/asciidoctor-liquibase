@@ -3,7 +3,7 @@
 # 
 # Aktueller Benutzer: constantin
 # Aktuelles Verzeichnis (user.dir): "/opt/data/github/asciidoctor/asciidoctor-liquibase"
-# Benötigte Zeit: 00:00:00.022 (26.08.2023 23:25:18.313 - 26.08.2023 23:25:18.335)
+# Benötigte Zeit: 00:00:00.018 (10.09.2023 22:54:30.958 - 10.09.2023 22:54:30.976)
 # 
 # Entscheidungstabelle: /opt/data/github/asciidoctor/asciidoctor-liquibase/lfet/extractor/addPrimaryKey.lfet
 # 
@@ -49,6 +49,6 @@ Feature: extract liquibase element addPrimaryKey
     R03 : B01 definition is based on ... format = *
     Given 'json' based 'addPrimaryKey' changeset
     When  extractor 'addPrimaryKey' is called
-    Then  Error message 'addPrimaryKey - 20230826.184034 - Format for currentFile.json is not supported.' is logged
+    Then  Error message 'addPrimaryKey - 20230910.223007 - Format for currentFile.json is not supported.' is logged
 
 ### end of generated test cases ###

@@ -3,7 +3,7 @@
 # 
 # Aktueller Benutzer: constantin
 # Aktuelles Verzeichnis (user.dir): "/opt/data/github/asciidoctor/asciidoctor-liquibase"
-# Benötigte Zeit: 00:00:00.021 (26.08.2023 23:25:18.490 - 26.08.2023 23:25:18.511)
+# Benötigte Zeit: 00:00:00.018 (10.09.2023 22:54:31.189 - 10.09.2023 22:54:31.207)
 # 
 # Entscheidungstabelle: /opt/data/github/asciidoctor/asciidoctor-liquibase/lfet/extractor/modifyDataType.lfet
 # 
@@ -49,6 +49,6 @@ Feature: extract liquibase element modifyDataType
     R03 : B01 definition is based on ... format = *
     Given 'json' based 'modifyDataType' changeset
     When  extractor 'modifyDataType' is called
-    Then  Error message 'modifyDataType - 20230826.183448 - Format for currentFile.json is not supported.' is logged
+    Then  Error message 'modifyDataType - 20230910.222411 - Format for currentFile.json is not supported.' is logged
 
 ### end of generated test cases ###

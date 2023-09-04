@@ -3,7 +3,7 @@
 # 
 # Aktueller Benutzer: constantin
 # Aktuelles Verzeichnis (user.dir): "/opt/data/github/asciidoctor/asciidoctor-liquibase"
-# Benötigte Zeit: 00:00:00.020 (26.08.2023 23:25:18.407 - 26.08.2023 23:25:18.427)
+# Benötigte Zeit: 00:00:00.019 (10.09.2023 22:54:31.110 - 10.09.2023 22:54:31.129)
 # 
 # Entscheidungstabelle: /opt/data/github/asciidoctor/asciidoctor-liquibase/lfet/extractor/dropColumn.lfet
 # 
@@ -49,6 +49,6 @@ Feature: extract liquibase element dropColumn
     R03 : B01 definition is based on ... format = *
     Given 'json' based 'dropColumn' changeset
     When  extractor 'dropColumn' is called
-    Then  Error message 'dropColumn - 20230826.183941 - Format for currentFile.json is not supported.' is logged
+    Then  Error message 'dropColumn - 20230910.223328 - Format for currentFile.json is not supported.' is logged
 
 ### end of generated test cases ###

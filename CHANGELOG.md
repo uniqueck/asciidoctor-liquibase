@@ -1,3 +1,14 @@
+## [1.2.3](https://github.com/uniqueck/asciidoctor-liquibase/compare/v1.2.2...v1.2.3) (2023-09-10)
+
+
+### Fix
+
+* missing processing of foreignkey information's on addColumn / createTable changeset (fixes #15) ([4b5d08d](https://github.com/uniqueck/asciidoctor-liquibase/commit/4b5d08d70476895b6c4e4d87ddb050d826a078d4)), closes [#15](https://github.com/uniqueck/asciidoctor-liquibase/issues/15)
+
+### Test
+
+* add cucumber tests for extractor elements ([ef6e72d](https://github.com/uniqueck/asciidoctor-liquibase/commit/ef6e72dedfd1a27866f6034396a6bf75afbef8fa))
+
 ## [1.2.2](https://github.com/uniqueck/asciidoctor-liquibase/compare/v1.2.1...v1.2.2) (2023-08-19)
 
 

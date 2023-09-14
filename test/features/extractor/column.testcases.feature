@@ -3,7 +3,7 @@
 # 
 # Aktueller Benutzer: constantin
 # Aktuelles Verzeichnis (user.dir): "/opt/data/github/asciidoctor/asciidoctor-liquibase"
-# Benötigte Zeit: 00:00:00.065 (10.09.2023 22:54:30.999 - 10.09.2023 22:54:31.064)
+# Benötigte Zeit: 00:00:00.074 (14.09.2023 14:11:35.797 - 14.09.2023 14:11:35.871)
 # 
 # Entscheidungstabelle: /opt/data/github/asciidoctor/asciidoctor-liquibase/lfet/extractor/column.lfet
 # 
@@ -157,6 +157,6 @@ Feature: extract liquibase element column
     R03 : B02 definition is based on ... format = *
     Given 'json' based 'column' changeset
     When  extractor column is called
-    Then  Error message 'column - 20230910.225304 - Format for currentFile.json is not supported.' is logged
+    Then  Error message 'column - 20230914.141121 - Format for currentFile.json is not supported.' is logged
 
 ### end of generated test cases ###

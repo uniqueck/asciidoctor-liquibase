@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230826a)" language="English" saveDate="2023.09.10 at 22:53:04 CEST" saveUser="constantin">
+<LFET version="LF-ET 2.2.1 (230826a)" language="English" saveDate="2023.09.14 at 14:11:21 CEST" saveUser="constantin">
   <Conditions>
     <Condition uId="16936948866246974">
       <Title language="English" value="step"/>
@@ -125,7 +125,7 @@
         <ActionOccurrence uId="16943367078398971">
           <Symbol language="English" value="EXTRACT"/>
           <Title language="English" value="extract information from element"/>
-          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const _constraintElement = constraintElementCallback(element)&lt;br/&gt;columnDetails.referencedColumnNames = _constraintElement.referencedColumnNames&lt;br/&gt;columnDetails.referencedTableName = _constraintElement.referencedTableName"/>
+          <SourceCode codeLanguage="JavaScript" sourceCodeType="StmtSeq" value="const _constraintElement = constraintElementCallback(element)&lt;br/&gt;columnDetails.referencedColumn = _constraintElement.referencedColumnNames&lt;br/&gt;columnDetails.referencedTable = _constraintElement.referencedTableName"/>
           <TestValue group="Cucumber" type="tse" value="extracted foreign key information is set"/>
         </ActionOccurrence>
       </ActionOccurrences>

@@ -3,7 +3,7 @@
 # 
 # Aktueller Benutzer: constantin
 # Aktuelles Verzeichnis (user.dir): "/opt/data/github/asciidoctor/asciidoctor-liquibase"
-# Benötigte Zeit: 00:00:00.188 (10.09.2023 22:54:30.124 - 10.09.2023 22:54:30.312)
+# Benötigte Zeit: 00:00:00.191 (14.09.2023 14:11:35.046 - 14.09.2023 14:11:35.237)
 # 
 # Entscheidungstabelle: /opt/data/github/asciidoctor/asciidoctor-liquibase/lfet/asciidoctor-liquibase.lfet
 # 

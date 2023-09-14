@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/uniqueck/asciidoctor-liquibase/compare/v1.2.3...v1.2.4) (2023-09-14)
+
+
+### Fix
+
+* wrong keys for foreign key column and table ([469688b](https://github.com/uniqueck/asciidoctor-liquibase/commit/469688b5f4fa05c1ab06f674da6270e4563c54ed))
+
 ## [1.2.3](https://github.com/uniqueck/asciidoctor-liquibase/compare/v1.2.2...v1.2.3) (2023-09-10)
 
 

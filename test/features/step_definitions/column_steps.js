@@ -59,6 +59,6 @@ Given('foreign key information are present', function () {
 })
 
 Then('extracted foreign key information is set', function () {
-  assert(this.column.referencedColumnNames === 'referencedColumnName')
-  assert(this.column.referencedTableName === 'referencedTableName')
+  assert(this.column.referencedColumn === 'referencedColumnName')
+  assert(this.column.referencedTable === 'referencedTableName')
 })

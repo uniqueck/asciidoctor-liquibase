@@ -3,7 +3,7 @@
 # 
 # Aktueller Benutzer: constantin
 # Aktuelles Verzeichnis (user.dir): "/opt/data/github/asciidoctor/asciidoctor-liquibase"
-# Benötigte Zeit: 00:00:00.278 (10.09.2023 22:54:30.318 - 10.09.2023 22:54:30.596)
+# Benötigte Zeit: 00:00:00.222 (14.09.2023 14:11:35.248 - 14.09.2023 14:11:35.470)
 # 
 # Entscheidungstabelle: /opt/data/github/asciidoctor/asciidoctor-liquibase/lfet/liquibase-elements.lfet
 # 
@@ -31,10 +31,10 @@ Feature: Analyze Liquibase element based on name
   Scenario: 0001 liquibase-elements
     liquibase-elements
     R01 : B01 Liquibase element name is ... = addDefaultValue
-    Given yaml tag value callback function is provided
-    *     define yaml element name callback function
-    *     yaml based liquibase element name is 'addDefaultValue'
-    When  liquibase-elements is called with tillTag 'V2.0.0'
+    Given xml tag value callback function is provided
+    *     define xml element name callback function
+    *     xml based liquibase element name is 'addDefaultValue'
+    When  liquibase-elements is called without tillTag defined
     Then  Check that ignore message is logged
     *     element should ignored from processing
     *     processing is not finished
@@ -44,10 +44,10 @@ Feature: Analyze Liquibase element based on name
   Scenario: 0002 liquibase-elements
     liquibase-elements
     R02 : B01 Liquibase element name is ... = loadData
-    Given xml tag value callback function is provided
-    *     define xml element name callback function
-    *     xml based liquibase element name is 'loadData'
-    When  liquibase-elements is called with tillTag 'V1.0.0'
+    Given yaml tag value callback function is provided
+    *     define yaml element name callback function
+    *     yaml based liquibase element name is 'loadData'
+    When  liquibase-elements is called with tillTag 'V2.0.0'
     Then  Check that ignore message is logged
     *     element should ignored from processing
     *     processing is not finished
@@ -57,10 +57,10 @@ Feature: Analyze Liquibase element based on name
   Scenario: 0003 liquibase-elements
     liquibase-elements
     R03 : B01 Liquibase element name is ... = insert
-    Given xml tag value callback function is provided
-    *     define xml element name callback function
-    *     xml based liquibase element name is 'insert'
-    When  liquibase-elements is called without tillTag defined
+    Given yaml tag value callback function is provided
+    *     define yaml element name callback function
+    *     yaml based liquibase element name is 'insert'
+    When  liquibase-elements is called with tillTag 'V1.0.0'
     Then  Check that ignore message is logged
     *     element should ignored from processing
     *     processing is not finished
@@ -70,10 +70,10 @@ Feature: Analyze Liquibase element based on name
   Scenario: 0004 liquibase-elements
     liquibase-elements
     R04 : B01 Liquibase element name is ... = sql
-    Given yaml tag value callback function is provided
-    *     define yaml element name callback function
-    *     yaml based liquibase element name is 'sql'
-    When  liquibase-elements is called with tillTag 'V2.0.0'
+    Given xml tag value callback function is provided
+    *     define xml element name callback function
+    *     xml based liquibase element name is 'sql'
+    When  liquibase-elements is called with tillTag 'V1.0.0'
     Then  Check that ignore message is logged
     *     element should ignored from processing
     *     processing is not finished
@@ -86,7 +86,7 @@ Feature: Analyze Liquibase element based on name
     Given xml tag value callback function is provided
     *     define xml element name callback function
     *     xml based liquibase element name is 'sqlFile'
-    When  liquibase-elements is called with tillTag 'V1.0.0'
+    When  liquibase-elements is called with tillTag 'V2.0.0'
     Then  Check that ignore message is logged
     *     element should ignored from processing
     *     processing is not finished
@@ -109,10 +109,10 @@ Feature: Analyze Liquibase element based on name
   Scenario: 0007 liquibase-elements
     liquibase-elements
     R07 : B01 Liquibase element name is ... = property
-    Given yaml tag value callback function is provided
-    *     define yaml element name callback function
-    *     yaml based liquibase element name is 'property'
-    When  liquibase-elements is called with tillTag 'V1.0.0'
+    Given xml tag value callback function is provided
+    *     define xml element name callback function
+    *     xml based liquibase element name is 'property'
+    When  liquibase-elements is called without tillTag defined
     Then  Check that ignore message is logged
     *     element should ignored from processing
     *     processing is not finished
@@ -122,9 +122,9 @@ Feature: Analyze Liquibase element based on name
   Scenario: 0008 liquibase-elements
     liquibase-elements
     R08 : B01 Liquibase element name is ... = tagDatabase ; B02 tag = tillTag = Y
-    Given xml tag value callback function is provided
-    *     define xml element name callback function
-    *     xml based liquibase element name is 'tagDatabase' with tag 'V2.0.0'
+    Given yaml tag value callback function is provided
+    *     define yaml element name callback function
+    *     yaml based liquibase element name is 'tagDatabase' with tag 'V2.0.0'
     When  liquibase-elements is called with tillTag 'V2.0.0'
     Then  processing is finished
     *     element name is 'tagDatabase'
@@ -133,10 +133,10 @@ Feature: Analyze Liquibase element based on name
   Scenario: 0009 liquibase-elements
     liquibase-elements
     R09 : B01 Liquibase element name is ... = tagDatabase ; B02 tag = tillTag = N
-    Given xml tag value callback function is provided
-    *     define xml element name callback function
-    *     xml based liquibase element name is 'tagDatabase' with tag 'V3.0.0'
-    When  liquibase-elements is called with tillTag 'V1.0.0'
+    Given yaml tag value callback function is provided
+    *     define yaml element name callback function
+    *     yaml based liquibase element name is 'tagDatabase' with tag 'V1.0.0'
+    When  liquibase-elements is called without tillTag defined
     Then  element should ignored from processing
     *     processing is not finished
     *     element name is 'tagDatabase'
@@ -145,10 +145,10 @@ Feature: Analyze Liquibase element based on name
   Scenario: 0010 liquibase-elements
     liquibase-elements
     R10 : B01 Liquibase element name is ... = addForeignKeyConstraint
-    Given yaml tag value callback function is provided
-    *     define yaml element name callback function
-    *     yaml based liquibase element name is 'addForeignKeyConstraint'
-    When  liquibase-elements is called without tillTag defined
+    Given xml tag value callback function is provided
+    *     define xml element name callback function
+    *     xml based liquibase element name is 'addForeignKeyConstraint'
+    When  liquibase-elements is called with tillTag 'V1.0.0'
     Then  processing is not finished
     *     element name is 'addForeignKeyConstraint'
 
@@ -156,10 +156,10 @@ Feature: Analyze Liquibase element based on name
   Scenario: 0011 liquibase-elements
     liquibase-elements
     R11 : B01 Liquibase element name is ... = addUniqueConstraint
-    Given yaml tag value callback function is provided
-    *     define yaml element name callback function
-    *     yaml based liquibase element name is 'addUniqueConstraint'
-    When  liquibase-elements is called without tillTag defined
+    Given xml tag value callback function is provided
+    *     define xml element name callback function
+    *     xml based liquibase element name is 'addUniqueConstraint'
+    When  liquibase-elements is called with tillTag 'V2.0.0'
     Then  Check that ignore message is logged
     *     element should ignored from processing
     *     processing is not finished
@@ -169,10 +169,10 @@ Feature: Analyze Liquibase element based on name
   Scenario: 0012 liquibase-elements
     liquibase-elements
     R12 : B01 Liquibase element name is ... = rollback
-    Given xml tag value callback function is provided
-    *     define xml element name callback function
-    *     xml based liquibase element name is 'rollback'
-    When  liquibase-elements is called with tillTag 'V1.0.0'
+    Given yaml tag value callback function is provided
+    *     define yaml element name callback function
+    *     yaml based liquibase element name is 'rollback'
+    When  liquibase-elements is called without tillTag defined
     Then  Check that ignore message is logged
     *     element should ignored from processing
     *     processing is not finished
@@ -182,10 +182,10 @@ Feature: Analyze Liquibase element based on name
   Scenario: 0013 liquibase-elements
     liquibase-elements
     R13 : B01 Liquibase element name is ... = dropColumn
-    Given xml tag value callback function is provided
-    *     define xml element name callback function
-    *     xml based liquibase element name is 'dropColumn'
-    When  liquibase-elements is called with tillTag 'V2.0.0'
+    Given yaml tag value callback function is provided
+    *     define yaml element name callback function
+    *     yaml based liquibase element name is 'dropColumn'
+    When  liquibase-elements is called with tillTag 'V1.0.0'
     Then  processing is not finished
     *     element name is 'dropColumn'
 
@@ -193,9 +193,9 @@ Feature: Analyze Liquibase element based on name
   Scenario: 0014 liquibase-elements
     liquibase-elements
     R14 : B01 Liquibase element name is ... = addColumn
-    Given yaml tag value callback function is provided
-    *     define yaml element name callback function
-    *     yaml based liquibase element name is 'addColumn'
+    Given xml tag value callback function is provided
+    *     define xml element name callback function
+    *     xml based liquibase element name is 'addColumn'
     When  liquibase-elements is called with tillTag 'V1.0.0'
     Then  processing is not finished
     *     element name is 'addColumn'
@@ -204,9 +204,9 @@ Feature: Analyze Liquibase element based on name
   Scenario: 0015 liquibase-elements
     liquibase-elements
     R15 : B01 Liquibase element name is ... = comment
-    Given yaml tag value callback function is provided
-    *     define yaml element name callback function
-    *     yaml based liquibase element name is 'comment'
+    Given xml tag value callback function is provided
+    *     define xml element name callback function
+    *     xml based liquibase element name is 'comment'
     When  liquibase-elements is called without tillTag defined
     Then  Check that ignore message is logged
     *     element should ignored from processing
@@ -217,9 +217,9 @@ Feature: Analyze Liquibase element based on name
   Scenario: 0016 liquibase-elements
     liquibase-elements
     R16 : B01 Liquibase element name is ... = renameColumn
-    Given xml tag value callback function is provided
-    *     define xml element name callback function
-    *     xml based liquibase element name is 'renameColumn'
+    Given yaml tag value callback function is provided
+    *     define yaml element name callback function
+    *     yaml based liquibase element name is 'renameColumn'
     When  liquibase-elements is called with tillTag 'V2.0.0'
     Then  processing is not finished
     *     element name is 'renameColumn'
@@ -242,7 +242,7 @@ Feature: Analyze Liquibase element based on name
     Given xml tag value callback function is provided
     *     define xml element name callback function
     *     xml based liquibase element name is 'changeSet'
-    When  liquibase-elements is called with tillTag 'V1.0.0'
+    When  liquibase-elements is called without tillTag defined
     Then  processing is not finished
     *     element name is 'changeSet'
 
@@ -253,7 +253,7 @@ Feature: Analyze Liquibase element based on name
     Given xml tag value callback function is provided
     *     define xml element name callback function
     *     xml based liquibase element name is 'dropSequence'
-    When  liquibase-elements is called without tillTag defined
+    When  liquibase-elements is called with tillTag 'V1.0.0'
     Then  Check that ignore message is logged
     *     element should ignored from processing
     *     processing is not finished
@@ -274,10 +274,10 @@ Feature: Analyze Liquibase element based on name
   Scenario: 0021 liquibase-elements
     liquibase-elements
     R21 : B01 Liquibase element name is ... = addPrimaryKey
-    Given xml tag value callback function is provided
-    *     define xml element name callback function
-    *     xml based liquibase element name is 'addPrimaryKey'
-    When  liquibase-elements is called with tillTag 'V2.0.0'
+    Given yaml tag value callback function is provided
+    *     define yaml element name callback function
+    *     yaml based liquibase element name is 'addPrimaryKey'
+    When  liquibase-elements is called with tillTag 'V1.0.0'
     Then  processing is not finished
     *     element name is 'addPrimaryKey'
 
@@ -285,10 +285,10 @@ Feature: Analyze Liquibase element based on name
   Scenario: 0022 liquibase-elements
     liquibase-elements
     R22 : B01 Liquibase element name is ... = dropTable
-    Given yaml tag value callback function is provided
-    *     define yaml element name callback function
-    *     yaml based liquibase element name is 'dropTable'
-    When  liquibase-elements is called with tillTag 'V1.0.0'
+    Given xml tag value callback function is provided
+    *     define xml element name callback function
+    *     xml based liquibase element name is 'dropTable'
+    When  liquibase-elements is called with tillTag 'V2.0.0'
     Then  processing is not finished
     *     element name is 'dropTable'
 
@@ -296,9 +296,9 @@ Feature: Analyze Liquibase element based on name
   Scenario: 0023 liquibase-elements
     liquibase-elements
     R23 : B01 Liquibase element name is ... = include
-    Given xml tag value callback function is provided
-    *     define xml element name callback function
-    *     xml based liquibase element name is 'include'
+    Given yaml tag value callback function is provided
+    *     define yaml element name callback function
+    *     yaml based liquibase element name is 'include'
     When  liquibase-elements is called without tillTag defined
     Then  processing is not finished
     *     element name is 'include'
@@ -307,9 +307,9 @@ Feature: Analyze Liquibase element based on name
   Scenario: 0024 liquibase-elements
     liquibase-elements
     R24 : B01 Liquibase element name is ... = createSequence
-    Given yaml tag value callback function is provided
-    *     define yaml element name callback function
-    *     yaml based liquibase element name is 'createSequence'
+    Given xml tag value callback function is provided
+    *     define xml element name callback function
+    *     xml based liquibase element name is 'createSequence'
     When  liquibase-elements is called with tillTag 'V1.0.0'
     Then  Check that ignore message is logged
     *     element should ignored from processing
@@ -336,7 +336,7 @@ Feature: Analyze Liquibase element based on name
     Given yaml tag value callback function is provided
     *     define yaml element name callback function
     *     yaml based liquibase element name is 'modifyDataType'
-    When  liquibase-elements is called with tillTag 'V2.0.0'
+    When  liquibase-elements is called with tillTag 'V1.0.0'
     Then  processing is not finished
     *     element name is 'modifyDataType'
 
@@ -347,7 +347,7 @@ Feature: Analyze Liquibase element based on name
     Given xml tag value callback function is provided
     *     define xml element name callback function
     *     xml based liquibase element name is 'update'
-    When  liquibase-elements is called without tillTag defined
+    When  liquibase-elements is called with tillTag 'V2.0.0'
     Then  Check that ignore message is logged
     *     element should ignored from processing
     *     processing is not finished
@@ -360,7 +360,7 @@ Feature: Analyze Liquibase element based on name
     Given yaml tag value callback function is provided
     *     define yaml element name callback function
     *     yaml based liquibase element name is 'hugo'
-    When  liquibase-elements is called with tillTag 'V1.0.0'
+    When  liquibase-elements is called without tillTag defined
     Then  Check that not supported message is logged
     *     element should ignored from processing
     *     processing is not finished

@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/uniqueck/asciidoctor-liquibase/compare/v1.2.4...v1.2.5) (2024-05-05)
+
+
+### Fix
+
+* Ignore all not supported changeset types ([ec84abb](https://github.com/uniqueck/asciidoctor-liquibase/commit/ec84abbde34f409495cb69f25b42dae4420f1cb5))
+
 ## [1.2.4](https://github.com/uniqueck/asciidoctor-liquibase/compare/v1.2.3...v1.2.4) (2023-09-14)
 
 

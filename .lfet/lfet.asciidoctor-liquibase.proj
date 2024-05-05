@@ -1,0 +1,54 @@
+# This file is used to define the limits within which the
+# decision table tool LF-ET can be freely used in this project.
+#
+# This file must not be changed, its checksum value must match
+# with the checksum value stored in the corresponding license file.
+#
+# More about LF-ET can be found here:
+# - https://lohrfink.de/de/produkte/lf-et/
+# - https://lohrfink.de/en/solutions/lf-et/
+#
+# More about the rulebased.group can be found here:
+# - https://rulebased.group/
+#
+# Any questions or CER's regarding LF-ET or this project are welcome here:
+# - mailto:support@rulebased.group
+
+LFET:
+
+    Project:
+
+        Url:
+        # List of global unique project ID's
+        - git@github.com:uniqueck/asciidoctor-liquibase.git
+        - https://github.com/uniqueck/asciidoctor-liquibase.git
+        - https://github.com/uniqueck/asciidoctor-liquibase/
+
+        FileNamePattern:
+        # List of regular expressions for allowed file names
+        # incl. common 'save as' and export formats
+        - ^liquibase-parser([(](Rwa|ras)[)])?[.](lfet|xls[x]?)$
+        - ^liquibase-elements([(](Rwa|ras)[)])?[.](lfet|xls[x]?)$
+        - ^asciidoctor-liquibase([(](Rwa|ras)[)])?[.](lfet|xls[x]?)$
+        - ^addColumn([(](Rwa|ras)[)])?[.](lfet|xls[x]?)$
+        - ^addPrimaryKey([(](Rwa|ras)[)])?[.](lfet|xls[x]?)$
+        - ^changeSet([(](Rwa|ras)[)])?[.](lfet|xls[x]?)$
+        - ^column([(](Rwa|ras)[)])?[.](lfet|xls[x]?)$
+        - ^createIndex([(](Rwa|ras)[)])?[.](lfet|xls[x]?)$
+        - ^createView([(](Rwa|ras)[)])?[.](lfet|xls[x]?)$
+        - ^createTable([(](Rwa|ras)[)])?[.](lfet|xls[x]?)$
+        - ^dropColumn([(](Rwa|ras)[)])?[.](lfet|xls[x]?)$
+        - ^dropTable([(](Rwa|ras)[)])?[.](lfet|xls[x]?)$
+        - ^include([(](Rwa|ras)[)])?[.](lfet|xls[x]?)$
+        - ^addForeignKeyConstraint([(](Rwa|ras)[)])?[.](lfet|xls[x]?)$
+        - ^modifyDataType([(](Rwa|ras)[)])?[.](lfet|xls[x]?)$
+        - ^renameColumn([(](Rwa|ras)[)])?[.](lfet|xls[x]?)$
+
+        DirectoryNamePattern:
+        # List of regular expressions for allowed directory names
+        # relative to the project content root
+        # use always '/' as file separator
+        - ^[/]?(lfet|lib|test)[/]?$
+        - ^[/]?(lib|lfet)/extractor[/]?$
+        - ^[/]?test/features[/]?$
+        - ^[/]?test/features/extractor[/]?$

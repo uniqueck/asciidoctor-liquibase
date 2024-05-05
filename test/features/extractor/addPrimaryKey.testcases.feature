@@ -1,9 +1,9 @@
-# Diese Datei wurde erzeugt durch LF-ET 2.2.1 (230826a) und Kommandozeile:
+# Diese Datei wurde erzeugt durch LF-ET 2.3.0 (240413a) und Kommandozeile:
 # -GenTest "/opt/data/github/asciidoctor/asciidoctor-liquibase/lfet/extractor/addPrimaryKey.lfet" -Group "Cucumber" -Config "Config" -ContinueOnError -GtdDirectory "../../test/features/testdata/" -GtdFileNamePattern "*.txt; *.csv" -NonExecutableRules "50" -RecommendedTestCases -OutGherkin "addPrimaryKey.testcases.feature" -InputRootfolder "/opt/data/github/asciidoctor/asciidoctor-liquibase/lfet" -OutputRootfolder "/opt/data/github/asciidoctor/asciidoctor-liquibase/test/features"
 # 
 # Aktueller Benutzer: constantin
 # Aktuelles Verzeichnis (user.dir): "/opt/data/github/asciidoctor/asciidoctor-liquibase"
-# Benötigte Zeit: 00:00:00.018 (14.09.2023 14:11:35.752 - 14.09.2023 14:11:35.770)
+# Benötigte Zeit: 00:00:00.020 (05.05.2024 22:41:08.777 - 05.05.2024 22:41:08.797)
 # 
 # Entscheidungstabelle: /opt/data/github/asciidoctor/asciidoctor-liquibase/lfet/extractor/addPrimaryKey.lfet
 # 

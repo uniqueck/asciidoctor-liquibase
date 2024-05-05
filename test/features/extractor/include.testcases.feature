@@ -1,9 +1,9 @@
-# Diese Datei wurde erzeugt durch LF-ET 2.2.1 (230826a) und Kommandozeile:
+# Diese Datei wurde erzeugt durch LF-ET 2.3.0 (240413a) und Kommandozeile:
 # -GenTest "/opt/data/github/asciidoctor/asciidoctor-liquibase/lfet/extractor/include.lfet" -Group "Cucumber" -Config "Config" -ContinueOnError -GtdDirectory "../../test/features/testdata/" -GtdFileNamePattern "*.txt; *.csv" -NonExecutableRules "50" -RecommendedTestCases -OutGherkin "include.testcases.feature" -InputRootfolder "/opt/data/github/asciidoctor/asciidoctor-liquibase/lfet" -OutputRootfolder "/opt/data/github/asciidoctor/asciidoctor-liquibase/test/features"
 # 
 # Aktueller Benutzer: constantin
 # Aktuelles Verzeichnis (user.dir): "/opt/data/github/asciidoctor/asciidoctor-liquibase"
-# Benötigte Zeit: 00:00:00.028 (14.09.2023 14:11:35.948 - 14.09.2023 14:11:35.976)
+# Benötigte Zeit: 00:00:00.024 (05.05.2024 22:41:09.011 - 05.05.2024 22:41:09.035)
 # 
 # Entscheidungstabelle: /opt/data/github/asciidoctor/asciidoctor-liquibase/lfet/extractor/include.lfet
 # 

@@ -1,0 +1,54 @@
+lfet:
+  nestedProjectIni: true
+  ide:
+    default: javascript
+    javascript:
+      enabled: true
+
+      baseOfVersion: DT
+      emptyLines: false
+
+      basicIndentLevel: 1
+
+      Format: false
+
+
+
+      src:
+        path: ${project.root}../lib/generated
+
+      comment:
+        filePaths:
+          removeAllBefore: /asciidoctor-liquibase/
+
+      Interface:
+        Enabled: true
+        Language: en
+        Name: LiquibaseElementsIface
+        VarName: iface
+        trace:
+          beforeRule: false
+          afterRule: false
+        Stateless: true
+
+        RulesClass:
+          Name: LiquibaseElementsDecisionLogic
+
+          Trace:
+            AfterRule: |
+              model.logger.info(`$$dtName - $$Version - $$Rule / $$Rules - ${JSON.stringify(model)}`)
+
+        Enum:
+          100:
+            MethodName: Prefix
+            Symbol: ""
+            Title: ""
+            EnumValueName:
+              - Symbol
+              - UpperCase
+            IncludeTagsTitle:
+              - Liquibase element name is ...
+              - set element to ignore
+              - log
+              - set finish processing
+              - set element name

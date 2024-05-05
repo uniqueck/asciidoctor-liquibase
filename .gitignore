@@ -5,9 +5,10 @@ test/antora/public/
 *.tgz
 
 # lfet based files
-*.log.*.console.txt
-*.log.*.ti.gtd.txt
-*.log.*.check.txt
+*_log_*_console.txt
+*_log_*_ti.gtd.txt
+*_log_*_rseq_nex.txt
+*_log_*_check.txt
 
 *.lfet.*.$bak
 *.lfet_$temp

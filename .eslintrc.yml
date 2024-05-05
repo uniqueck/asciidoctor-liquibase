@@ -8,4 +8,6 @@ parserOptions:
 ignorePatterns:
   - "test/antora/.cache/**"
   - "test/antora/public/**"
-rules: {}
+rules: {
+  camelcase: off
+}

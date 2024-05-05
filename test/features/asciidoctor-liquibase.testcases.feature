@@ -1,9 +1,9 @@
-# Diese Datei wurde erzeugt durch LF-ET 2.2.1 (230826a) und Kommandozeile:
+# Diese Datei wurde erzeugt durch LF-ET 2.3.0 (240413a) und Kommandozeile:
 # -GenTest "/opt/data/github/asciidoctor/asciidoctor-liquibase/lfet/asciidoctor-liquibase.lfet" -Group "Cucumber" -Config "Config" -ContinueOnError -SwitchCoverage "1" -NonExecutableRules "50" -NonExecutableRuleSeq "50" -RecommendedTestCases -OutGherkin "asciidoctor-liquibase.testcases.feature" -InputRootfolder "/opt/data/github/asciidoctor/asciidoctor-liquibase/lfet" -OutputRootfolder "/opt/data/github/asciidoctor/asciidoctor-liquibase/test/features"
 # 
 # Aktueller Benutzer: constantin
 # Aktuelles Verzeichnis (user.dir): "/opt/data/github/asciidoctor/asciidoctor-liquibase"
-# Benötigte Zeit: 00:00:00.191 (14.09.2023 14:11:35.046 - 14.09.2023 14:11:35.237)
+# Benötigte Zeit: 00:00:00.285 (05.05.2024 22:39:26.270 - 05.05.2024 22:39:26.555)
 # 
 # Entscheidungstabelle: /opt/data/github/asciidoctor/asciidoctor-liquibase/lfet/asciidoctor-liquibase.lfet
 # 
